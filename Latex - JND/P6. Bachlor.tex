@@ -1,0 +1,77 @@
+%Indsæt et billede ved at udskifte ordene som er skrevet med CAPS, i nedenstående, se evt eksemplet nedenunder hvis du er i tvivl:
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=TAL.TAL]{FILNAVN.FILTYPE}              %Filnavn må ikke indeholde æ,ø,å
+%\caption{EN BESKRIVELSE AF FIGUREN}
+%\label{fig:NAVN_TIL_BRUG_VED_REFERENCE}                       %Må ikke indeholde æ,ø,å
+%\end{figure}
+
+%Et eksempel kunne se sådan her ud:
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.9]{Figure/Vores_Figurer/till.jpg}
+%\caption{En figur som viser en smiley med et spørgsmåltegn}
+%\label{fig:Smiley}
+%\end{figure}
+
+% Et eksempel på hvordan en costum function som kan findes i preamble kan bruges til at lave text i farvede og numerede boxe.
+%\begin{theorybox}[label={teobox:Example_Label},floatplacement=htb]{Example titlte}
+%This is an example.
+%\end{theorybox}
+
+\input{Preamble/Preamble}
+\usepackage{float}  %Test -> Gør at man kan tvinge billedet til et bestemt sted i Latex dokumentet. (PDF'en) DETTE ER EN TEST, TIL HVORDAN VI KAN SÆTTE BILLEDERNE BEDRE OP! - Karolis.
+%\usepackage{hyperref}
+\usepackage{tikz}
+%\usepackage{ifthen}
+%\usepackage{xstring}
+%\usepackage{calc}
+%\usepackage{pgfopts}
+%\usepackage{tikz-uml}
+%\makeatletter
+%\global\let\tikz@ensure@dollar@catcode=\relax
+%\makeatother
+
+
+\begin{document}
+
+\pagenumbering{gobble} %Fjerner alle sidetal fra kommende sider, til andet specificeres.
+
+%%% Fixme-listen %%%%
+%\newpage														% Ny side til Fixme-listen
+%\listoffixmes			
+%\newpage										% Fixme-listen - Skal fjernes til sidst i projektet med "%"
+
+%\includepdf{Chapter/Formalia/Forside.pdf}                      %Inkluderer første side af "Forside.PDF"
+%\cleardoublepage %Laver en tom side 
+%\input{Chapter/Abstract/Abstract}
+%\cleardoublepage %Laver en tom side 
+%\include{Chapter/Formalia/Titelblad}
+%\cleardoublepage
+%\input{Chapter/Forord/Forord} %Inkluder forord
+%\cleardoublepage
+
+                              
+\tableofcontents* %Indholdsfortegningelse * = uden sidetal
+
+\mainmatter	%Starter med at nummere siderne
+
+\input{Chapter/JND}
+
+\cleardoublepage
+
+
+%%% Kilder %%%%
+\nocite{Holmqvist2015}
+\begingroup
+	\raggedright
+	\bibliography{Bib/Bibliography}			                    % Litteraturlisten inkluderes
+\endgroup
+
+
+%%%% Appendiks %%%%
+%\appendix
+%\appendixpage*
+%\input{Chapter/Appendiks/Appendiks}
+\end{document}
