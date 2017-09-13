@@ -1,85 +1,77 @@
 \chapter*{Pitch perception - JND}
-
-\section*{Introduction}
-The purpose of this study is to evaluate the just noticeable difference (JND) of pitch.
-Webers law:
-
+%
+The purpose of this study is to evaluate the differential threshold, known as Just Noticeable Difference (JND), of pitch perception. Webers law states that the smallest detectable change in perception, \textit{$\Delta$I}, is equal to a constant, \textit{k}, times the physical stimulus intensity, \textit{I}. 
+%
 \begin{equation}
 \Delta I = k \cdot I
 \end{equation}
+%
+The constant, \textit{k}, is known as the Weber Fraction for a particular sensory dimension.
+%
 
 \section*{Methods}
 %
-\begin{itemize}
-  \item Psychometric method
-  \item Method of Constant Stimuli
-  \item Data collection method: Two-Alternative Forced Choice (2-AFC) (avoids criterium problems)
-\end{itemize}
+The psychometric method used for stimuli presentation is the Method of Constant Stimuli which prescribe that the experimenter chooses a number of stimulus intensities and a reference intensity, the intensity refers to frequency. In this study the test subject reports which of the two stimuli are highest in pitch. The response is presented as a psychometric function. 
 
+These chosen values have to be a qualified guess about where the test subjects differential threshold is. In our study we base the qualified guess on the differential threshold found by \citep{Wier1977} at 800 Hz which is approximately 1.2 Hz. It is important that the intensity range covers intensities above and below the actual differential threshold so there must be stimuli which the test subject always report the correct answer to and vice versa. Based on a pilot test the intensity range was expanded with higher frequency differences because some of the test subjects did not reach a plateau of 100\% correct answers. Based on the differential threshold approximation from \citep{Wier1977} and the pilot test, the intensity range consists of frequencies with a logarithmic difference from 800 Hz starting from 0.15 Hz to 76.8 Hz. Each frequency is repeated 10 times which leads to a total of 100 trials per test subject.  
 
-\subsection*{Stimuli}
+Data collections is done by Two-Alternative Forced Choice (2-AFC). A more objective measure is obtained with 2-AFC because the test subjects are forced to make an answer whether or not they actually heard a difference in the two stimuli, \citep[p. 1219]{Ehrenstein1999}. 2-AFC accounts for criterium problems when using multiple test subjects who might have different response criteria when answering which of the two frequency had the highest pitch. Criterium problems are avoided because the test subjects are forced to answer whether or not they have perceived a difference. When using this method there is a 50\% chance of guessing which of the two stimuli had the highest pitch and therefore the JND is found where 75\% of the answers are correct.\\[5mm]
 %
-\begin{itemize}
-\item Reference stimulus intensity: 800 Hz (pure tones)
-\item Expected JND: ca. 1.2 Hz (Wier, Jesteadt \& Green, 1977)
-\item Logarithmic distribution on chosen frequencies from a 800 Hz reference.
-\item Difference from 800 Hz: 0.3 Hz, 0.6 Hz, 1.2 Hz, 2.4 Hz, 4.8 Hz, 9.6 Hz. (before pilot test)
-\item Order of stimuli representation: Randomize presentation order for comparisons over all frequencies and repetitions.
-\item Repetitions: 12 at each frequency 
-\end{itemize}
-
+In contrast to the two other classical psychometric methods the Method of Constant Stimuli prescribes randomization of stimuli representation which eliminates anticipation and habituation \citep[p. 15]{Poulsen2005}. One disadvantage with Method of Constant Stimuli is the measurement time. Each added repetition or stimulus intensity will add extra time in which the subjects must focus on pitch differences. This prolonged measurement time might lead to fatigue and risk of an altered differential threshold, \citep[p. 16]{Poulsen2005}. 
+%
 
 \subsection*{Experimental setup}
-Equipment: Bang \& Olufsen H6 headphones, Lenovo ThinkPad (Volume 10\%)
-
+%
+The equipment used for the study is a pair of Bang $\&$ Olufsen H6 headphones, a Lenovo Thinkpad with a fixed 10\% volume, and a programme (TwoAFC\_pitch) running in MatLab for stimuli presentation. The experiment was conducted in a group room located on the 1st floor of Fredrik Bajers vej 7B, B2-207. \autoref{fig:experiment} illustrates the experimental setup.
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.5\textwidth]{Figure/Vores_Figurer/experiment.png} 
 \caption{A sketch of the experimental setup}
 \label{fig:experiment}
 \end{figure}
+%
 
 \subsection*{Test subjects}
 %
-Five test subjects two males and three females, age 23 - 24 (mean: 23.4).
+Five test subjects were used in the test including two males and three females in the age of 23 to 24 (mean: 23.4). All of which are Engineering Psychology students at Aalborg University.
 
-\subsection*{Pilot testing}
+\subsection*{Pilot test}
 %
-Based on a pilot test with two test subjects (one male and one female) it is decided to expand the stimuli intensity range down to 0.15 Hz and up to 19.2 Hz.
+Based on a pilot test it is decided to expand the stimuli intensity range down to 0.15 Hz and up to 76.8 Hz from the original range of intensities 0.3 Hz, 0.6 Hz, 1.2 Hz, 2.4 Hz, 4.8 Hz, 9.6 Hz. This is done because the female test subjects had problems detecting any difference in pitch, especially when the difference between the two frequencies are small.
 
 \section*{Results}
-Show data in figures and maybe also tables
-
-OBS: lav funktionerne i hånden eller i excel (de er ikke særlig præcise i MatLab da plot funktionen er lidt forældet.)
-
+%
+On \autoref{fig:Subject1}, \autoref{fig:Subject2}, \autoref{fig:Subject3}, \autoref{fig:Subject4} and \autoref{fig:Subject5} data from each test subject is presented along with the psychometric function. The response from the subjects are represented as the percentage of correct answers to each $\Delta$f.
+% 
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Vores_Figurer/Subject1} 
 \caption{Raw data and fitted psychometric function for Subject 1.}
 \label{fig:Subject1}
 \end{figure}
-
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Vores_Figurer/Subject2} 
 \caption{Raw data and fitted psychometric function for Subject 2.}
 \label{fig:Subject2}
 \end{figure}
-
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Vores_Figurer/Subject3} 
 \caption{Raw data and fitted psychometric function for Subject 3.}
 \label{fig:Subject3}
 \end{figure}
-
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Vores_Figurer/Subject4} 
 \caption{Raw data and fitted psychometric function for Subject 4.}
 \label{fig:Subject4}
 \end{figure}
-
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Vores_Figurer/Subject5} 
@@ -88,17 +80,43 @@ OBS: lav funktionerne i hånden eller i excel (de er ikke særlig præcise i Mat
 \end{figure}
 
 \section*{Analysis}
-Present the data analysis, show figures, tables and interpret the results.
+%
+A 2-AFC method is used to collect data which leaves a 50\% chance of guessing the right answer of the two possibilities. The point for JND is therefore at 75\%.
 
-2-AFC is used and there is a 50 \% chance guessing the right answer of the two possible answers. The point for JND is at 75 \%.
+From the fitted psychometric function for each subject the JND is read at 75\% correct answered. In \autoref{tab:JND} the individual test subjects JND are presented along with a calculated mean JND which is 5.31 Hz. 
+%
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c}
+Subject     & JND ($\Delta$f at 75\%) \\\hline
+Subject 1   & 4.40 Hz                 \\\hline
+Subject 2   & 1.28 Hz                 \\\hline
+Subject 3   & 7.56 Hz                 \\\hline
+Subject 4   & 9.42 Hz                 \\\hline
+Subject 5   & 3.88 Hz                 \\\hline
+mean JND & 5.31 Hz       
+\end{tabular}
+\caption{JND for all test subjects and mean JND.}
+\label{tab:JND}         
+\end{table}
+\noindent
+%
+From Webers law the Weber fraction, \textit{k}, can be calculated. The smallest detectable change in perception, \textit{$\Delta$I}, is the mean JND at 5.31 Hz and the physical stimulus intensity, \textit{I}, is 800 Hz.
+% 
+\begin{equation}
+5.31 Hz = k \cdot 800 Hz \Rightarrow k = \frac{5.31 Hz}{800 Hz} = 0.007
+\end{equation}
+%
+This Weber fraction allows for calculating differential threshold at other intensities, \textit{I}. 
+%
 
-\section*{Discussion and conclusion} 
-Compare to other results, discuss the methods used, discuss strange looking data etc. and conclude.
-The frequency span used in this study is based on the findings of \citep{Wier1977}. However, there might be other variables affecting the outcomes of this study. These include ambient noise and distractions. Furthermore, they might have used different levels of pitch and more repetitions.
+\section*{Discussion and conclusion}
+%
+The results shows that the mean JND at 75\% is 5.31 Hz, which is a bit higher than the expected 1.2 Hz. This might be due to variables affecting the outcome of this study, including ambient noise, distractions and fatigue. If the test was done in an sound isolated lab JND might have been closer to the approximately 1.2 Hz from \citep{Wier1977} findings. Furthermore, \citep{Wier1977} might have used different levels of pitch and more repetitions, which can contribute to different results. 
 
-What if a person’s threshold is outside our range of chosen stimuli intensities 
+In the pilot test the female test subjects had problems detecting differences in pitch, especially when the difference between the two frequencies was small, while the male subjects did not experience these problems. This might be due to the fact that one of the male test subjects have more expertise in listening to music and its specific characteristics e.g. when tuning a guitar. Furthermore the subjects might not answer based on the same criterions e.g. they might have different understandings of the word “pitch”. When trying to agree upon a common definition of “pitch”, there might also be different understandings of the words used to describe it.  
 
-We don’t know if subjects has the same understanding of pitch and how to listen for differences in this. The subjects discussed what they think pitch is, but it is not known if the interpretation of the words used to describe it is understood in the same way.
+From the pilot test it became clear that some of the test subject’s differential threshold was outside the range of the chosen stimuli intensities. Therefore it was decided to expand the intensity range with more frequencies so every test subjects differential threshold would be included. If a test with more subjects had been done, it would likewise have been important to use a frequency span which includes every subject’s differential threshold. Furthermore, a study with more test subjects could be more representative for the general JND. 
 
 
 
