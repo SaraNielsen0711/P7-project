@@ -1,15 +1,15 @@
 \section*{Methods}
 \label{Methods}
 %
-The psychometric method used for stimuli presentation is not one of the classical methods but is one of the adaptive methods, namely \textit{Transformed Up/Down Method}. Instead of pre-chosen stimuli intensities the stimuli intensities are determined by previous response and thus dose not depend on a qualified guess on where the threshold might be, same goes for other adaptive methods. By using an adaptive method the efficiency is maximizes because the stimuli presentations converges upon threshold and does not present stimuli that are faraway from threshold, \parencite[p. 287]{PDF:Hearing}. There are different strategies on how to determine the needed step size e.g. it can be fixed or change as the presentations converge upon the threshold, \parencite[p. 22]{PDF:Psychoacoustic}. In this study it is decided to use a changing step size, the steps will chance in logarithmic manner so that the steps are either halved or doubled according to the previous response. Apart from higher efficiency \textit{Transformed Up/Down Method} yield higher accuracy compared to e.g. \textit{Method of Constant Stimuli} because the step size is altered according to previous response. Furthermore \textit{Transformed Up/Down Method} follow the test subject's response criterions so it always adjusts the stimuli intensities according to the answers.  
+The psychometric method used for stimuli presentation is not one of the classical methods but is one of the adaptive methods, namely \textit{Transformed Up/Down Method}. Instead of pre-chosen stimuli intensities the stimuli intensities are determined by previous response and thus dose not depend on a qualified guess on where the threshold might be, same goes for other adaptive methods. By using an adaptive method the efficiency is maximizes because the stimuli presentations converges upon threshold and does not present stimuli that are faraway from threshold, \parencite[p. 287]{PDF:Hearing}. There are different strategies on how to determine the needed step size e.g. it can be fixed or change as the presentations converge upon the threshold, \parencite[p. 22]{PDF:Psychoacoustic}. In this study it is decided to use a changing step size, the steps will chance in logarithmic manner so that the steps are either halved or doubled according to the previous response. Apart from higher efficiency \textit{Transformed Up/Down Method} yield higher accuracy compared to e.g. \textit{Method of Constant Stimuli} because the step size is altered according to previous response. Furthermore \textit{Transformed Up/Down Method} follow the test subject's response criterions so it always adjusts the stimuli intensities according to the previous answers.  
 
-The specific up/down rules are chosen so that the stimuli intensities will converge around threshold read as close to 75 \%, on a psychometric function, as possible. To achieve this the up/down rules are defined as one-up and two-down, which will result in a threshold read at 70.7 \%, \parencite[p. 22]{PDF:Psychoacoustic}. This rule implies that one-up is a result of an incorrect answer, which will lead to an increase in stimuli intensity and two-down is a result of two in a row correct answer, which will lead to a decrease in stimuli intensity. According to \textcite[p. 293]{PDF:Hearing} the probability of an increasing stimuli intensity due to an incorrect answer is: 
+The specific up/down rules are chosen so that the stimuli intensities will converge around threshold read as close to 75 \%, on a psychometric function, as possible. To achieve this the up/down rules are defined as one-up and two-down, which will result in a threshold read at 70.7 \%, \parencite[p. 22]{PDF:Psychoacoustic}. This rule implies that one-up is a result of an incorrect answer, which will lead to an increase in stimuli intensity and two-down is a result of two consecutive correct answer, which will lead to a decrease in stimuli intensity. According to \textcite[p. 293]{PDF:Hearing} the probability of an increasing stimuli intensity due to an incorrect answer is: 
 %
 \begin{equation}
 	(1-p)+p\cdot(1-p)
 \end{equation}  
 %
-And for a decreasing stimuli intensity due to two correct answers in a row: 
+And for a decreasing stimuli intensity due to two consecutive correct answers: 
 %
 \begin{equation}
 	p\cdot p = p^2
@@ -37,10 +37,13 @@ So the probability for a single correct answer is 70.7 \%. On \autoref{fig:Illus
 \end{figure}
 \noindent
 %
-The threshold is 
+The threshold is calculated by averaging the stimuli intensity level at the last FOUR/SIX(?) reversals. A reversal is defined as when the stimuli intensity changes direaction from either a decreasing intensity, due to two consecutive correct answers, or a increasing intensity, due to one incorrect answer. A stop criterion for the test is determined, the criterion is set at EIGHT(?) reversals. The number of trials needed to find the threshold with  \textit{Transformed 1-Up/2-Down Method} must be less than the 100 trials used in \textit{Method of Constant Stimuli}, because it is assumed that \textit{Transformed 1-Up/2-Down Method} is more efficient and accurate than \textit{Method of Constant Stimuli}. Therefore, a maximum of 100 trials is defined as a stop criterion if, against our assumption, the EIGHT reversals is not reach with a smaller number of trials.           
 
 
 
 
 
 Diskuter metodevalg
+
+Reference tone: 800 Hz 
+Highest tone: 876.8 Hz (delta f 76.8)
