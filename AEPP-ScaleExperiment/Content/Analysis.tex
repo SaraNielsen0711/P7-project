@@ -1,33 +1,34 @@
 \section*{Analyse}
 \label{Analyse}
 %
-Før analysen udføres, opstilles et boksplot for hver af positionerne, som kan ses på \autoref{fig:boksplot}. Ud fra figuren kan det ses at position 2 og 3 ser ud til at være placeret højere end position 1 og 4. Dette vil blive undersøgt i analysen.
-
+Før analysen udføres, opstilles et boksplot for hver af de fire hovedpositioner, jævnfør \autoref{fig:boksplot}. Baseret på \autoref{fig:boksplot} tyder det på, at position 2 og position 3 begge perciperes som værende mere indbydende sammenlignet med position 1 og position 4.   
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{Figure/Rplot.png} 
-\caption{Boksplot for vurderingerne til hver af de fire positioner}
+\caption{Boksplot over hvor indbydende hver af de fire hovedpositioner perciperes.}
 \label{fig:boksplot}
 \end{figure}
+\noindent
+%
+Data analyseres med en \textit{one-way repeated measures ANOVA}, \parencite[s. 554]{DiscoveringStatisticsUsingR}. Hvor \textit{one-way} refererer til antallet af uafhængige variable, som i dette tilfælde er én; robottens hovedposition. \textit{Repeated measures} refererer til, at samtlige testpersoner præsenteres for samtlige stimuli. Da formålet med denne test er at undersøge hvor indbydende en robot perciperes afhængigt af dens hovedposition, er den afhængige variabel testpersonernes individuelle respons angivet på skalaen. Den indsamlede data er af typen interval data, hvilket skyldes at VAS er en kontinuerlig skala. 
 
-\noindent Det er valgt at analysere vores data med en \textbf{\textit{one-way repeated measures ANOVA}}. Hvor \textit{one-way} referere til antallet af uafhængige variabler, hvor vi har én, som er positionen af robotens hoved. 
-Begrundelsen for at der laves en ANOVA er variablerne. Vi har én afhængig variabel som er vurderingen afgivet på skalaen, hvor typen af den indsamlede data er kontinuerlig. Vi har også kun én uafhængig variabel som er positionen af hovedet, hvor typen af data er fire kategorier, her er det antallet af kategorier der er årsag til valget af ANOVA, da der er flere end to. 
-Analysen skal være \textit{repeated measures} da vi har et within-subjects design og derfor ønsker at sammenligne vurderinger fra samme testperson afgivet ved de forskellige positioner. 
-\\\\
-Før analysen udføres er der nogle antagelser som skal tjekkes om de er opfyldt. De er følgende: 
+Ydermere dækker den uafhængige variabel over fire kategorier; de fire forskellige hovedpositioner, er det ligeledes oplagt at anvende en ANOVA, da det ønskes at sammenligne mere end to kategorier.\blankline
+%
+Følgende antagelser skal overholdes for at udføre en \textit{one-way repeated measures ANOVA}: \blankline  
+%
 \begin{itemize}
-	\item \textbf{Observationerne skal være uafhængige}\\
-	?????? 
-	\item \textbf{Den afhængige variabel skal som minimum være målt på en interval skala.}\\
-	Vurderingen givet på skalaen er målt på en ratio skala og opfylder derved denne antagelse.
+	\item \textbf{Den afhængige variabel skal som minimum være målt på interval skala.}\\
+	Vurderingen givet på skalaen er målt på en interval skala og opfylder dermed denne antagelse.
 	\item \textbf{Der skal være homogen varians. }\\
-	For at teste om der er homogen varians udføres Levene's test, hvor testresultatet er $F(3.28)=1.09, p=0.37$. Det viser at der ikke er signifikant forskel og det kan derfor konkluderes at antagelsen om homogen varians er opfyldt. 
-	\item \textbf{Der skal være normalfordeling i grupperne.}\\
-	For teste om der er normalfordeling udføres Shapiro-Wilk test, hvor resultatet er $W=0.94, p=0.09$. Heller ikke her er der signifikant forskel og det kan derfor konkluderes at antagelsen om normal fordeling er opfyldt.
+	For at teste om der er homogen varians udføres \textit{Levene's test}. Testresultatet er $F(3.28)=1.09, p=0.37$, hvorfor der ikke er signifikant forskel og dermed er antagelsen om homogen varians opfyldt. 
+	\item \textbf{Data skal være normalfordelt.}\\
+	For teste om der er normalfordeling udføres en \textit{Shapiro-Wilk test}. Testresultatet er $W=0.94, p=0.09$, hvorfor der ikke er signifikant forskel og dermed er antagelsen om normalfordeling er opfyldt.\blankline
 \end{itemize}
-
-\noindent Da alle antagelser for analysen er opfyldt, udføres denne i rstudio og giver resultatet: 
-Der er signifikant effekt af positionen af robotens hoved på vurderingen af hvor indbydende den er, $F(3.21)=13,7, p=4.4*e^{-4}$
+\noindent
+%
+Da alle antagelser for at udføre en \textit{one-way repeated measures ANOVA} er opfyldt, udføres denne i \textit{rStudio}. Testresultatet er $F(3.21)=13,7, p=4.4*e^{-4}$, hvilket indikerer at der er signifikant effekt af robottens hovedposition på hvor indbydende robotten perciperes.
+%HER TIL!!% 
 
 Analysen viser at der er en forskel, men ikke mellem hvilke positioner forskellen er. For at undersøge hvor forskellen er, udføres der post hoc test, mere specifikt den type der hedder \textit{pairwise comparisons using t-tests}. Resultatet af denne test kan ses i \autoref{fig:sammenligning}.
 \begin{figure}[H]
