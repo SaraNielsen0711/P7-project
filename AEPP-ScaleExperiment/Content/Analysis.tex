@@ -11,11 +11,11 @@ Før analysen udføres, opstilles et boksplot for hver af de fire hovedpositione
 \end{figure}
 \noindent
 %
-Data analyseres med en \textit{one-way repeated measures ANOVA}, \parencite[s. 554]{DiscoveringStatisticsUsingR}. Hvor \textit{one-way} refererer til antallet af uafhængige variable, som i dette tilfælde er én; robottens hovedposition. \textit{Repeated measures} refererer til, at samtlige testpersoner præsenteres for samtlige stimuli. Da formålet med denne test er at undersøge hvor indbydende en robot perciperes afhængigt af dens hovedposition, er den afhængige variabel testpersonernes individuelle respons angivet på skalaen. Den indsamlede data er af typen interval data, hvilket skyldes at VAS er en kontinuerlig skala. 
+Data analyseres med en \textit{One-way Repeated Measures ANOVA}, \parencite[s. 554]{DiscoveringStatisticsUsingR}. Hvor \textit{one-way} refererer til antallet af uafhængige variable, som i dette tilfælde er én; robottens hovedposition. \textit{Repeated measures} refererer til, at samtlige testpersoner præsenteres for samtlige stimuli. Da formålet med denne test er at undersøge hvor indbydende en robot perciperes afhængigt af dens hovedposition, er den afhængige variabel testpersonernes individuelle respons angivet på skalaen. Den indsamlede data er af typen interval data, hvilket skyldes at VAS er en kontinuerlig skala. 
 
 Ydermere dækker den uafhængige variabel over fire kategorier; de fire forskellige hovedpositioner, er det ligeledes oplagt at anvende en ANOVA, da det ønskes at sammenligne mere end to kategorier.\blankline
 %
-Følgende antagelser skal overholdes for at udføre en \textit{one-way repeated measures ANOVA}: \blankline  
+Følgende antagelser skal overholdes for at udføre en \textit{One-way Repeated Measures ANOVA}: \blankline  
 %
 \begin{itemize}
 	\item \textbf{Den afhængige variabel skal som minimum være målt på interval skala.}\\
@@ -28,16 +28,17 @@ Følgende antagelser skal overholdes for at udføre en \textit{one-way repeated 
 \noindent
 %
 Da alle antagelser for at udføre en \textit{one-way repeated measures ANOVA} er opfyldt, udføres denne i \textit{rStudio}. Testresultatet er $F(3.21)=13,7, p=4.4*e^{-4}$, hvilket indikerer at der er signifikant effekt af robottens hovedposition på hvor indbydende robotten perciperes.
-%HER TIL!!% 
 
-Analysen viser at der er en forskel, men ikke mellem hvilke positioner forskellen er. For at undersøge hvor forskellen er, udføres der post hoc test, mere specifikt den type der hedder \textit{pairwise comparisons using t-tests}. Resultatet af denne test kan ses i \autoref{fig:sammenligning}.
+Baseret på dette resultat er det kun muligt at konkludere at der er signifikant forskel mellem hvordan hovedpositionerne perciperes i forhold til hvor indbydende robotten er, det er derfor ikke muligt at afgøre hvor den signifikante forskel er. For at undersøge hvor forskellen er udføres der en \textit{Post Hoc test} af typen \textit{Pairwise Comparison}, hvilket udføres med t-tests. Testresultatet fremgår af \autoref{fig:sammenligning}.
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.5\textwidth]{Figure/PostHocExcel.PNG} 
-\caption{Sammenligning mellem vurderingerne afgivet til hver position. Grøn markering angiver at der er signifikant forskel.}
+\caption{Sammenligning mellem vurderingerne af hvor indbydende robotten perciperes i henhold til dens hovedposition. Grøn markering angiver signifikante forskelle.}
 \label{fig:sammenligning}
 \end{figure}
+\noindent
+%
+Baseret på \autoref{fig:sammenligning} fremgår det at både position 2 og position 3 er signifikant forskellige fra position 1. Sammenholdes dette med \autoref{fig:boksplot} kan det konkluderes at både position 2 og position 3 perciperes som værende mere indbydende end position 1. I tillæg er der signifikant forskel mellem position 3 og position 4, hvor position 3 perciperes som værende mere indbydende. Det er dog bemærkelsesværdigt at det ikke er tilfældet mellem position 2 og position 4, hvor der ikke fremgår en signifikant forskel, jævnfør \autoref{fig:sammenligning}.
+%
 
-\noindent Resultatet viser at både position 2 og 3 er signifikant forskellige fra position 1. Ud fra boksplottene på \autoref{fig:boksplot} konkluderes det at position 2 og 3 må være vurderet signifikant højere end position 1, og derved blevet opfattet som mere indbydende. 
-\\\\
-Der er ligeledes signifikant forskel mellem position 3 og 4. Det er værd at bemærke at der ikke er signifikant forskel mellem vurderingen af position 2 og 4. 
