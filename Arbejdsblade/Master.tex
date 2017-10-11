@@ -1,0 +1,26 @@
+\input{Preamble/Preamble}
+
+\begin{document}
+\pagenumbering{gobble} %Fjerner sidetal, til andet specificeres
+\input{Content/Frontpage} %Forside
+\cleardoublepage\tableofcontents* %Indholdsfortegnelse
+
+\mainmatter	%Starter med at nummerere siderne
+%
+
+\input{Content/Introduktion/ProjektIde}
+\input{Content/Introduktion/Problemformulering}
+
+
+%%%% Kilder %%%%
+\printbibliography	%Litteraturlisten inkluderes
+
+%%%% Bilag %%%%
+%\appendix
+%\appendixpage
+
+%\input{Content/Appendix/Appendix}
+
+
+\end{document}
+ 
