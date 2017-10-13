@@ -47,23 +47,25 @@ facial=[
  xlabel('Dimensions');
  ylabel('Stress');
  
-%  dissimilarities = squareform(facial);
-%  [Y,stress2,disparities] = mdscale(dissimilarities,2);
-% 
-% figure = plot(Y2(:,1), Y2(:,2), '.')
-% text(Y2(1,1),Y2(1,2) ,'Grief at death of mother')
-% text(Y2(2,1),Y2(2,2) ,'Savoring a coke')
-% text(Y2(3,1),Y2(3,2) ,'Very pleasant surprise')
-% text(Y2(4,1),Y2(4,2) ,'Maternal love-baby in arms')
-% text(Y2(5,1),Y2(5,2) ,'Physical exhaustion')
-% text(Y2(6,1),Y2(6,2) ,'Something wrong with the plane')
-% text(Y2(7,1),Y2(7,2) ,'Anger at seeing dog beaten')
-% text(Y2(8,1),Y2(8,2) ,'Pulling hard on seat of chair')
-% text(Y2(9,1),Y2(9,2) ,'Unexpectedly meets old boy friend')
-% text(Y2(10,1),Y2(10,2) ,'Revulsion')
-% text(Y2(11,1),Y2(11,2) ,'Extreme pain')
-% text(Y2(12,1),Y2(12,2) ,'Knows plane will crash')
-% text(Y2(13,1),Y2(13,2) ,'Light sleep')
+ dissimilarities = squareform(facial);
+ [Y,stress2,disparities] = mdscale(dissimilarities,2);
+
+figure = plot(Y2(:,1), Y2(:,2), '*')
+text(Y2(1,1),Y2(1,2) ,'Grief at death of mother')
+text(Y2(2,1),Y2(2,2) ,'Savoring a coke')
+text(Y2(3,1),Y2(3,2) ,'Very pleasant surprise')
+text(Y2(4,1),Y2(4,2) ,'Maternal love-baby in arms')
+text(Y2(5,1),Y2(5,2) ,'Physical exhaustion')
+text(Y2(6,1),Y2(6,2) ,'Something wrong with the plane')
+text(Y2(7,1),Y2(7,2) ,'Anger at seeing dog beaten')
+text(Y2(8,1),Y2(8,2) ,'Pulling hard on seat of chair')
+text(Y2(9,1),Y2(9,2) ,'Unexpectedly meets old boy friend')
+text(Y2(10,1),Y2(10,2) ,'Revulsion')
+text(Y2(11,1),Y2(11,2) ,'Extreme pain')
+text(Y2(12,1),Y2(12,2) ,'Knows plane will crash')
+text(Y2(13,1),Y2(13,2) ,'Light sleep')
+xlabel('Dimension 1')
+ylabel('Dimension 2')
 
 
 
@@ -74,12 +76,12 @@ facial=[
 
 
  
-%  distances = pdist(Y);
-% [dum,ord] = sortrows([disparities(:) dissimilarities(:)]);
-% Shepard = plot(dissimilarities,distances,'bo', ...
-%      dissimilarities(ord),disparities(ord),'r.-', ...
-%      [0 15],[0 15],'k-')
-% xlabel('Dissimilarities')
-% ylabel('Distances/Disparities')
-% legend({'Distances' 'Disparities' '1:1 Line'},...
-%        'Location','NorthWest');
+ distances = pdist(Y);
+[dum,ord] = sortrows([disparities(:) dissimilarities(:)]);
+Shepard = plot(dissimilarities,distances,'bo', ...
+     dissimilarities(ord),disparities(ord),'r.-', ...
+     [0 15],[0 15],'k-')
+xlabel('Dissimilarities')
+ylabel('Distances/Disparities')
+legend({'Distances' 'Disparities' '1:1 Line'},...
+       'Location','NorthWest');
