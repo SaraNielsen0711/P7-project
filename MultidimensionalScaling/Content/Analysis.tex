@@ -4,16 +4,16 @@
 %How many dimensions should you use? Plot scree plot
 %How well a fit is your solution? Plot Shepard plot and interpret it
 %Can you find meaningful dimensions? Label them. 
-Analysen fortages på datasættet som er præsenteret i \autoref{fig:Data}, der indeholder sammenligningsdata for vurderingen af ansigtsudtrykkene. 
+Analysen foretages på datasættet, som er præsenteret i \autoref{fig:Data} og indeholder sammenligningsdata for vurderingen af ansigtsudtrykkene. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{Figure/Data.PNG} 
-\caption{Sammenligning mellem vurderingen af de 13 ansigtsudtryk, hvor 0 = vurderet helt ens.}
+\caption{Sammenligning mellem vurderingen af de 13 ansigtsudtryk, hvor 0 indikerer, at ansigtsudtrykkene er vurderet helt ens.}
 \label{fig:Data}
 \end{figure}
 
-\noindent \autoref{fig:Data} giver ikke er specielt godt overblik over sammenhæng og forskelle mellem vurderingerne af ansigtsudtrykkene. For at få et overblik ønskes det at udføre en \textit{Non-metric MDS}, som beskrevet er beskrevet i \fullref{Metode}. 
+\noindent \autoref{fig:Data} giver ikke et specielt godt overblik over sammenhæng og forskelle mellem vurderingerne af ansigtsudtrykkene. For at få et overblik ønskes det at udføre en \textit{Non-metric MDS}, som beskrevet er beskrevet i \fullref{Metode}. 
 
 \subsection*{Valg af dimensioner}
 Første step er at bestemme det optimale antal dimensioner. Måden hvorpå dette gøres, er ved lave et Scree-plot, hvor sammenhængen mellem stress og antal dimensioner kan aflæses ud fra. På \autoref{fig:ScreePlot} er plottet vist. 
@@ -25,11 +25,11 @@ Første step er at bestemme det optimale antal dimensioner. Måden hvorpå dette
 \label{fig:ScreePlot}
 \end{figure}
 
-\noindent Scree-plottet har nogle ``knee''-punkter, som er de steder hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes. 
+\noindent Scree-plottet har forskellige ``knee''-punkter, som er de steder hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
 
-\noindent Antallet af dimensioner bestemmes til at være 2, der har en stress værdi på 0,1. Dette antal dimensioner er det første ``knee''-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel da den svarer til ``fair''. Det er også vigtigt for valget af 2 dimensioner, at skalaen vil være meget let at fortolke og derved arbejde med. 
+\noindent Antallet af dimensioner vælges til at være to, der har en stress værdi på 0,1. Dette antal dimensioner er det første ``knee''-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel da den svarer til ``fair''. Ydermere mindskes stress betydeligt ved at gå fra en dimension til to, hvor stress ikke mindskes lige så meget ved at gå flere dimensioner op. Det er også vigtigt for valget af dimensioner, at skalaen vil være nemmere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner.
 
-For at undersøge mere detaljeret hvor godt dette 2 dimensioner passer på datasættet laves der et Shepard-plot, som er vist på \autoref{fig:ShepardPlot}.
+For at undersøge mere detaljeret, hvor godt disse to dimensioner passer på datasættet laves der et Shepard-plot, som er vist på \autoref{fig:ShepardPlot}.
 
 \begin{figure}[H]
 \centering
@@ -38,7 +38,7 @@ For at undersøge mere detaljeret hvor godt dette 2 dimensioner passer på datas
 \label{fig:ShepardPlot}
 \end{figure}
 
-\noindent På Shepard-plottet kan det ses at der er nogle afvigelse fra det perfekte fit, som er den sorte linje (1:1 Line). Det vurderes at den afvigelse der er fra det perfekte fit er lille nok til at fortsætte analysen med de valgte 2 dimensioner. 
+\noindent På Shepard-plottet ses det, at der er nogen afvigelse fra det perfekte fit, som er den sorte linje (1:1 Line). Det vurderes, at den afvigelse, der er fra det perfekte fit, er lille nok til at fortsætte analysen med de valgte 2 dimensioner. 
 
 \subsection*{MDS-plot}
 2-dimensionalt non-metric MDS for vurderingen af ansigtsudtrykkene er vist i \autoref{fig:MDS}.  
