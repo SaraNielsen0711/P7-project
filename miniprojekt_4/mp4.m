@@ -76,12 +76,12 @@ ylabel('Dimension 2')
 
 
  
- distances = pdist(Y);
-[dum,ord] = sortrows([disparities(:) dissimilarities(:)]);
-Shepard = plot(dissimilarities,distances,'bo', ...
-     dissimilarities(ord),disparities(ord),'r.-', ...
-     [0 15],[0 15],'k-')
-xlabel('Dissimilarities')
-ylabel('Distances/Disparities')
-legend({'Distances' 'Disparities' '1:1 Line'},...
-       'Location','NorthWest');
+%  distances = pdist(Y);
+% [dum,ord] = sortrows([disparities(:) dissimilarities(:)]);
+% Shepard = plot(dissimilarities,distances,'bo', ...
+%      dissimilarities(ord),disparities(ord),'r.-', ...
+%      [0 15],[0 15],'k-')
+% xlabel('Dissimilarities')
+% ylabel('Distances/Disparities')
+% legend({'Distances' 'Disparities' '1:1 Line'},...
+%        'Location','NorthWest');
