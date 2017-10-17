@@ -21,13 +21,13 @@ Første step er at bestemme det optimale antal dimensioner. Måden hvorpå dette
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/screeplot.png} 
-\caption{Scree plot - Forholdet mellem stress og antallet af dimensioner.}
+\caption{Scree plot - Forholdet mellem stress og antallet af dimensioner. Det ses, at der er to markante albue-punkter. Ved 2 og 3 dimensioner.}
 \label{fig:ScreePlot}
 \end{figure}
 
-\noindent Scree-plottet har forskellige ``knee''-punkter, som er de steder hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
+\noindent Scree-plottet har forskellige \textit{Knee-points} (albue-punkter), som er de steder, hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
 
-\noindent Antallet af dimensioner vælges til at være to, der har en stress værdi på 0,1\fxnote{Indsæt præcise værdi.}. Dette antal dimensioner er det første ``knee''-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel da den svarer til ``fair''. Ydermere mindskes stress betydeligt ved at gå fra en dimension til to, hvor stress ikke mindskes lige så meget ved at gå flere dimensioner op. Det er også vigtigt for valget af dimensioner, at skalaen vil være nemmere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner.
+\noindent Antallet af dimensioner vælges til at være to, der har en stress værdi på 0.1062. Dette antal dimensioner er det første albue-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel, da den svarer til fair i \autoref{fig:TolkningStress}. Ydermere mindskes stress betydeligt ved at gå fra en dimension til to, hvor stress ikke mindskes lige så meget ved at gå flere dimensioner op. Det er også vigtigt for valget af dimensioner, at skalaen vil være nemmere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner. Det betyder, at stress ved 3 dimensioner er mindre (0.0596) og egentligt tilbyder en bedre repræsentation af datapunkterne, men det er nemmere at fortolke på 2 dimensioner, da det er svært at repræsentere 3 dimensioner på et 2 dimensionelt papir. Det bliver endnu mere langhåret, når man forsøger at repræsentere flere end 3 dimensioner på et 2 dimensionelt plan og efterlader som konsekvns MDS tæt på ubrugelig, når det forsøges at tydeliggøre komplekse sammenhænge i datasættet med flere end 3 dimensioner \parencite{Borgatti1997}. 
 
 For at undersøge mere detaljeret, hvor godt disse to dimensioner passer på datasættet laves der et Shepard-plot, som er vist på \autoref{fig:ShepardPlot}.
 
