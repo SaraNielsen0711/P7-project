@@ -1,70 +1,70 @@
 \section*{Analyse}
 \label{Analyse}
 %
-%How many dimensions should you use? Plot scree plot
-%How well a fit is your solution? Plot Shepard plot and interpret it
-%Can you find meaningful dimensions? Label them. 
 Analysen foretages på datasættet, som er præsenteret i \autoref{fig:Data} og indeholder sammenligningsdata for vurderingen af ansigtsudtrykkene. 
-
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{Figure/Data.PNG} 
 \caption{Sammenligning mellem vurderingen af de 13 ansigtsudtryk, hvor 0 indikerer, at ansigtsudtrykkene er vurderet helt ens.}
 \label{fig:Data}
 \end{figure}
-
-\noindent \autoref{fig:Data} giver ikke et specielt godt overblik over sammenhæng og forskelle mellem vurderingerne af ansigtsudtrykkene. For at få et overblik ønskes det at udføre en \textit{Non-metric MDS}, som beskrevet er beskrevet i \fullref{Metode}. 
+\noindent
+%
+\autoref{fig:Data} giver ikke et specielt godt overblik over sammenhæng og forskellen mellem vurderingerne af ansigtsudtrykkene. For at få et overblik udføres der en \textit{Non-metric MDS}, som beskrevet er beskrevet i \fullref{Metode}. 
 
 \subsection*{Valg af dimensioner}
-Første step er at bestemme det optimale antal dimensioner. Måden hvorpå dette gøres, er ved lave et Scree-plot, hvor sammenhængen mellem stress og antal dimensioner kan aflæses ud fra. På \autoref{fig:ScreePlot} er plottet vist. 
-
+%
+Første step er at bestemme det optimale antal dimensioner. Måden hvorpå det gøres, er ved lave et \textit{Scree}-plot, hvor sammenhængen mellem \textit{stress} og antal dimensioner kan aflæses ud fra. Plottet er præsenteret på \autoref{fig:ScreePlot}. 
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/screeplot.png} 
-\caption{Scree plot - Forholdet mellem stress og antallet af dimensioner. Det ses, at der er to markante albue-punkter. Ved 2 og 3 dimensioner.}
+\caption{\textit{Scree}-plot: Forholdet mellem \textit{stress} og antallet af dimensioner. Det forekommer to markante albue-punkter ved henholdvis to og tre dimensioner.}
 \label{fig:ScreePlot}
 \end{figure}
+\input
+%
+\textit{Scree}-plottet har forskellige albue-punkter (\textit{elbow-points}), som er de steder, hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes afhængigt af \textit{stress}-værdien. Mindskes \textit{stress}-værdien er det nødvendigt med flere dimensioner.\blankline  
+%
+Antallet af dimensioner vælges til at være to, der har en \textit{stress}-værdi på 0,1062. Dette antal dimensioner er det første albue-punkt på \textit{Scree}-plottet, jævnfør \autoref{fig:ScreePlot}, derudover er \textit{stress}-værdien acceptabel, da den svarer til \textit{fair}, jævnfør \autoref{fig:TolkningStress}. Ydermere mindskes \textit{stress} betydeligt ved at gå fra én dimension til to, hvor \textit{stress} ikke mindskes lige så meget ved at øge antallet af dimensioner. Det er også vigtigt for valget af dimensioner, at skalaen bliver lettere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner. Det betyder, at \textit{stress} ved tre dimensioner er mindre (0,0596), hvorfor der opnåes en bedre repræsentation af datapunkterne. Derudover er det lettere at fortolke to dimensioner, da det er svært at repræsentere tre dimensioner på et to dimensionelt papir. Forsøges det at repræsentere flere end tre dimensioner på et to dimensionelt plan, vil resultatet af MDS være tæt på ubrugeligt, særligt når hvis det  forsøges at tydeliggøre komplekse sammenhænge i datasættet, \parencite{Borgatti1997}. 
 
-\noindent Scree-plottet har forskellige \textit{elbow-points} (albue-punkter), som er de steder, hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
-
-\noindent Antallet af dimensioner vælges til at være to, der har en stress værdi på 0.1062. Dette antal dimensioner er det første albue-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel, da den svarer til fair i \autoref{fig:TolkningStress}. Ydermere mindskes stress betydeligt ved at gå fra en dimension til to, hvor stress ikke mindskes lige så meget ved at gå flere dimensioner op. Det er også vigtigt for valget af dimensioner, at skalaen vil være nemmere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner. Det betyder, at stress ved 3 dimensioner er mindre (0.0596) og egentligt tilbyder en bedre repræsentation af datapunkterne, men det er nemmere at fortolke på 2 dimensioner, da det er svært at repræsentere 3 dimensioner på et 2 dimensionelt papir. Det bliver endnu mere langhåret, når man forsøger at repræsentere flere end 3 dimensioner på et 2 dimensionelt plan og efterlader som konsekvns MDS tæt på ubrugelig, når det forsøges at tydeliggøre komplekse sammenhænge i datasættet med flere end 3 dimensioner \parencite{Borgatti1997}. 
-
-For at undersøge mere detaljeret, hvor godt disse to dimensioner passer på datasættet laves der et Shepard-plot, som er vist på \autoref{fig:ShepardPlot}.
-
+For at undersøge mere detaljeret, hvor godt de to dimensioner passer på datasættet udarbejdes der et \textit{Shepard}-plot, jævnfør \autoref{fig:ShepardPlot}.
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/Sheppard_plot.png} 
-\caption{Her er punkterne plottet i et Shepard-plot. Der ikke er tale om et perfekt fit, da der afviges fra 1:1 linjen.}
+\caption{\textit{Shepard}-plot: datapunkterne, angivet med cirkler, er fittet ud fra den røde kurve \textit{Disparities}, som sammenlignes med den diagonale sorte kurve.}
 \label{fig:ShepardPlot}
 \end{figure}
-
-\noindent På Shepard-plottet ses det, at der er nogen afvigelse fra det perfekte fit, som er den sorte linje (1:1 Line). Det vurderes, at den afvigelse, der er fra det perfekte fit, er lille nok til at fortsætte analysen med de valgte 2 dimensioner. 
-
+\noindent
+%
+På \autoref{fig:ShepardPlot} fremgår det, at det indsamlede data afviger fra det perfekte fit, som er den sorte linje \textit{1:1 Line}. Det vurderes, at afvigelsen, der er fra det perfekte fit, er lille nok til at fortsætte analysen med de valgte to dimensioner. 
+%
 \subsection*{MDS-plot}
-2-dimensionalt non-metric MDS for vurderingen af ansigtsudtrykkene er vist i \autoref{fig:MDS}.  
+2-dimensionel \textit{non-metric MDS} for vurderingen af ansigtsudtrykkene præsenteres på \autoref{fig:MDS}.  
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/MDS_plot} 
-\caption{Multidimensional scaling af det perceptuelle rum i 2 dimensioner. Datapunkter, der ligger tæt på hinanden har en højere korrelation end datapunkter, der ligger langt fra hinanden. Dog er der højere "distortion" ved punkter tæt på hinanden ift. punkter langt fra hinanden. Der er højere præcision jo længere væk punkterne er - data er bedre repræsenteret.}
+\caption{MDS af det perceptuelle rum i to dimensioner. Datapunkter, der ligger tæt på hinanden har en højere korrelation end datapunkter, der ligger langt fra hinanden. Dog er der større usikkerhed omkring punkter tæt på hinanden ift. punkter langt fra hinanden. Der er højere præcision jo længere væk punkterne er - data er bedre repræsenteret.}
 \label{fig:MDS}
 \end{figure}
 %
-
-\noindent Ud fra plottet og placeringen af ansigtsudtrykkene heri, kan det nu undersøges hvilke labels de to dimensioner kan have, som kan give mening i forhold til hvordan ansigtsudtrykkene er placeret. 
-\\\\
-Dimension 1, som er den vandrette akse (x-aksen) på plottet, kan være \textbf{negativitet}, på engelsk \textbf{Negativity}. Hvis værdien stiger vil personen være mere negativ. Hvis værdien er under nul, vil personen være mere positiv, som vurderes som det modsatte af negativ. 
-\\\\
-Dimension 2, som er den lodrette akse (y-aksen) på plottet, kan være \textbf{fraværende}, på engelsk \textbf{Absent-minded}. Hvis værdien stiger vil personen være mere fraværende. Hvis værdien er under nul, vil personen være mere tilstedeværende, som vurderes som det modsatte af fraværende. 
-\\\\
-Det kan ikke undgås at der vil være afvigelser fra de labels der sættes på dimensionerne, da der ved to dimensioner er en stress-værdi på 0.1062, som betyder at det det ikke er et perfekt fit ved to dimensioner, og nogle punkter derfor vil være placeret tættere eller længere fra hinanden end den forskel der reelt er.
-\\\\
-På \autoref{fig:MDSA} er der tilføjet pile i forhold til tolkningen, hvor hver pil repræsenterer et parameter. Længden og retningen af pilen indikerer henholdsvis, hvor godt den passer og hvornår den øges. Det er forfatternes egen fortolkning. 
+Baseret på \autoref{fig:MDS} samt placeringen af ansigtsudtrykkene heri, kan det undersøges hvilke labels de to dimensioner kan have for at det giver mening i forhold til hvordan ansigtsudtrykkene er placeret.\blankline 
+%
+Dimension 1, som er den vandrette akse (x-aksen) på plottet, kan være \textit{Negativitet}, på engelsk \textbf{Negativity}. Hvis værdien stiger vil personen være mere negativ. Hvis værdien er under nul, vil personen være mere positiv, som vurderes til at være det modsatte af negativ.\blankline
+%
+Dimension 2, som er den lodrette akse (y-aksen) på plottet, kan være \textit{Fraværende}, på engelsk \textbf{Absent-minded}. Hvis værdien stiger vil personen være mere fraværende. Hvis værdien er under nul, vil personen være mere tilstedeværende, som vurderes til at være det modsatte af fraværende. \blankline
+%
+Det kan ikke undgås, at der opstår afvigelser fra de tildelte labels, da der ved to dimensioner er en \textit{stress}-værdi på 0,1062, som gengiver at det ikke er et perfekt fit ved blot to dimensioner. Nogle punkter vil derfor være placeret tættere eller længere fra hinanden end den forskel, der reelt er.\blankline
+%
+På \autoref{fig:MDSA} er der tilføjet pile i forhold til fortolkningen, hvor hver pil repræsenterer én attribut. Længden og retningen af pilen indikerer henholdsvis, hvor godt den passer og hvornår den øges. Det er forfatternes egen fortolkning. 
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/MSD_PlotArrows.png} 
-\caption{Multidimensional scaling - 2 dimensioner, med indsatte vektorer og labels.}
+\caption{MDS: to dimensioner, med indsatte retningsvektorer og labels.}
 \label{fig:MDSA}
 \end{figure}
 \noindent
