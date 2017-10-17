@@ -25,7 +25,7 @@ Første step er at bestemme det optimale antal dimensioner. Måden hvorpå dette
 \label{fig:ScreePlot}
 \end{figure}
 
-\noindent Scree-plottet har forskellige \textit{Knee-points} (albue-punkter), som er de steder, hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
+\noindent Scree-plottet har forskellige \textit{elbow-points} (albue-punkter), som er de steder, hvor kurven knækker. Det er ud fra disse punkter at antallet af dimensioner bestemmes, da man her kan se hvor meget stress mindskes ved at øge antallet af dimensioner. 
 
 \noindent Antallet af dimensioner vælges til at være to, der har en stress værdi på 0.1062. Dette antal dimensioner er det første albue-punkt på Scree-plottet på \autoref{fig:ScreePlot} og stress værdien er acceptabel, da den svarer til fair i \autoref{fig:TolkningStress}. Ydermere mindskes stress betydeligt ved at gå fra en dimension til to, hvor stress ikke mindskes lige så meget ved at gå flere dimensioner op. Det er også vigtigt for valget af dimensioner, at skalaen vil være nemmere at fortolke og arbejde med, hvilket gør sig gældende for to dimensioner. Det betyder, at stress ved 3 dimensioner er mindre (0.0596) og egentligt tilbyder en bedre repræsentation af datapunkterne, men det er nemmere at fortolke på 2 dimensioner, da det er svært at repræsentere 3 dimensioner på et 2 dimensionelt papir. Det bliver endnu mere langhåret, når man forsøger at repræsentere flere end 3 dimensioner på et 2 dimensionelt plan og efterlader som konsekvns MDS tæt på ubrugelig, når det forsøges at tydeliggøre komplekse sammenhænge i datasættet med flere end 3 dimensioner \parencite{Borgatti1997}. 
 
@@ -34,7 +34,7 @@ For at undersøge mere detaljeret, hvor godt disse to dimensioner passer på dat
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/Sheppard_plot.png} 
-\caption{Shepard-plot}
+\caption{Her er punkterne plottet i et Shepard-plot. Der ikke er tale om et perfekt fit, da der afviges fra 1:1 linjen.}
 \label{fig:ShepardPlot}
 \end{figure}
 
@@ -46,7 +46,7 @@ For at undersøge mere detaljeret, hvor godt disse to dimensioner passer på dat
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/MDS_plot} 
-\caption{Multidimensional scaling - 2 dimensioner}
+\caption{Multidimensional scaling af det perceptuelle rum i 2 dimensioner. Datapunkter, der ligger tæt på hinanden har en højere korrelation end datapunkter, der ligger langt fra hinanden. Dog er der højere "distortion" ved punkter tæt på hinanden ift. punkter langt fra hinanden. Der er højere præcision jo længere væk punkterne er - data er bedre repræsenteret.}
 \label{fig:MDS}
 \end{figure}
 %
@@ -57,9 +57,9 @@ Dimension 1, som er den vandrette akse (x-aksen) på plottet, kan være \textbf{
 \\\\
 Dimension 2, som er den lodrette akse (y-aksen) på plottet, kan være \textbf{fraværende}, på engelsk \textbf{Absent-minded}. Hvis værdien stiger vil personen være mere fraværende. Hvis værdien er under nul, vil personen være mere tilstedeværende, som vurderes som det modsatte af fraværende. 
 \\\\
-Det kan ikke undgås at der vil være afvigelser fra de labels der sættes på dimensionerne, da der ved to dimensioner er en stress-værdi på 0,1, som betyder at det det ikke er et perfekt fit ved to dimensioner, og nogle punkter derfor vil være placeret tættere eller længere fra hinanden end den forskel der reelt er.
+Det kan ikke undgås at der vil være afvigelser fra de labels der sættes på dimensionerne, da der ved to dimensioner er en stress-værdi på 0.1062, som betyder at det det ikke er et perfekt fit ved to dimensioner, og nogle punkter derfor vil være placeret tættere eller længere fra hinanden end den forskel der reelt er.
 \\\\
-På \autoref{fig:MDSA} er der tilføjet pile i forhold til tolkningen, hvor hver pil repræsenterer et parameter. Længden og retningen af pilen indikere henholdsvis hvor godt den passer og hvornår den øges. 
+På \autoref{fig:MDSA} er der tilføjet pile i forhold til tolkningen, hvor hver pil repræsenterer et parameter. Længden og retningen af pilen indikerer henholdsvis, hvor godt den passer og hvornår den øges. Det er forfatternes egen fortolkning. 
 %
 \begin{figure}[H]
 \centering
