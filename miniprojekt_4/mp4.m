@@ -65,8 +65,8 @@ text(Y2(10,1),Y2(10,2) ,'Revulsion', 'FontSize',str)
 text(Y2(11,1),Y2(11,2) ,'Extreme pain', 'FontSize',str)
 text(Y2(12,1),Y2(12,2) ,'Knows plane will crash', 'FontSize',str)
 text(Y2(13,1),Y2(13,2) ,'Light sleep', 'FontSize',str)
-xlabel('Dimension 1')
-ylabel('Dimension 2')
+xlabel('Negativity', 'FontSize', str)
+ylabel('Absent-minded', 'FontSize', str)
 
 
 
