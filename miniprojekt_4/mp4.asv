@@ -56,8 +56,7 @@ facial=[
  %Laver nu MDS plot. Variablen 'str' ændrer skriftstørrelsen på labels og
  %akser. Først beder vi om at plotte alle punkterne med en aterisk '*'. Vi
  %vælger at plotte vector Y2 ((søjle 1), (søjle 2)). Derefter vælger vi
- %hvert enkelt datapunkt, og tilføjer den rigtige betegnelse, (fx
- %'Revulsion')
+ %hvert enkelt datapunkt, 
  str = 14;
 figure = plot(Y2(:,1), Y2(:,2), '*')
 text(Y2(1,1),Y2(1,2) ,'Grief at death of mother', 'FontSize',str)
@@ -83,8 +82,7 @@ ylabel('Absent-minded', 'FontSize', str)
 
 
 
-%Dette her er Shepard-plottet. Koden er eksempelkode fra matlabs egen
-%dokumentation under mdscale()
+
  
 %  distances = pdist(Y);
 % [dum,ord] = sortrows([disparities(:) dissimilarities(:)]);
