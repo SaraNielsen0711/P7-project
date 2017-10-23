@@ -1,8 +1,12 @@
 \section*{Method}
 \label{Method}
 %
-The probabilistic method used is called the BTL model. It is a model which checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison.
+In order to know whether or not the BTL model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a $\chi^{2}-test$. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour (eg. chosen pleasant where others chose unpleasant) or not. If that is the case, then the preference matrix becomes inconsistent.
+Consider three stimuli: \textit{a}, \textit{b}, and \textit{c}. Weak Stochastic Transitivity holds when \fxnote{skulle til at forklare, hvornår der er weak transitivity.. derefter hvordan man tjekker for det, ved at udregne propabilities (freq/n)}
 
-\begin{equation}
-P_{ab} =\frac{v(a)}{v(a)+v(b)} 
-\end{equation}
+
+%Firstly  it is needed to calculate the probability of a sound being chosen in the 
+
+Luckily it is not needed to perform the likelihood calculation for every single comparison by hand and a Matlab function has been developed for this purpose called fOptiPt.m. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In this case \textit{s} is not specified.
+
+
