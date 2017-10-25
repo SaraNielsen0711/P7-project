@@ -23,7 +23,7 @@ Vent       & 10  & 27 & 10 & 5  & 40 & 48 & 3  & 19 & 8  & 17 & 0  \\ \bottomrul
 \label{tab:data}
 \end{table} 
 
-The probabilistic method used is called the BTL model. It is a model which checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison. See \autoref{eq:BTL}.
+\noindent The probabilistic method used is called the BTL model. It is a model which checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison. See \autoref{eq:BTL}.
 
 \begin{equation}
 P_{ab} =\frac{v(a)}{v(a)+v(b)} 
@@ -42,4 +42,4 @@ In order to get the scale values and parameter estimates\fxnote{er ikke sikker},
 L(D|\Theta_{model}) = \prod_{i<j} p_{ij} ^{n_{ij}}\cdot(1- p_{ij})^{n-n_{ij}}
 \end{equation}
 
-where n is the number of comparisons, which is equal to the amount of test subjects in this case (\textit{n=60}) and $n_{ij}$ is the frequency of how many times the sound in row \textit{i} was rated as being more unpleasant over the sound in column \textit{j}. $P_{ij}$ is the preference probability and is estimated using \autoref{eq:BTL}. 
+\noindent Where n is the number of comparisons, which is equal to the amount of test subjects in this case (\textit{n=60}) and $n_{ij}$ is the frequency of how many times the sound in row \textit{i} was rated as being more unpleasant over the sound in column \textit{j}. $P_{ij}$ is the preference probability and is estimated using \autoref{eq:BTL}. 
