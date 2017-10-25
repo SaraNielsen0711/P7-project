@@ -1,11 +1,13 @@
 \section*{Method}
 \label{Method}
 %
-In order to know whether or not the BTL model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a $\chi^{2}-test$. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour eg. chosen pleasant where others chose unpleasant or not. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as unpleasant. See \autoref{eg:probability}.
+In order to know whether or not the BTL model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a $\chi^{2}-test$. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour eg. chosen pleasant where others chose unpleasant or not. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as unpleasant. See \autoref{eq:probability}.
 %
 \begin{equation}
 p = \frac{freq}{n}
+\label{eq:probability}
 \end{equation}
+
 \noindent
 %
 Here \textit{freq} is the frequency that a sound has been rated unpleasant (the pooled preference matrix, \autoref{tab:data}) and \textit{n} is the number of test subjects. Thereafter it is needed to check every combination of the stimuli for transitivity violations. There are no set rules but a rough estimate of when the probabilistic choice models holds is shown in \autoref{tab:trans_violations}:

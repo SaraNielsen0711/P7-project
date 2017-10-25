@@ -33,10 +33,11 @@ P_{ab} =\frac{v(a)}{v(a)+v(b)}
 %
 $P_{ab}$ is the probability of sound \textit{a} being rated more unpleasant than sound \textit{b}. \textit{v(a)} and \textit{v(b)} denotes the scale values of the sounds \textit{a} and \textit{b}.
 
-In order to get estimates of the scale values, one has to maximise the likelihood of the data seen in \autoref{tab:data}. This is done given the model: 
+In order to get estimates of the scale values, one has to maximise the likelihood of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood}: 
 %
 \begin{equation}
 L(D|\Theta_{model}) = \prod_{i<j} p_{ij} ^{n_{ij}}\cdot(1- p_{ij})^{n-n_{ij}}
+\label{eq:max_likelyhood}
 \end{equation}
 \noindent 
 %
