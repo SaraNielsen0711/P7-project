@@ -26,7 +26,17 @@ Considerable SST and MST but few WST violations & Possible to rank order (no mod
 
 Consider three stimuli: \textit{a}, \textit{b}, and \textit{c}. If it is observed that $p_{ab} \geq 0.05$ and $p_{ab} \geq 0.05$, in other words if the probability of \textit{a} being rated as more unpleasant compared to \textit{b} and \textit{b} more unpleasant compared to \textit{c}. Then Weak Stochastic Transitivity (WST) holds when $p_{ac} \geq 0.05$. It is considered a WST violation if $p_{ac} < 0.05$. The same logic applies to MST and SST. If $p_{ac}$ is bigger than or equal to the minimum value in $p_{ab}$ and $p_{bc}$, MST holds( $p_{ac}\geq min(p_{ab};p_{bc}$). It is a violation if not. For SST, $p_{ac}$ is compared to the maximum value of both $p_{ab}$ and $p_{bc}$. If $p_{ac}$ is not bigger or equal to values, it counts as an SST (violation if $p_{ac}< max(p_{ab};p_{bc}$.)
  
+Luckily, with the help of Matlab it is not needed to perform every single comparison by hand. A loop was written which identified the number of WST, MST and SST violations. See \autoref{fig:loop}.
 
-Luckily it is not needed to perform the likelihood calculation for every single comparison by hand and a Matlab function has been developed for this purpose called fOptiPt.m. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In this case \textit{s} is not specified.
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{Figure/loop.png} 
+\caption{Loop used to calculate WST, MST and SST violations}
+\label{fig:loop}
+\end{figure}
+
+
+
+The same goes for the likelihood estimation. The  fOptiPt.m Matlab function has been developed for this purpose. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In this case \textit{s} is not specified.
 
 
