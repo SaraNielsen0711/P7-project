@@ -1,7 +1,7 @@
 \section*{Introduction}
 \label{Introduktion}
 %
-The purpose of this article is to analyse data about the perceived health risk of six different drugs, using the probabilistic choice model Preference Tree. The dataset is analysed using the Matlab function \textit{fOptiPt.m} developed by Florian Wickelmaier and Christian Schmid, \parencite{Wickelmaier2004}. See \autoref{tab:data} for the absolute frequencies used in a cumulative preference matrix. The scores denote how many participants voted the drug in question as being of the lowest health risk.
+The purpose of this article is to analyse data about the perceived health risk of six different drugs, using either the probabilistic choice model BTL or Preference Tree. It will be tested which one of the two models that fits the best. The data that will be analysed is shown in \autoref{tab:data}, where  the absolute frequencies used in a cumulative preference matrix is presented. The scores denote how many participants voted the drug in question as being of the highest health risk.
 %
 \begin{table}[H]
 \centering
@@ -15,6 +15,6 @@ Ecstasy    & 4   & 38 & 46 & 45 & 0  & 1  & 17 \\
 Heroin     & 5   & 44 & 48 & 47 & 47 & 0  & 44 \\
 Cocaine    & 6   & 41 & 45 & 48 & 31 & 4  & 0  \\ \bottomrule
 \end{tabular}
-\caption{The cumulative preference matrix of the health risk of the drugs. The absolute frequency denotes how many participants judged the drug as being the less health risky.}
+\caption{The cumulative preference matrix of the health risk of the drugs. The absolute frequency denotes how many participants judged the drug as being of the highest health risk.}
 \label{tab:data}
 \end{table} 
