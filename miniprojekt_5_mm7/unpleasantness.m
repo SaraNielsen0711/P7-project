@@ -39,8 +39,8 @@ unpleasant=[
 
 %laver en matrix, p, med "probabilities". Ifølge slideshowet fra mm7,
 %regnes det ud, vha. freq/N, hvor freq er frequencies, og N er antallet af
-%stimuli.
-p = unpleasant/10;
+%testpersoner.
+p = unpleasant/60;
 
 %Definerer variabler til Weak Stochastic Transitivity, Moderate Stochastic
 %Transitivity og Strong Stochastic Transitivity. Yderligere har jeg en
