@@ -67,22 +67,9 @@ P_{ab} =\frac{v(a'-b')}{v(a'-b')+v(b'-a')}
 \end{equation}
 \noindent
 %
-$P_{ab}$ is the probability of drug \textit{a} being rated to be of higher health risk than drug \textit{b}. \textit{v(a)} and \textit{v(b)} denotes the scale values of drug \textit{a} and \textit{b}.
+$P_{ab}$ is the probability of drug \textit{a} being rated to be of higher health risk than drug \textit{b}. \textit{v(a'-b')} is the scale value for the attribute(s) that \textit{a} does not share with \textit{b} and last is \textit{v(b'-a')} which is the scale value for the attribute(s) that \textit{b} does not share with \textit{a}.
 
-In order to get estimates of the scale values, one has to maximise the likelihood of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood}: 
-%
-\begin{equation}
-L(D|\Theta_{model}) = \prod_{i<j} p_{ij} ^{n_{ij}}\cdot(1- p_{ij})^{n-n_{ij}}
-\label{eq:max_likelyhood}
-\end{equation}
-\noindent 
-%
-Where \textit{n} is the number of comparisons, which is equal to the amount of test subjects in this case (\textit{n=48}) and $n_{ij}$ is the frequency of how many times the drug in row \textit{i} was rated as being of higher health risk than the drug in column \textit{j}. $P_{ij}$ is the preference probability and is estimated using \autoref{eq:BTL}. 
-
-
-
-
-
-%MATLAB
-The same goes for the likelihood estimation. The \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid for the purpose of  \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In the case \textit{s} of the BTL-model it is not specified nor is it used. For the Preference Tree-model it is used.. \fxnote{}
+In order to get estimates of the scale values, one has to maximise the likelihood (\textit{L}) of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood} and this is exactly like it was done for for the BTL-model. 
+\\\\
+For estimation the likelihood the \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In the case with both the BTL-model and Preference Tree, \textit{s} is not specified nor is it used.
 \vfill
