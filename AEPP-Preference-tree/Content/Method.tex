@@ -7,7 +7,6 @@ In order to know whether or not the BTL model and the Preference Tree-model can 
 p = \frac{freq}{n}
 \label{eq:probability}
 \end{equation}
-
 \noindent
 %
 Here \textit{freq} is the frequency that a drug has been rated as having the highest health risk (the pooled preference matrix, \autoref{tab:data}) and \textit{n} is the number of test subjects. Thereafter it is needed to check every combination of the stimuli for transitivity violations. There are no set rules but a rough estimate of when the probabilistic choice models holds is shown in \autoref{tab:trans_violations}:
@@ -38,5 +37,52 @@ Luckily, with the help of Matlab it is not needed to perform every single compar
 \end{figure}
 \noindent
 %
-The same goes for the likelihood estimation. The \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid for this purpose \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In this case \textit{s} is not specified nor is it used.
+\subsection*{Bradley-Terry-Luce (BTL)}
+The probabilistic method used called the BTL-model has a simple model structure, where only one attribute distinguish the stimuli. The model checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison. See \autoref{eq:BTL}.
+%
+\begin{equation}
+P_{ab} =\frac{v(a)}{v(a)+v(b)} 
+\label{eq:BTL}
+\end{equation}
+%
+$P_{ab}$ is the probability of drug \textit{a} being rated to be of higher health risk than drug \textit{b}. \textit{v(a)} and \textit{v(b)} denotes the scale values of drug \textit{a} and \textit{b}.
+
+In order to get estimates of the scale values, one has to maximise the likelihood of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood}: 
+%
+\begin{equation}
+L(D|\Theta_{model}) = \prod_{i<j} p_{ij} ^{n_{ij}}\cdot(1- p_{ij})^{n-n_{ij}}
+\label{eq:max_likelyhood}
+\end{equation}
+\noindent 
+%
+Where \textit{n} is the number of comparisons, which is equal to the amount of test subjects in this case (\textit{n=48}) and $n_{ij}$ is the frequency of how many times the drug in row \textit{i} was rated as being of higher health risk than the drug in column \textit{j}. $P_{ij}$ is the preference probability and is estimated using \autoref{eq:BTL}. 
+
+\subsection*{Preference Tree}
+%
+The Preference Tree has a more complex structure than the BTL-model, where it has subgroups of attributes. The model assumes the relationship shown in \autoref{eq:PT} between scale values and the probability the stimuli \textit{v(a)} is chosen over \textit{v(b)}.
+%
+\begin{equation}
+P_{ab} =\frac{v(a'-b')}{v(a'-b')+v(b'-a')} 
+\label{eq:PT}
+\end{equation}
+\noindent
+%
+$P_{ab}$ is the probability of drug \textit{a} being rated to be of higher health risk than drug \textit{b}. \textit{v(a)} and \textit{v(b)} denotes the scale values of drug \textit{a} and \textit{b}.
+
+In order to get estimates of the scale values, one has to maximise the likelihood of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood}: 
+%
+\begin{equation}
+L(D|\Theta_{model}) = \prod_{i<j} p_{ij} ^{n_{ij}}\cdot(1- p_{ij})^{n-n_{ij}}
+\label{eq:max_likelyhood}
+\end{equation}
+\noindent 
+%
+Where \textit{n} is the number of comparisons, which is equal to the amount of test subjects in this case (\textit{n=48}) and $n_{ij}$ is the frequency of how many times the drug in row \textit{i} was rated as being of higher health risk than the drug in column \textit{j}. $P_{ij}$ is the preference probability and is estimated using \autoref{eq:BTL}. 
+
+
+
+
+
+%MATLAB
+The same goes for the likelihood estimation. The \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid for the purpose of  \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In the case \textit{s} of the BTL-model it is not specified nor is it used. For the Preference Tree-model it is used.. \fxnote{}
 \vfill
