@@ -206,3 +206,4 @@ ylabel ('Estimated risk [95% CI]')
 % % A_tree14 = {[1];[2 7];[3 7];[4 7]; [5]; [6 7]};
 % % 
 % % [p_tree14,chistat_tree14,u,lL_eba,lL_sat,fit,cova]=fOptiPt(rus,A_tree14);
+m2tex

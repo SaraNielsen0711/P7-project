@@ -1,0 +1,28 @@
+\hspace{1mm}WST = 0; \\ 
+\hspace{1mm}MST = 0; \\ 
+\hspace{1mm}SST = 0; \\ 
+\hspace{1mm}Count = 0; \\ 
+\hspace{1mm} \\ 
+\hspace{1mm}\textcolor{blue}{for} a = 1:6; \\ 
+\hspace{1mm}\indent \textcolor{blue}{for} b = 1:6; \\ 
+\hspace{1mm}\indent \indent \textcolor{blue}{for} c = 1:6; \\ 
+\hspace{1mm}\indent \indent \indent \textcolor{blue}{if} (a~=b)\&\&(b~=c)\&\&(a~=c); \textcolor{green}{\%avoids comparing the same value (0) }\\ 
+\hspace{1mm}\indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,b)$>$=0.5 \&\& p\_model(b,c) $>$=0.5; \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent Count = Count+1; \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c)$<$0.5; \textcolor{green}{\%checks \textcolor{blue}{for} WST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent WST = WST+1; \textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \textcolor{green}{\%checks \textcolor{blue}{for} MST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c) $<$ min(p\_model(a,b),p\_model(b,c)); \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent MST = MST+1; \textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{green}{\%checks \textcolor{blue}{for} SST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c) $<$ max(p\_model(a,b),p\_model(b,c)); \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \indent SST = SST+1;\textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent m2tex(\textcolor{red}{'loop.m'}) \\ 
