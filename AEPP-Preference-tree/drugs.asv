@@ -88,7 +88,7 @@ conf_int= 1.96*sqrt(diag(cova));
 errorbar(p_tree13,conf_int, 'O')
 xlim([0 10]);
 xlabel('Drug')
-ylabel ('Estimated risk [95% CI]')
+ylabel ('Estimated risk [95% CI]'
 
 %Vi undersøger nu om preference-tree modellen passer.
 %Vi har lavet forskellige pretrees. 
