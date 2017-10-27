@@ -1,7 +1,7 @@
 \section*{Method}
 \label{Method}
 %
-In order to know whether or not the BTL model and the Preference Tree can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a Chi-square-test. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour eg. chosen pleasant where others chose unpleasant or not. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as unpleasant. See \autoref{eq:probability}.
+In order to know whether or not the BTL model and the Preference Tree-model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a Chi-square-test. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour eg. chosen pleasant where others chose unpleasant or not. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as unpleasant. See \autoref{eq:probability}.
 %
 \begin{equation}
 p = \frac{freq}{n}
@@ -15,10 +15,10 @@ Here \textit{freq} is the frequency that a drug has been rated as having the hig
 \centering
 \begin{tabular}{@{}ll@{}}
 \toprule
-Transitivity violations              & Expected                                      \\ \midrule
-None or few SST                      & BTL may fit                                   \\
-Some SST and few MST                 & Preference-tree might fit (Not BTL)           \\
-Considerable SST and MST but few WST & Possible to rank order (no model will fit)    \\ \bottomrule
+Transitivity violations                                    & Expected                                      \\ \midrule
+None or few SST violations                                 & BTL may fit                                   \\
+Some SST violations and few MST violations                 & Preference-tree might fit (Not BTL)            \\
+Considerable SST and MST but few WST violations & Possible to rank order (no model will fit) \\ \bottomrule
 \end{tabular}
 \caption{General estimates of the outcome of probabilistic choice models considering the amount of weak (WST), moderate (MST) and strong (SST) transitivity violations.}
 \label{tab:trans_violations}
@@ -27,15 +27,48 @@ Considerable SST and MST but few WST & Possible to rank order (no model will fit
 %
 Consider three stimuli: \textit{a}, \textit{b}, and \textit{c}. If it is observed that $p_{ab} \geq 0.05$ and $p_{ab} \geq 0.05$, in other words if the probability of \textit{a} being rated as more unpleasant compared to \textit{b} and \textit{b} more unpleasant compared to \textit{c}. Then Weak Stochastic Transitivity (WST) holds when $p_{ac} \geq 0.05$. It is considered a WST violation if $p_{ac} < 0.05$. The same logic applies to MST and SST. If $p_{ac}$ is bigger than or equal to the minimum value in $p_{ab}$ and $p_{bc}$, MST holds ($p_{ac}\geq min(p_{ab};p_{bc}$). It is a violation if not. For SST, $p_{ac}$ is compared to the maximum value of both $p_{ab}$ and $p_{bc}$. If $p_{ac}$ is not bigger or equal to these values, it counts as an SST violation ($p_{ac}< max(p_{ab};p_{bc}$.)
 
-Luckily, with the help of Matlab it is not needed to perform every single comparison by hand. A loop was written which identified the number of WST, MST and SST violations respectively. See \autoref{fig:loop}.
-%
-\begin{figure}[H]
-\centering
-\includegraphics[width = \textwidth]{Figure/loop} 
-\caption{Loop used to calculate WST, MST and SST violations.}
-\label{fig:loop}
-\end{figure}
+Luckily, with the help of Matlab it is not needed to perform every single comparison by hand. A loop was written which identified the number of WST, MST and SST violations respectively:\\
+\pagebreak
+%butt-rape in 3... 2... 1... 
+\texttt{
+\hspace{1mm}WST = 0; \\ 
+\hspace{1mm}MST = 0; \\ 
+\hspace{1mm}SST = 0; \\ 
+\hspace{1mm}Count = 0; \\ 
 \noindent
+\hspace{1mm} \\ 
+\hspace{1mm}\textcolor{blue}{for} a = 1:6; \\ 
+\hspace{1mm}\indent \textcolor{blue}{for} b = 1:6; \\ 
+\hspace{1mm}\indent \indent \textcolor{blue}{for} c = 1:6; \\ 
+\hspace{1mm}\indent \indent \indent \textcolor{blue}{if} (a~=b)\&\&(b~=c)\&\&(a~=c); \textcolor{green}{\%avoids comparing diagonal (0) }\\ 
+\hspace{1mm}\indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,b)$>$=0.5 \&\& p\_model(b,c) $>$=0.5; \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent Count = Count+1; \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c)$<$0.5; \textcolor{green}{\%checks for WST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent WST = WST+1; \textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent\indent \indent \indent \indent\indent \textcolor{green}{\%checks for MST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c) $<$ min(p\_model(a,b),p\_model(b,c)); \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent MST = MST+1; \textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent\indent \indent \indent \textcolor{green}{\%checks for SST violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{if} p\_model(a,c) $<$ max(p\_model(a,b),p\_model(b,c)); \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \indent SST = SST+1;\textcolor{green}{\%counts number of violations }\\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \indent \textcolor{blue}{end} \\ 
+\hspace{1mm}\indent \indent \indent \textcolor{blue}{end} \\ 
+}
+
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width = \textwidth]{Figure/loop} 
+%\caption{Loop used to calculate WST, MST and SST violations.}
+%\label{fig:loop}
+%\end{figure}
+%\noindent
 %
 \subsection*{Bradley-Terry-Luce (BTL)}
 The probabilistic method used called the BTL-model has a simple model structure, where only one attribute distinguish the stimuli. The model checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison. See \autoref{eq:BTL}.
