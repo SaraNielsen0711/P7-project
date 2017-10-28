@@ -1,28 +1,29 @@
 \section*{Analysis}
 \label{Analyse}
 %
-Based on the results presented in the previous section it is possible to analyse how well a fit the BTL and preference tree are.\blankline
+Based on the results presented in the previous section it is possible to analyse how well a fit the BTL-model and the Preference Tree are.\blankline
 %
-The number of possible stocastic violations in the data is 20, and from theese one moderate and five strong stocastic violations was found. This combined with the Chi-square test, which calculated a p-value at 0.0055, showed that a BTL-model would not be a good fit. Instead a preference tree was made.\blankline
-%
-As mentioned different types of preference trees was testet, but only two preference trees had a p-value high enough to fit. Theese two preference trees is shown on \autoref{fig:Tree1overveiw} and \autoref{fig:Tree2overveiw}. From matlab the value for every line segment of the preference tree is calculated. This length of the line segment is presented in \autoref{tab:Length1} for the first preference tree and \autoref{tab:Length2} for the second preference tree.  
+The number of possible stochastic violations in the data is 20, and only one MST and five SST violations was found. This amount of violations could most likely be descriept as \textit{some SST violations and few MST violations} and therefore the expectation, as explained in \fullref{Method}, will be that the Preference Tree might fit, but the BTL-model will not. 
 
+To test if the BTL-model could fit a Chi-square test was conducted. The result from the test is a p-value at 0.0055, which is under the significans level at 0.1, and therefore the conclusion is that the BTL-model is significant worse at predicting the data than the statistic model and because of that the model is not accepted as a fit. Instead a Preference Tree was made.\blankline
+%
+Different types of Preference Trees were tested, but only two Preference Trees was found to have a p-value above 0.1 in the Chi-square tests and therefore not significant different from the statistic model. The two Preference Trees that is concluded to be a fit is shown in \fullref{Results} on \autoref{fig:Tree1overveiw} and \autoref{fig:Tree2overveiw}. The value for every line segment of the Preference Tree is calculated. The length of the line segments is presented in \autoref{tab:Length1} for the first Preference Tree and in \autoref{tab:Length2} for the second Preference Tree.  
 %
 \begin{table}[H]
 	\centering
 	\begin{tabular}{@{}ll@{}}
 		\toprule
-		Number of line segment    & Length of line segment \\ \midrule
-		1									      & 0.1976   \\
-		2      									  & 0.0277   \\
-		3      									  & 0.0376   \\
-		4      									  & 0.0259   \\
-		5      									  & 0.6931   \\
-		6      									  & 0.0509   \\
-		7      									  & 0.8717   \\
-		8								          & 0.0727   \\ \bottomrule
+		Number of line segment  & Length of line segment \\ \midrule
+		1					    & 0.1976   \\
+		2      				    & 0.0277   \\
+		3      				    & 0.0376   \\
+		4      					& 0.0259   \\
+		5      					& 0.6931   \\
+		6      					& 0.0509   \\
+		7      					& 0.8717   \\
+		8						& 0.0727   \\ \bottomrule
 	\end{tabular}
-	\caption{The tabel shows every length of the line segments from the first preference tree.}
+	\caption{The length of the line segments for the first Preference Tree.}
 	\label{tab:Length1}
 \end{table} 
 \noindent 
@@ -31,42 +32,41 @@ As mentioned different types of preference trees was testet, but only two prefer
 	\centering
 	\begin{tabular}{@{}ll@{}}
 		\toprule
-		Number of line segment     & Length of line segment \\ \midrule
-		1							      & $3.36\cdot10^{15}$   \\
-		2      							  & $4.37\cdot10^{14}$   \\
-		3      							  & $5.98\cdot10^{14}$   \\
-		4      							  & $7.66\cdot10^{14}$   \\
-		5      							  & $3.58\cdot10^{16}$   \\
-		6     							  & $4.00\cdot10^{15}$   \\
-		7      							  & $1.39\cdot10^{15}$   \\
-		8						          & $9.69\cdot10^{15}$   \\
-		9								  & $1.30\cdot10^{15}$   \\ \bottomrule
+		Number of line segment  & Length of line segment \\ \midrule
+		1						& $3.36\cdot10^{15}$   \\
+		2      					& $4.37\cdot10^{14}$   \\
+		3      					& $5.98\cdot10^{14}$   \\
+		4      					& $7.66\cdot10^{14}$   \\
+		5      					& $3.58\cdot10^{16}$   \\
+		6     					& $4.00\cdot10^{15}$   \\
+		7      					& $1.39\cdot10^{15}$   \\
+		8						& $9.69\cdot10^{15}$   \\
+		9						& $1.30\cdot10^{15}$   \\ \bottomrule
 	\end{tabular}
-	\caption{The tabel shows every length of the line segments from the second preference tree.}
+	\caption{The length of the line segments for the second Preference Tree.}
 	\label{tab:Length2}
 \end{table} 
 \noindent 
 %
-The scale values for every drug is calculated by adding all lengt leading from the drug up to the starting point and is presented in \autoref{tab:ScaleValues1} for the first preference tree and \autoref{tab:ScaleValues2} for the second preference tree.\blankline
+The scale values for every drug type is calculated by adding all length together for the line segments that leads to the drug. The values is presented in \autoref{tab:ScaleValues1} for the first Preference Tree and in \autoref{tab:ScaleValues2} for the second Preference Tree.\blankline
 % 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{@{}ll@{}}
 		\toprule
-		Drugs     & Scale value \\ \midrule
+		Drug      & Scale value \\ \midrule
 		Alcohol	  & 0.1976   \\
 		Tobacco	  & 0.1004   \\
-		Cannabis	  & 0.1103   \\
+		Cannabis  & 0.1103   \\
 		Ecstasy	  & 0.9703   \\
 		Heroin	  & 1.6376   \\
 		Cocaine	  & 0.9953   \\	\bottomrule
 	\end{tabular}
-	\caption{The tabel shows the scale values of the different drugs for the first preference tree.}
+	\caption{The scale values of the different drugs for the first Preference Tree.}
 	\label{tab:ScaleValues1}
 \end{table} 
 \noindent 
 %
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{@{}ll@{}}
@@ -74,22 +74,22 @@ The scale values for every drug is calculated by adding all lengt leading from t
 		Drugs     & Scale value \\ \midrule
 		Alcohol	  & $3.36\cdot10^{15}$   \\
 		Tobacco	  & $1.74\cdot10^{15}$   \\
-		Cannabis	  & $1.90\cdot10^{15}$   \\
+		Cannabis  & $1.90\cdot10^{15}$   \\
 		Ecstasy	  & $1.31\cdot10^{16}$   \\
 		Heroin	  & $4.82\cdot10^{16}$   \\
 		Cocaine	  & $1.50\cdot10^{16}$   \\	\bottomrule
 	\end{tabular}
-	\caption{The tabel shows the scale values of the different drugs for the second preference tree.}
+	\caption{The scale values for the different drugs for the second Preference Tree.}
 	\label{tab:ScaleValues2}
 \end{table} 
 \noindent 
 %
-To illustrate how the different drugs are evaluated based on health risks \autoref{fig:Tree1real} for the first preference tree are drawn and labeled. \autoref{fig:Tree2real} shows the second preference tree drawn and labeled. 
+To illustrate how the different drugs are rated, the line segments are drawn and labelled, where the labels is found by looking at the types of drugs and considering what is a appropriate description for this drugs. On \autoref{fig:Tree1real}the first Preference Tree is showed with labels and on \autoref{fig:Tree2real} the second Preference Tree is showed. The interpretation of the figures is that the longer the line the higher health risk the is rated to have.  
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.80\textwidth]{Figure/Tree1real}
-\caption{The figure shows the real first preference tree with labels on the line segments.}
+\caption{The first Preference Tree with correct line length and labels on the line segments.}
 \label{fig:Tree1real}
 \end{figure}
 \noindent
@@ -97,12 +97,29 @@ To illustrate how the different drugs are evaluated based on health risks \autor
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = 0.80\textwidth]{Figure/Tree2real}
-	\caption{The figure shows the real second preference tree with labels on the line segments.}
+	\caption{The second Preference Tree with correct line length and labels on the line segments.}
 	\label{fig:Tree2real}
 \end{figure}
 \noindent
 %
-%indsæt figurer af de tegnede preference trees her.
-To signify what the analysis shows the scale values for each drug and their respective confidence interval are plottet in \autoref{fig:}.
-
-%insæt confidensinterval og skriv noget om det 
+The scale values for the line segments and their respective confidence interval for the first Preference Tree are shown on \autoref{fig:Tree1conf}.
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.80\textwidth]{Figure/confidense_p1220}
+	\caption{Scale values and confidence intervals for the line segments for the first Preference Tree.}
+	\label{fig:Tree1conf}
+\end{figure}
+\noindent
+%
+The scale values for the line segments and their respective confidence interval for the second Preference Tree are shown on \autoref{fig:Tree2conf}.
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.80\textwidth]{Figure/confidense_p1414}
+	\caption{Scale values and confidence intervals for the line segments for the second Preference Tree.}
+	\label{fig:Tree2conf}
+\end{figure}
+\noindent
+%
+When looking at the confidence intervals plotted for the two Preference Trees, it is clear that the second Tree is a better fit. For example is the placement of number five, Heroin, clearly different from the other drugs on the confidence plot for the second tree. This is consistent with the plots of the line segments in \autoref{fig:Tree1real} and \autoref{fig:Tree2real} that showed that Heroin is rated to of a higher health risk than the other drugs. 
