@@ -20,7 +20,7 @@ Cocaine    & 6   & 0.85 & 0.94 & 1    & 0.65 & 0.83 & 0    \\ \bottomrule
 \end{table} 
 \noindent 
 %
-To find out how many times the stochastic transitivities is violated, each of the three types is investigated and the number of times there is a violation is counted. The results are shown in \autoref{tab:Stocha}. 
+To find out how many times the stochastic transitivities are violated, each of the three types are investigated and the number of times there is a violation it is counted. The results are shown in \autoref{tab:Stocha}. 
 %
 \begin{table}[H]
 \centering
@@ -34,9 +34,11 @@ SST      & 5   \\ \bottomrule
 \caption{Results for the number of violations of the three stochastic transitivities out of 20 possible.}
 \label{tab:Stocha}
 \end{table}
+\vfill
 
 \subsection*{BTL-model}
-To check how good a fit the BTL-model is, a Chi-square test is conducted and the results are shown in \autoref{tab:Chi}. 
+%
+To check how good a fit the BTL-model is, a \textit{Chi-square}-test is conducted and the results are shown in \autoref{tab:Chi}. 
 %
 \begin{table}[H]
 \centering
@@ -45,24 +47,26 @@ To check how good a fit the BTL-model is, a Chi-square test is conducted and the
 $\chi^{2}$   & Df  & p-value \\ \midrule
 24.9423      & 10  & 0.0055* \\ \bottomrule
 \end{tabular}
-\caption{Results from the Chi-square test. The p-value of 0.0055 suggests that the BTL model does not fit.}
+\caption{Results from the \textit{Chi-square}-test. The p-value of 0.0055 suggests that the BTL model does not fit.}
 \label{tab:Chi}
 \end{table} 
 \noindent 
-The results from the Chi-square test shows a p-value at 0.0055 and therefore the conclusion is that this model is significant worse at predicting the data than the statistic model. The model is not accepted and instead the Preference Tree will be used. 
+%
+The results from the \textit{Chi-square}-test shows a p-value at 0.0055 and therefore the conclusion is that this model is significant worse at predicting the data than the statistic model. The model is not accepted and instead the Preference Tree will be used. 
 
 \subsection*{Preference Tree}
-The way it is determined how the Preference Tree should be structured is be drawing the tree be looking at the types of drugs and conducting a Chi-square on the model to see if it fits. Many different Preference Trees were drawn and tested, the first one found that fits is shown in \autoref{fig:Tree1overveiw}
+%
+The way it is determined how the Preference Tree should be structured is by drawing the tree by looking at the types of drugs and conducting a \textit{Chi-square}-test on the model to estimate if it fits. Many different Preference Trees were drawn and tested, the first that fits is illustrated in \autoref{fig:Tree1overveiw}.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.70\textwidth]{Figure/Tree1overview}
-\caption{Structure of the first Preference Tree found that fits the data.}
+\caption{Structure of the first Preference Tree that fits the data.}
 \label{fig:Tree1overveiw}
 \end{figure}
 \noindent
 %
-The results of the Chi-square test for the Preference Tree shown at \autoref{fig:Tree1overveiw} are shown in \autoref{tab:Chi}. 
+The results of the \textit{Chi-square}-test for the Preference Tree, illustrated in \autoref{fig:Tree1overveiw}, are shown in \autoref{tab:Chi}. 
 %
 \begin{table}[H]
 \centering
@@ -71,22 +75,22 @@ The results of the Chi-square test for the Preference Tree shown at \autoref{fig
 $\chi^{2}$   & Df  & p-value \\ \midrule
 12.7157      & 8   & 0.1220  \\ \bottomrule
 \end{tabular}
-\caption{Results from the Chi-square test on the first Preference Tree. The p-value of 0.1220 suggests that the Preference model fits.}
+\caption{Results from the \textit{Chi-square}-test on the first Preference Tree. The p-value of 0.1220 suggests that the Preference model fits.}
 \label{tab:Chi1}
 \end{table} 
 \noindent
 %
-One other preference tree was found to fit, and this tree is shown in \autoref{fig:Tree2overveiw}. 
+Another Preference Tree was found to fit, and this tree is illustrated in \autoref{fig:Tree2overveiw}. 
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.70\textwidth]{Figure/Tree2overview}
-\caption{Structure of the second Preference Tree found that fits the data.}
+\caption{Structure of the second Preference Tree that fits the data.}
 \label{fig:Tree2overveiw}
 \end{figure}
 \noindent
 %
-The results of the Chi-square test for the second Preference Tree shown at \autoref{fig:Tree2overveiw} are shown in \autoref{tab:Chi2}. 
+The results of the \textit{Chi-square}-test for the second Preference Tree, illustrated in \autoref{fig:Tree2overveiw}, are shown in \autoref{tab:Chi2}. 
 %
 \begin{table}[H]
 \centering
@@ -95,6 +99,6 @@ The results of the Chi-square test for the second Preference Tree shown at \auto
 $\chi^{2}$   & Df  & p-value \\ \midrule
 10.9377      & 7   & 0.1414  \\ \bottomrule
 \end{tabular}
-\caption{Results from the Chi-square test on the second Preference Tree. The p-value of 0.1220 suggests that the Preference model fits.}
+\caption{Results from the \textit{Chi-square}-test on the second Preference Tree. The p-value of 0.1220 suggests that the Preference model fits.}
 \label{tab:Chi2}
 \end{table} 
