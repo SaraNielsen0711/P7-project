@@ -5,21 +5,55 @@ Eftersom at robotten fortrinsvist skal indgå i en lufthavn og da formålet med 
 
 Alene baseret på antallet af terminaler forventes det, at det tilmed bliver sværere at lokalisere sin gate dels på oversigtstavlerne og dels i forhold til gatens fysiske lokalitet, hvorfor det ligeledes forventes, at der er større behov for den sociale robot i Københavns Lufthavn sammenlignet med Aalborg Lufthavn. Dette kan potentielt begrænse testpersonernes forståelse for, hvorfor det kan være en fordel at interagere med robotten, fremfor at finde information selv, da det ikke er sikkert at de oplever behov for assistance.\blankline
 %
-Selvom der kan være behov for en social robot i indgangshallen, hvor de rejsende blandt andet skal igennem check-in og aflevere bagage, vælges det at udføre testen på den anden side af sikkerhedskontrollen. Det skyldes blandt andet antagelsen om, at de rejsende har mindre travlt og er mindre stresset efter de har passeret sikkerhedskontrollen og nu kun venter på at boarde flyet. Derudover er det begrænset, hvilke muligheder der er i Aalborg Lufthavn eksempelvis i forhold til shopping og café besøg, hvorfor det forventes, at det er nemmere at rekruttere testpersoner, da de formentlig bruger det meste af deres ventetid på at sidde og vente, fremfor at besøge lufthavnens butiksområde. Dog kan en ulempe være, at de rejsende ankommer senere til lufthavnen fordi den ikke er så stor, at det er nødvendigt at ankomme de anbefalede to timer i forvejen.        
+Selvom der kan være behov for en social robot i indgangshallen, hvor de rejsende blandt andet skal igennem check-in og aflevere bagage, vælges det at udføre testen på den anden side af sikkerhedskontrollen. Det skyldes blandt andet antagelsen om, at de rejsende har mindre travlt og er mindre stresset efter de har passeret sikkerhedskontrollen og nu kun venter på at boarde flyet. Derudover er det begrænset, hvilke muligheder der er i Aalborg Lufthavn eksempelvis i forhold til shopping og café besøg, hvorfor det forventes, at det er nemmere at rekruttere testpersoner, da de formentlig bruger det meste af deres ventetid på at sidde og vente, fremfor at besøge lufthavnens butiksområde. Dog kan en ulempe være, at de rejsende ankommer senere til lufthavnen fordi den ikke er så stor, at det er nødvendigt at ankomme de anbefalede to timer i forvejen.
 
-
-
-
-Lufthavnen efter security. 
-Vi markerer ikke et område, men vi har internet en idé/aftale om hvilket område vi tester i. Det er muligt for andre at gå ind i området og har lyst til at blande sig, men vi sørger for at der er en, der tager imod dem og fortæller dem at de kan for lov til selv at prøve lige om lidt. Det kan give en mere realistisk oplevelse og giver mulighed for at rekruttere folk der rent faktisk har lyst. 
-
-Udstyr: Double robot, iPad Air2, computer med internet adgang (Karl har forslået et internt netværk f.eks. internetdeling), hvorfra Double styres, computer til at tage noter (observatør), lydoptager f.eks. egne telefoner, Interviewguide, tidsmåler til observatør (f.eks. egne telefoner). 
-
-Borde og stole til observatør og robotfører, måske et højbord til interviewer og TP.   
-
-Forplejning i lufthavnen
-
-
-
- hvorfor vi bruger Double fremfor den "rigtige" robot og hvilken effekt det har på brugerens oplevelse. Diskuter hvilken effekt det har at robotten delvist er en prototype og delvist en færdig robot.          
+I henhold til det praktiske aspekt ved at udføre denne undersøgelse vil der ikke foretages nogle synelige markeringer af testområdet, da det formentlig vil have indflydelse på, hvor realistisk situationen opleves af testpersonerne. Derimod vil testområdet være kendt dels af projektgruppen og dels af personalet i lufthavnen. \blankline
+%
+Til at udføre undersøgelsen er der behov for følgende udstyr:\blankline
+%
+\begin{itemize}
+  \item \textit{Double}-robot
+  \item iPad Air2
+  \item Vinklede hovedbeslag
+  \item To computere begge med internetadgang
+  \item Lydoptager
+  \item Tidsmåler
+  \item Guide til samtaleemner
+  \item Bord og stol til observatør og robot styre
+  \item Højbord til testleder og testperson\blankline
+\end{itemize}
+\noindent
+%
+SKRIV FØRST OM DOUBLE OG DET MED PROTOTYPE.. \blankline
+%
+Hovedet på \textit{Double}-robotten består af en iPad Air2, med internet adgang. Det er dog muligt at anvende andre udgaver og versioner af Apple's iPad. Baseret på miniprojektet, beskrevet i \fullref{\MiniprojektHovedeVinkelpartname}, hvor robottens hovedposition blev evalueret i forhold til hvor indbydende robotten blev perciperet, besluttes det at anvende et vinklet hovedbeslag. Dette hovedbeslag har til formål at vinkle hovedet på \textit{Double}-robotten, så den fremstår mere indbydende og derfor nemmere at interagere med. Hovedbeslaget er designet af Karl Damkjær Hansens, som har 3D printet beslaget, og er illustreret på \autoref{fig:VinkledeHovedbeslag}.            
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.3\textwidth]{Figure/VinkledeHovedbeslag} 
+\caption{Illustration af det 3D printede vinklede hovedbeslag designet af Karl Damkjær Hansen i forbindelse med projektsamarbejdet.}
+\label{fig:VinkledeHovedbeslag}
+\end{figure}
+\noindent
+%
+Ved at erstatte det originale beslag, som medfølger robotten, med det vinklede beslag, illustreret på \autoref{fig:VinkledeHovedbeslag}, vil det vinkle robottens hovede med XX$^{\circ}$. Den modificerede \textit{Double}-robot illustreres på \autoref{fig:ModificeretDoubleRobot}.
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.7\textwidth]{Figure/ModificeretDouble} 
+\caption{TAG ET BILLED AF DOUBLE ROBOTTEN MED HOVEDBESLAGET og erstat billedet her.}
+\label{fig:ModificeretDoubleRobot}
+\end{figure}
+\noindent
+%
+Både robot styren og observatøren skal hver tildeles en computer med interadgang. Det er særligt vigtigt at robot styrens computer har interadgang da denne skal kommunikere med robotten, hvorfor det kan være nødvendigt at oprette et lukket netværk, eksempelvis ved at lave internetdeling fra ens egen telefon. Selvom det vælges at observatøren skal notere sine observationer i en teksteditor, som ikke kræver internetadgang er det alligevel en fordel, at computeren har mulighed for at oprette forbindelse til internette i tilfælde af problemer med den anden computer. Lydoptageren anvendes af testlederen til at optage den auditive respons fra testpersonerne, der vælges at lydoptagelsen foretages på en af projektgruppens telefoner. Tilsvarende gør sig gældende for tidsmåleren, som anvendes af observatøren. Guide til samtaleemner printes for, at den pågældende testleder altid ved hvilke samtaleemner testpersonen og testlederen skal igennem. Bord og stole til observatør og robot styre placeres så de ikke er i vejen for testlederen og testpersonen, men så det samtidig er muligt for både observatør og robot styre at overvære interaktionen og høre samtalen. Højbordet indgår for at testlederen og testpersonen har en form for base, hvor der blandt andet uddeles samtykkeerklæringer og hvor testlederen introducere testpersonen til undersøgelsen. Derudover vil der på højbordet blive sat forplejning til rådighed. På \autoref{fig:ParametreTestopstilling} fremgår testopstillingen.   
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.7\textwidth]{Figure/ParametreTestopstilling} 
+\caption{TAG ET BILLED ELLER LAV EN ILLUSTRATION AF TESTOPSTILLINGEN I LUFTHAVNEN.}
+\label{fig:ParametreTestopstilling}
+\end{figure}
+\noindent
+%  
 
