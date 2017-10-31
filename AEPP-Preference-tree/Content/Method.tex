@@ -1,7 +1,7 @@
 \section*{Method}
 \label{Method}
 %
-In order to know whether or not the BTL model and the Preference Tree-model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a Chi-square-test. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour or not eg. chosen high risk where others low risk. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as high risk. See \autoref{eq:probability}.
+In order to know whether or not the BTL model and the Preference Tree-model can be applied to the data shown in \autoref{tab:data}, it is first necessary to check for transitivity in the data. In other words how reliable and consistent the data is. The cumulative preference matrix is a pooled data matrix meaning it contains data from all the participants deemed sufficiently consistent. This is typically done using a \textit{Chi-square}-test. Now a problem could arise because it is unknown whether the pooled subjects have shown an opposite decision behaviour or not eg. chosen high risk where others low risk. If that is the case, then the preference matrix becomes inconsistent. Before it is possible to do the transitivity check, it is necessary to calculate the probability of a stimulus being rated as high risk. See \autoref{eq:probability}.
 %
 \begin{equation}
 p = \frac{freq}{n}
@@ -25,13 +25,15 @@ Considerable SST and MST but few WST violations & Possible to rank order (no mod
 \end{table}
 \noindent
 %
-Consider three stimuli: \textit{a}, \textit{b}, and \textit{c}. If it is observed that $p_{ab} \geq 0.05$ and $p_{bc} \geq 0.05$, in other words if the probability of \textit{a} being rated as more unpleasant compared to \textit{b} and \textit{b} more unpleasant compared to \textit{c}. Then Weak Stochastic Transitivity (WST) holds when $p_{ac} \geq 0.05$. It is considered a WST violation if $p_{ac} < 0.05$. The same logic applies to MST and SST. If $p_{ac}$ is bigger than or equal to the minimum value in $p_{ab}$ and $p_{bc}$, MST holds ($p_{ac}\geq min(p_{ab};p_{bc}$). It is a violation if not. For SST, $p_{ac}$ is compared to the maximum value of both $p_{ab}$ and $p_{bc}$. If $p_{ac}$ is not bigger or equal to these values, it counts as an SST violation ($p_{ac}< max(p_{ab};p_{bc}$.)
+Consider three stimuli: \textit{a}, \textit{b}, and \textit{c}. If it is observed that $p_{ab} \geq 0.05$ and $p_{bc} \geq 0.05$, in other words if the probability of \textit{a} being rated as more unpleasant compared to \textit{b} and \textit{b} more unpleasant compared to \textit{c}. Then \textit{Weak Stochastic Transitivity} (WST) holds when $p_{ac} \geq 0.05$. It is considered a WST violation if $p_{ac} < 0.05$. The same logic applies to MST and SST. If $p_{ac}$ is bigger than or equal to the minimum value in $p_{ab}$ and $p_{bc}$, MST holds ($p_{ac}\geq min(p_{ab};p_{bc}$). It is a violation if not. For SST, $p_{ac}$ is compared to the maximum value of both $p_{ab}$ and $p_{bc}$. If $p_{ac}$ is not bigger or equal to these values, it counts as an SST violation ($p_{ac}< max(p_{ab};p_{bc}$).
 
-Luckily, with the help of Matlab it is not needed to perform every single comparison by hand. A loop was written which identified the number of WST, MST and SST violations respectively:\\
-\pagebreak
-%butt-rape in 3... 2... 1... 
+Luckily, with the help of \textit{Matlab} it is not needed to perform every single comparison by hand. A loop was written which identified the number of WST, MST and SST violations respectively:
+%
+\vfill
+\noindent
 \texttt{
-\hspace{1mm}WST = 0; \\ 
+\noindent
+\hspace{-2.3mm}WST = 0; \\ 
 \hspace{1mm}MST = 0; \\ 
 \hspace{1mm}SST = 0; \\ 
 \hspace{1mm}Count = 0; \\ 
@@ -61,16 +63,8 @@ Luckily, with the help of Matlab it is not needed to perform every single compar
 \hspace{1mm}\indent \indent \indent \textcolor{blue}{end} \\ 
 }
 
-%
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = \textwidth]{Figure/loop} 
-%\caption{Loop used to calculate WST, MST and SST violations.}
-%\label{fig:loop}
-%\end{figure}
-%\noindent
-%
 \subsection*{Bradley-Terry-Luce (BTL)}
+%
 The probabilistic method used called the BTL-model has a simple model structure, where only one attribute distinguish the stimuli. The model checks for transitivity in data containing pairwise comparisons and is able to predict the outcome of the comparison. See \autoref{eq:BTL}.
 %
 \begin{equation}
@@ -102,7 +96,7 @@ P_{ab} =\frac{v(a'-b')}{v(a'-b')+v(b'-a')}
 %
 $P_{ab}$ is the probability of drug \textit{a} being rated to be of higher health risk than drug \textit{b}. \textit{v(a'-b')} is the scale value for the attribute(s) that \textit{a} does not share with \textit{b} and last is \textit{v(b'-a')} which is the scale value for the attribute(s) that \textit{b} does not share with \textit{a}.
 
-In order to get estimates of the scale values, one has to maximise the likelihood (\textit{L}) of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood} and this is exactly like it was done for for the BTL-model. 
-\\\\
-For estimation the likelihood the \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In the case with both the BTL-model and Preference Tree, \textit{s} is not specified nor is it used.
+In order to get estimates of the scale values, one has to maximise the likelihood (\textit{L}) of the data seen in \autoref{tab:data}. This is done given the model in \autoref{eq:max_likelyhood} and this is exactly like it was done for for the BTL-model. \blankline
+%
+For estimation of the likelihood the \textit{fOptiPt.m} Matlab function has been developed by Florian Wickelmaier and Christian Schmid \parencite{Wickelmaier2004}. The function requires two mandatory input, \textit{M} and \textit{A}, where \textit{M} is the paired comparison matrix shown in \autoref{tab:data}, and \textit{A} is a cell array with length corresponding to the number of stimuli, which is 10. Further there is an optional input, \textit{s}, which denotes the starting values for the estimation routine. The search algorithm starts at $\frac{1}{k}$ for each parameter value, where \textit{k} is the number of parameters, if \textit{s} is not specified. In the case with both the BTL-model and Preference Tree, \textit{s} is not specified nor is it used.
 \vfill
