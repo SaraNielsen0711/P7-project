@@ -67,6 +67,25 @@
 % (uncomment the ones you want to load)
 
 
+%*********test om vi kan autoref*************
+\usepackage[colorlinks]{hyperref}			% Danner klikbare referencer (hyperlinks) i dokumentet.
+\hypersetup{colorlinks = true,				% Opsaetning af farvede hyperlinks (interne links, citeringer og URL)
+    linkcolor = black,
+    citecolor = black,
+    urlcolor = black
+}
+
+\def\sectionautorefname{Section}			% Definition til brug ved \autoref
+\def\subsectionautorefname{Subsection} % Definition til brug ved \autoref
+\def\figureautorefname{Figure}			% Definition til brug ved \autoref
+%\def\appendixautorefname{appendix}		% Definition til brug ved \autoref
+\def\tableautorefname{Table}			% Definition til brug ved \autoref
+\def\equationautorefname{Equation}		% Definition til brug ved \autoref
+%\def\itemautorefname{\$.}				% Ændrer autoref ved items i enumerate
+\def\appendixautorefname{Appendix}
+\def\chapterautorefname{Chapter}		% Definition til brug ved \autoref
+\AtBeginDocument{\renewcommand{\chapterautorefname}{Chapter}}
+
 % *** MISC UTILITY PACKAGES ***
 %
 \usepackage{ifpdf}
@@ -327,22 +346,37 @@
 % use a multiple column layout for up to three different
 % affiliations
 
-{\centering
-\author{\IEEEauthorblockN{Juliane Nilsson}
-\IEEEauthorblockA{jnils12@student.aau.dk}
-\and
-\IEEEauthorblockN{Emil Bonnerup}
-\IEEEauthorblockA{ebonne14@student.aau.dk}
-\and
-\IEEEauthorblockN{Andreas Kornmaaler}
-\IEEEauthorblockA{akha14@student.aau.dk} 
-\and 
-\IEEEauthorblockN{Lucca Nellemann}
-\IEEEauthorblockA{ljne14@student.aau.dk}
-\and
-\IEEEauthorblockN{Sara Nielsen}
-\IEEEauthorblockA{snie14@student.aau.dk}}
+%{\centering
+%\author{\IEEEauthorblockN{Juliane Nilsson}
+%\IEEEauthorblockA{jnils12@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Emil Bonnerup}
+%\IEEEauthorblockA{ebonne14@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Andreas Kornmaaler}
+%\IEEEauthorblockA{akha14@student.aau.dk} 
+%\and 
+%\IEEEauthorblockN{Lucca Nellemann}
+%\IEEEauthorblockA{ljne14@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Sara Nielsen}
+%\IEEEauthorblockA{snie14@student.aau.dk}}
+%}
+
+
+\author{\IEEEauthorblockN{Juliane Nilsson\IEEEauthorrefmark{0},
+Emil Bonnerup\IEEEauthorrefmark{0},
+Andreas Kornmaaler Hansen\IEEEauthorrefmark{0}, 
+Lucca Nellemann\IEEEauthorrefmark{0} and
+Sara Nielsen\IEEEauthorrefmark{0}}
+\IEEEauthorblockA{\IEEEauthorrefmark{0}School of Information and Computer Technology\\
+Aalborg University,
+Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 }
+
+
+
+
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
 % the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
@@ -369,8 +403,8 @@
 
 
 % use for special paper notices
-\IEEEspecialpapernotice{School of Information and Communication Technology \\
-Aalborg University, Denmark}
+%\IEEEspecialpapernotice{School of Information and Communication Technology \\
+%Aalborg University, Denmark}
 
 
 
@@ -541,15 +575,15 @@ Aalborg University, Denmark}
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
+%\bibliography{}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-
-
+%
+%
 \input{Content/thebibliography}
 
 
