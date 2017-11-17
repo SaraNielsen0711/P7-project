@@ -20,7 +20,8 @@
 %%*************************************************************************
 %% Legal Notice:
 %% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
+%% implied; without even the implied warranty 
+of MERCHANTABILITY or
 %% FITNESS FOR A PARTICULAR PURPOSE! 
 %% User assumes all risk.
 %% In no event shall the IEEE or any contributor to this code be liable for
@@ -67,9 +68,28 @@
 % (uncomment the ones you want to load)
 
 
+%*********test om vi kan autoref*************
+\usepackage[colorlinks]{hyperref}			% Danner klikbare referencer (hyperlinks) i dokumentet.
+\hypersetup{colorlinks = true,				% Opsaetning af farvede hyperlinks (interne links, citeringer og URL)
+    linkcolor = black,
+    citecolor = black,
+    urlcolor = black
+}
+
+\def\sectionautorefname{Section}			% Definition til brug ved \autoref
+\def\subsectionautorefname{Subsection} % Definition til brug ved \autoref
+\def\figureautorefname{Figure}			% Definition til brug ved \autoref
+%\def\appendixautorefname{appendix}		% Definition til brug ved \autoref
+\def\tableautorefname{Table}			% Definition til brug ved \autoref
+\def\equationautorefname{Equation}		% Definition til brug ved \autoref
+%\def\itemautorefname{\$.}				% Ændrer autoref ved items i enumerate
+\def\appendixautorefname{Appendix}
+\def\chapterautorefname{Chapter}		% Definition til brug ved \autoref
+\AtBeginDocument{\renewcommand{\chapterautorefname}{Chapter}}
+
 % *** MISC UTILITY PACKAGES ***
 %
-%\usepackage{ifpdf}
+\usepackage{ifpdf}
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
@@ -92,7 +112,7 @@
 
 % *** CITATION PACKAGES ***
 %
-%\usepackage{cite}
+\usepackage{cite}
 % cite.sty was written by Donald Arseneau
 % V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
 % \cite{} output to follow that of the IEEE. Loading the cite package will
@@ -116,12 +136,12 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
+   \graphicspath{{Figure/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+   \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -159,7 +179,7 @@
 
 % *** MATH PACKAGES ***
 %
-%\usepackage{amsmath}
+\usepackage{amsmath}
 % A popular package from the American Mathematical Society that provides
 % many useful and powerful commands for dealing with mathematics.
 %
@@ -197,7 +217,7 @@
 
 % *** ALIGNMENT PACKAGES ***
 %
-%\usepackage{array}
+\usepackage{array}
 % Frank Mittelbach's and David Carlisle's array.sty patches and improves
 % the standard LaTeX2e array and tabular environments to provide better
 % appearance and additional user controls. As the default LaTeX2e table
@@ -260,7 +280,7 @@
 % http://www.ctan.org/pkg/fixltx2e
 
 
-%\usepackage{stfloats}
+\usepackage{stfloats}
 % stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
 % the ability to do double column floats at the bottom of the page as well
 % as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
@@ -291,7 +311,7 @@
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
-%\usepackage{url}
+\usepackage{url}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version and documentation can be obtained at:
@@ -320,32 +340,44 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Human Robot Interaction\\ in airport}
+\title{Human Robot Interaction\\ in an Airport}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
 
-{\centering
-\author{\IEEEauthorblockN{Juliane Nilsson}
-\IEEEauthorblockA{jnils12@student.aau.dk}
-\and
-\IEEEauthorblockN{Emil Bonnerup}
-\IEEEauthorblockA{ebonne14@student.aau.dk}
-\and
-\IEEEauthorblockN{Andreas Kornmaaler}
-\IEEEauthorblockA{akha14@student.aau.dk} 
-\and 
-\IEEEauthorblockN{Lucca Nellemann}
-\IEEEauthorblockA{ljne14@student.aau.dk}
-\and
-\IEEEauthorblockN{Sara Nielsen}
-\IEEEauthorblockA{snie14@student.aau.dk\\}
-\and
-\IEEEauthorblockN{School of Information and Communication Technology \\
-Aalborg University, Denmark}}
+%{\centering
+%\author{\IEEEauthorblockN{Juliane Nilsson}
+%\IEEEauthorblockA{jnils12@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Emil Bonnerup}
+%\IEEEauthorblockA{ebonne14@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Andreas Kornmaaler}
+%\IEEEauthorblockA{akha14@student.aau.dk} 
+%\and 
+%\IEEEauthorblockN{Lucca Nellemann}
+%\IEEEauthorblockA{ljne14@student.aau.dk}
+%\and
+%\IEEEauthorblockN{Sara Nielsen}
+%\IEEEauthorblockA{snie14@student.aau.dk}}
+%}
+
+
+\author{\IEEEauthorblockN{Juliane Nilsson\IEEEauthorrefmark{0},
+Emil Bonnerup\IEEEauthorrefmark{0},
+Andreas Kornmaaler Hansen\IEEEauthorrefmark{0}, 
+Lucca Nellemann\IEEEauthorrefmark{0} and
+Sara Nielsen\IEEEauthorrefmark{0}}
+\IEEEauthorblockA{\IEEEauthorrefmark{0}School of Information and Computer Technology\\
+Aalborg University,
+Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 }
+
+
+
+
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
 % the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
@@ -372,7 +404,8 @@ Aalborg University, Denmark}}
 
 
 % use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
+%\IEEEspecialpapernotice{School of Information and Communication Technology \\
+%Aalborg University, Denmark}
 
 
 
@@ -543,15 +576,15 @@ Aalborg University, Denmark}}
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
+%\bibliography{}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-
-
+%
+%
 \input{Content/thebibliography}
 
 
