@@ -31,7 +31,7 @@ Følgende antagelser skal overholdes for at udføre en \textit{One-way Repeated 
 %
 Da alle antagelser for at udføre en \textit{One-way Repeated Measures ANOVA} er opfyldt, udføres denne i \textit{rStudio}. Testresultatet er $F(3.21)=13.7, p=4.4*e^{-4}$, hvilket indikerer at der er signifikant effekt af robottens hovedposition på hvor indbydende robotten perciperes.
 
-Baseret på dette resultat er det kun muligt at konkludere, at der er signifikant forskel mellem hvordan hovedpositionerne perciperes i forhold til hvor indbydende robotten er, det er derfor ikke muligt at afgøre hvor den signifikante forskel er. For at undersøge hvor forskellen er udføres der en \textit{Post Hoc test} af typen \textit{Pairwise Comparison}, hvilket udføres med t-tests, \parencite[s. 1171]{PDF:PairwiseComparison}. Testresultatet fremgår af \autoref{fig:sammenligning}.
+Baseret på dette resultat er det kun muligt at konkludere, at der er signifikant forskel mellem hvordan hovedpositionerne perciperes i forhold til hvor indbydende robotten er, men ikke muligt at afgøre hvor den signifikante forskel er. For at undersøge hvor forskellen er, udføres der en \textit{Post Hoc test} af typen \textit{Pairwise Comparison}, hvilket udføres med t-tests, \parencite[s. 1171]{PDF:PairwiseComparison}. Testresultatet fremgår af \autoref{fig:sammenligning}.
 %
 \begin{figure}[H]
 \centering
@@ -41,6 +41,6 @@ Baseret på dette resultat er det kun muligt at konkludere, at der er signifikan
 \end{figure}
 \noindent
 %
-Baseret på \autoref{fig:sammenligning} fremgår det at både position 2 og position 3 er signifikant forskellige fra position 1. Sammenholdes dette med \autoref{fig:boksplot} kan det konkluderes at både position 2 og position 3 perciperes som værende mere indbydende end position 1. I tillæg er der signifikant forskel mellem position 3 og position 4, hvor position 3 perciperes som værende mere indbydende. Det er dog bemærkelsesværdigt at det ikke er tilfældet mellem position 2 og position 4, hvor der ikke fremgår en signifikant forskel, jævnfør \autoref{fig:sammenligning}.
+Baseret på resultaterne præsenteret i \autoref{fig:sammenligning} fremgår det at både position 2 og position 3 er signifikant forskellige fra position 1. Sammenholdes dette med \autoref{fig:boksplot} kan det konkluderes at både position 2 og position 3 perciperes som værende mere indbydende end position 1. I tillæg er der signifikant forskel mellem position 3 og position 4, hvor position 3 perciperes som værende mere indbydende. Det er dog bemærkelsesværdigt at det ikke er tilfældet mellem position 2 og position 4, hvor der ikke fremgår en signifikant forskel, jævnfør \autoref{fig:sammenligning}.
 %
 
