@@ -50,7 +50,6 @@
 % http://www.michaelshell.org/tex/testflow/
 
 
-
 \documentclass[conference]{IEEEtran}
 % Some Computer Society conferences also require the compsoc mode option,
 % but others use the standard conference format.
@@ -58,9 +57,6 @@
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[conference]{../sty/IEEEtran}
-
-
-
 
 
 % Some very useful LaTeX packages include:
@@ -84,9 +80,6 @@
 % \ifCLASSINFOpdf conditional that works the same way.
 % When switching from latex to pdflatex and vice-versa, the compiler may
 % have to be run twice to clear warning/error messages.
-
-
-
 
 
 
@@ -154,8 +147,6 @@
 
 
 
-
-
 % *** MATH PACKAGES ***
 %
 \usepackage{amsmath}
@@ -169,8 +160,6 @@
 % does. amsmath.sty is already installed on most LaTeX systems. The latest
 % version and documentation can be obtained at:
 % http://www.ctan.org/pkg/amsmath
-
-
 
 
 
@@ -190,7 +179,6 @@
 % Also of interest may be the (relatively newer and more customizable)
 % algorithmicx.sty package by Szasz Janos:
 % http://www.ctan.org/pkg/algorithmicx
-
 
 
 
@@ -375,9 +363,6 @@ Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 % use for special paper notices
 %\IEEEspecialpapernotice{(Invited Paper)}
 
-
-
-
 % make the title area
 \maketitle
 
@@ -389,9 +374,6 @@ Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 
 % no keywords
 
-
-
-
 % For peer review papers, you can put extra information on the cover
 % page as needed:
 % \ifCLASSOPTIONpeerreview
@@ -402,17 +384,13 @@ Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
-
-
 \input{Content/Introduction}
-
 \input{Content/Method.tex}
-
-
 \input{Content/Results.tex}
 \input{Content/Discussion.tex}
-
-
+\input{Content/Conclusion}
+% use section* for acknowledgment
+\input{Content/Acknowledgment}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -508,26 +486,7 @@ Aalborg, Denmark\\ Email: 17gr782@es.aau.dk}
 % footnotes above bottom floats. This can be corrected via the
 % \fnbelowfloat command of the stfloats package.
 
-
-
-\input{Content/Conclusion}
-
-
-
-
 % conference papers do not normally have an appendix
-
-
-% use section* for acknowledgment
-\input{Content/Acknowledgment}
-
-
-The authors would like to thank...  \cite{Graaf2013} og \cite{Graaf2015}
-
-
-
-
-
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
@@ -557,8 +516,6 @@ The authors would like to thank...  \cite{Graaf2013} og \cite{Graaf2015}
 %H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 %\end{thebibliography}
-
-
 
 
 % that's all folks
