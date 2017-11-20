@@ -109,11 +109,13 @@
 % The documentation is contained in the cite.sty file itself.
 
 
+\usepackage{hyperref}
+%Så vi kan referer til figur, tabel mm. med f.eks. Figure 1 - autoref
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
 %\ifCLASSINFOpdf
-%  % \usepackage[pdftex]{graphicx}
+ \usepackage[pdftex]{graphicx}
 %  % declare the path(s) where your graphic files are
 %  % \graphicspath{{../pdf/}{../jpeg/}}
 %  % and their extensions so you won't have to specify these with
@@ -241,7 +243,9 @@
 
 % *** FLOAT PACKAGES ***
 %
-%\usepackage{fixltx2e}
+\usepackage{float}
+
+% \usepackage{fixltx2e}
 % fixltx2e, the successor to the earlier fix2col.sty, was written by
 % Frank Mittelbach and David Carlisle. This package corrects a few problems
 % in the LaTeX2e kernel, the most notable of which is that in current
