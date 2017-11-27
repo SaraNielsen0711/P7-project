@@ -8,14 +8,26 @@ Ud fra de opstillede parametre, opstilles der skalaer, ved at gennemgå alle sæ
 
 %OBS: Nogen af de orange (Skalaer) er slået sammen, fordi de egentlig siger det samme og hører under det samme emne. 
 % OBS: Jeg synes R er en god idé hører under grøn 8 (positiv overfor R) er sorteret fra fordi det ikke er noget der kan ændres på i forhold til robotten. 
-%OBS: Det der handler om kendskab beholdes som skalaer selvom det ikke er muligt at ændre på det. De vil blive brugt i forbindelse med indsamling af demografi, så det kan sammenholdes med deres respons. 
+%OBS: Det der handler om kendskab til teknologi beholdes som skalaer selvom det ikke er muligt at ændre på det. De vil blive brugt i forbindelse med indsamling af demografi, så det kan sammenholdes med resten af deres respons. (Jeg synes R minder om noget jeg kender er slået sammen med jeg har erfaring med robotter til Hvor meget kendskab har du til teknologi/robotter)
 
-%OBS igang med at slå dem sammen efter hvad der hænger sammen
-%Anmassende og intimiderende bliver slået sammen - til: Jeg synes R er anmassende
+%OBS igang med at slå dem sammen efter hvad der hænger sammen (Dem der ikke nævnes her, står for sig selv)
 
-%R ser menneskelig ud og R er levende slåes sammen - Til: Jeg synes R er menneskelig
+%Anmassende, intimiderende og let at ignorer R bliver slået sammen - til: Jeg synes R er anmassende
+
+%Jeg synes R ser menneskelig ud, Jeg synes R er levende og jeg foretrækker R ser menneskelig ud slåes sammen - Til: Jeg synes R er menneskelig
 
 %Fjerner "Jeg kan godt lide R's udseende" fordi det formentlig er en overkategori til sej, sjov, sød, elegant, så hvis de rates højt er det formentlig et udtryk for at de også godt kan lide robottens udseende, hvorhvis sej, sjov, sød mm. rates dårligt er det et udtryk for at de ikke kan lide R's udseende. Så parameteren bliver målt indirekte, ved underparametre. 
+
+%Jeg blev nysgerrige da jeg så R, jeg synes R er spændende og R fangede min opmærksomhed, bliver slået sammen til: Jeg synes R er spændende
+
+%Jeg oplevede hastighed som værende langsom/hurtig og Jeg synes hastighed som værende langsom/hurtig slåes sammen til: Jeg synes Rs hastighed er for (langsom/hurtig) (slået sammen inden vi til sidst skal udvælge dem vi bruger)
+
+%Jeg føler R kan hjælpe mig, R kan hjælpe mig så jeg ikke behøver at spørger personale, Jeg kan bruge R til at finde rundt i L slåes sammen til: Jeg føler at R kan hjælpe mig
+
+%Jeg synes R's bevægelser er behagelige og Jeg synes R har rolige bevægelser er slået sammen til: Jeg synes R har (Rolige/vilde)
+
+%Jeg oplevede R højdes som værende meget høj/lav og Jeg synes R's højde er for høj for lav bliver slået sammen til: Jeg synes R's højde er (høj/lav) (slået sammen inden vi til sidst skal udvælge dem vi bruger)
+
 
 
 Når parametrene er udledt fra hver af de grønne kategorier skal der udvælges de parametre, som vil blive anvendt i forbindelse med at udvikle skalaerne. 
@@ -44,9 +56,9 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
 \textbf{UDSEENDE}
 %
 \begin{enumerate}
-  \item Jeg synes at R's højde er...
+  \item Jeg synes at R's højde er... (Jeg oplevede R's højde som værende meget høj/lav og Jeg synes at R's højde er for høj/lav)
   \item Jeg synes R er elegant...
-  \item Jeg synes R ser menneskelig ud...
+  \item Jeg synes R ser menneskelig ud... (Jeg foretrækker at R ser menneskelig ud og Jeg synes at R ser menneskelig ud)
   \item Jeg kan godt lide R's udseende...)\blankline
 \end{enumerate}
 %
@@ -88,8 +100,8 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
 \textbf{VÆREMÅDE}
 %
 \begin{enumerate}
-  \item Jeg synes R's bevægelser er...
-  \item Jeg synes at R's hastighed er...
+  \item Jeg synes R's bevægelser er... (Jeg synes R's bevægelser er behagelige og Jeg synes R har rolige bevægelser)
+  \item Jeg synes at R's hastighed er... (Jeg oplevede R's hastighed som værende hurtig/langsom og Jeg synes at R's hastighed er for langsom/hurtig)
   \item Jeg synes R er irriterende...
   \item Jeg synes R er levende...
   \item Jeg synes R er anmassende...\blankline
@@ -116,7 +128,7 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
   \item Jeg synes R er imødekommende
   \item Jeg synes R kom for tæt på
   \item Jeg synes R stod i vejen
-  \item Jeg blev overrasket over R's henvendelse
+  \item Jeg blev overrasket over R's henvendelse 
   \item Jeg synes R er intimiderende\\
 \end{enumerate}
 %
@@ -174,7 +186,7 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
 \textbf{SKÆRMEN VIRKER IKKE}\\
 %
 \begin{enumerate}
-  \item Hvordan synes du skærmen virkede
+  \item Hvordan synes du skærmen virkede (Jeg synes det var svært at trykke på R's skærm og Hvordan synes du skærmen reagerede godt/dårligt)
 \end{enumerate}
 %
 \begin{table}[H]
@@ -192,7 +204,7 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
 %
 \begin{enumerate}
   \item Jeg oplever at Rs hjælp som personlig
-  \item Jeg føler at R kan hjælpe mig
+  \item Jeg føler at R kan hjælpe mig (Jeg kan bruge R til at finde rundt i L og Jeg føler at R kan hjælpe mig)
   \item R kan hjælpe mig så jeg ikke behøver at spørge personale
 \end{enumerate}
 %
@@ -209,11 +221,11 @@ Blev sorteret fra da den ikke er manipulerbar, da den kun henvender sig til hvad
 \end{table}
 \noindent
 %
-\textbf{Kendskab til teknologi}\\
+\textbf{KENDSKAB TIL TEKNOLOGI}\\
 %
 \begin{enumerate}
-  \item Hvordan var det at bruge R
-  \item Hvor meget kenderskab har du til teknologi/robotter
+  \item Hvordan var det at bruge R (Jeg synes at R er nem at bruge (kommer fra positiv overfor R) og Jeg har brug for hjælp til at bruge R)
+  \item Hvor meget kenderskab har du til teknologi/robotter (Jeg synes at R minder om noget jeg kender, Jeg har erfaring med robotter og Min erfaring med teknologi har betydning for min oplevelse af R)
 \end{enumerate}
 %
 Skala spørgsmål 2 vil blive brugt i forbindelse med demografi.
