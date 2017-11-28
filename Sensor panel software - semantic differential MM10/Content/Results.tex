@@ -1,15 +1,15 @@
-\section*{Results}
+\section*{Results and Analysis}
 \label{Results}
 
 
-Using a 2-way ANOVA, a significant assessor effect (p<0.01) has been found on the dark-light attribute, which means that the assessors disagrees about how light/dark the speakers are.
+Using a 2-way ANOVA, a significant assessor effect (p<0.01) has been found on the "Dark - Light" attribute, which means that the assessors disagree about how light/dark the speakers are. See \autoref{fig:AssessorEffect}. This could mean that people do not have the same understanding of what it means for something to be light or dark.
 \begin{figure}[H]
 \centering
-\includegraphics[width = 0.8\textwidth]{Figure/AssessorEffect.png} 
-\caption{}
+\includegraphics[width =0.8\textwidth]{Figure/AssessorEffect.png} 
+\caption{A plot showing the assessor effect. The variance was only significantly different in the results relating to the "Dark - Light" attribute. This means that the assessors did not agree upon which of the speakers were the lightest or darkest.}
 \label{fig:AssessorEffect}
 \end{figure}
-Regarding the product effect on ratings, all attributes are rated significant different at at least p<0.01, except for symmetrical-assymetrical. That means that the speaker model has an influence on the ratings of all the attributes, except for symmetry, which is unaffected of which speaker model is rated.
+Regarding the product effect on ratings, all attributes are rated significantly different at at least p<0.01, except for symmetrical-assymetrical. That means that the speaker model has an influence on the ratings of all the attributes, except for symmetry, which is unaffected of which speaker model is rated.
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/ProductEffect.png} 
@@ -31,13 +31,13 @@ Looking at the product effect alone for all of the five speakers does not tell u
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.8\textwidth]{Figure/4000vs6000.png} 
-\caption{Comparison of the attribute ratings for the Beolab 4000 and the Beolab 6000}
+\caption{Comparison of the attribute ratings for the Beolab 4000 and the Beolab 6000. It is possible to see which of the attributes are significantly different from each other.In this example is "Low-Tall", "Light-Dark", and "Wide-Narrow".}
 \label{fig:4000vs6000}
 \end{figure}
 
 
 
-It is possible to look at a spider plot in order to get a sense of how the speakers were rated overall, se \autoref{fig:spider_plot}. For example the BeoLab 5 overall scores the highest in the attributes: \textit{Flashy}, \textit{Decorated}, \textit{Wide}, \textit{Untypical}. This seems reasonable when presented with the speakers next to each other in \autoref{fig:speakers}. In general this paints a fitting picture over which features stands out the most and creates a unique attribute profile for each speaker when shown individually. However when shown all together as in \autoref{fig:spider_plot} a lot of points do end up close to each other and some insights may be lost due to this.
+It is possible to look at a spider plot in order to get a sense of how the speakers were rated overall, se \autoref{fig:spider_plot}. For example the BeoLab 5 overall scores the highest in the attributes: \textit{Flashy}, \textit{Decorated}, \textit{Wide}, \textit{Untypical}. This seems reasonable when presented with the speakers next to each other in \autoref{fig:speakers}. In general this paints a fitting picture regarding which features stand out the most and it creates a unique attribute profile for each speaker when shown individually. Though when shown all together as in \autoref{fig:spider_plot} a lot of points do end up close to each other and some insights may be lost due to this.
 
 \begin{figure}[H]
 \centering
@@ -45,3 +45,16 @@ It is possible to look at a spider plot in order to get a sense of how the speak
 \caption{A spider plot of the subjects' preference of the five different speakers}
 \label{fig:spider_plot}
 \end{figure}
+
+\subsection*{Possible Correlation}
+The spider also plot in \autoref{fig:spider_plot} paints an overall picture of which attributes might correlate though they are not arranged according to correlation. The plot can also get a bit confusing when multiple points are arranged close or on top of each other as previously stated. Luckily \textit{PanelCheck} contains a PCA Correlation loadings plot which presumably arranges attributes with higher correlation close to one another. See \autoref{fig:pca}.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{Figure/PCA_correlations.png}
+\caption{A plot containing the PCA correlation loadings. It becomes clearer which attributes correlates. e.g. "Small-Big" and "Light-Heavy".}
+\label{fig:pca}
+\end{figure}
+
+In this PCA Correlation loadings plot a group appears to the left containing "Light-Heavy", "Small-Big",  "Low-Tall", "Narrow-Wide", and "Fragile-Robust". This means that their seems to exist a correlation with these attributes. The group makes sense from an objective point of view where all relates to size except "Fragile-Robust". However small, narrow, light etc. might often be experienced to be fragile. The same goes for robust and being big etc. Another clear group is "Soft-Hard" and "Feminine-Masculine". It could be investigated further if these correlations are strong enough to stand alone meaning, perhaps they mean the same to the assessors and the number of word pairs might be reduced without losing much resolution in the data.
