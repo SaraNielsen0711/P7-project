@@ -1,23 +1,67 @@
+\section{Robottens opførsel}
+\label{RobottensOpfoersel}
+Til denne undersøgelse vælges det, at robotstyreren skal variere på robottens opførsel fra testperson til testperson. Dette gør sig gældende for parametre som højden på robotten, afstanden robotten stopper fra testpersonen og indgangsvinklen, hvorpå robotten henvender sig. Disse parametre er valgt, fordi det er disse parametre der kan ændre på ved brug af \textit{Double}-robotten. Formålet med at ændre på de fysiske parametre, at det ønskes at undersøge om andre parametre også ændrer sig, når disse fysiske parametre gør. 
+
+Når robottens forskellige højder skal bestemmes vælges det som udgangspunkt at have den laveste højde (118 cm) og den højeste højde (151 cm) med. Derudover bestemmes der en midterhøjde på 129 cm. Dette er ikke midten af de to ekstremer robotten kan hæve eller sænke sig til, men det er albuehøjden til en menneskehøjde på 175 cm, som er ca. midten af gennemsnitshøjden for danske mænd (181.4 cm) og kvinder (167.2 cm). For at få yderliger variation medtages højden midt mellem den laveste højde og midterhøjden samt højeden midt mellem midterhøjden og den højeste højde. De medtagende højder bliver derfor 118 cm, 123,5 cm, 129 cm, 140 cm og 151 cm. Højderne er vejlederende, da det godt kan svinge en centimeter i den ene eller anden retning, når robotten indstilles. 
+
+Når robottens afstand til testpersoner bestemmes medtages afstandende: Tæt på, tilpas afstand og lant fra. For tæt på defineres som at man skal tage et skridt væk for at kunne interagere ordentligt med skærmen. En tilpas afstand defineres som når man kan interagere med robotten med strakt arm og langt fra defineres som når testpersonen ikke kan nå robotten med strakt arm.
+
+Ved indgangsvinkel bestemmes det at variere mellem at robotten kommer forfra, fra højde side eller fra venstre side. 
+
+På \autoref{tab:Raekkefoelge} ses hvordan robotten er forudindstillet og skal henvende sig ved testperson 1 til 9. Efterfølgende indstillinger følger samme mønster, dog ændres højden til henholdsvis 123,5 cm, 129 cm, 140 cm og 151 cm. I alt vil er der være forudbestemte indstillinger til 45 testpersoner. Haves der flere testpersoner end dette, startes præsentationsrækkefølgen forfra.
+
+%
+\begin{table}[H]
+	\centering 
+	\begin{tabular}{l|c|c|c}
+		Testperson  & Højde & Afstand & Indgangsvinkel \\\hline
+		1   & 118 cm & Tæt på & Forfra  \\\hline
+		2   & 118 cm & Tilpas & Forfra \\ \hline
+		3   & 118 cm & Langt fra  & Forfra \\ \hline
+		4   & 118 cm & Tæt på & Højre side \\ \hline
+		5   & 118 cm & Tilpas & Højre side \\ \hline
+		6   & 118 cm & Langt fra & Højre side \\ \hline
+		7   & 118 cm & Tæt på & Venstre side \\ \hline
+		8   & 118 cm & Tilpas & Venstre side \\ \hline
+		9   & 118 cm & Langt fra  & Venstre side 
+	\end{tabular} 
+	\caption{Tabellen viser hvordan robotten skal forudindstilles og styres ved de første 9 testpersoner.}
+	\label{tab:Raekkefoelge}       
+\end{table}
+\noindent
+%
+På baggrund af dette vælges det at køre testen, så der minimum bliver testet på 45 testpersoner.
+
 \section{Rollefordeling}
 \label{TestAfSkalaRollefordeling}
 %
 For at strukturer testen opstilles der specifikke roller hvortil specifikke opgaver tildeles hver rolle. Der opstilles i alt tre forskellige roller. 
 %
-\subsubsection*{Robotstyre}
-Som ved feltundersøgelsen der er udført tidligere vælges det at fjernstyrer en \textit{Double}-robot og det er derfor nødvendigt at have en person til at styre robotten, som vil blive betegnet Robotstyrer. \blankline
+\subsubsection*{Robotstyrer}
+Som ved tidligere udført feltundersøgelse vælges det at fjernstyre en \textit{Double}-robot. Det er derfor nødvendigt at have en person til at styre robotten. \blankline
 %
-Robotstyren har til opgave at køre robotten rundt i lufthavnen og få den til at henvende sig til personer i området. Ved denne test er valgt at robotstyren skal variere på følgende parametre\fxnote{Disse parametre er foreløbige, og tilpasses/ændres sandsynligvis} ved robotten: 
-\begin{itemize}
-	\item Højden på robotten. 
-	\item Afstanden fra robotten til personen den henvender sig til. 
-	\item Om det er robotten eller testpersonen der henvender sig. 
-\end{itemize}
-Formålet med at robotstyreren skal ændre på disse fysiske parametre er at det ønskes at undersøge om andre parametre også ændrer sig når disse fysiske parametre gør. 
+Robotstyren har til opgave at køre robotten rundt i lufthavnen og få den til at henvende sig til personer i området. Som beskrevet i \fullref{RobottensOpfoersel} skal robotstyreren følge \autoref{tab:Raekkefoelge}, når vedkommende styrer robotten.
 
-\subsubsection*{Testleder}
-Personen der står for at fange testpersonen og bede dem besvarer skalaerne betegnes testlederen. Denne rolle har til opgave at introducere testpersonerne for testen og give dem tabletten til besvarelse af skalaerne. \blankline
+\subsection{Observatør af interaktion på skærmen}
+Denne observatør skal holde øje med hvad de rejsende trykker på skærmen. Hvis der trykkes “nej” skal observatøren indikere til robotstyreren at robotten skal køre væk og henvende sig til andre personer. Dette indikeres ved at vende tommelfingeren nedad. 
+Hvis personen, der interagerer med robotten, trykker "ja", skal observatøren holde øje med hvornår der står “følg venligst efter mig” på skærmen. Når der står dette på skærmen indikerer observatøren til robotstyreren, ved at vende tommelfingeren opad og robotstyreren lader robotten køre mod shopping området. 
+
+\subsection{Observatør af robotten}
+Personen med denne rolle har til formål at observere, hvordan robotten bevæger sig, og notere dette. De parametre, der er vigtige at notere, er følgende: 
 %
-Testlederen har desuden til opgave at observere og svare på spørgsmål under besvarelsen, hvis testpersonen måtte have nogle. Hvis der er spørgsmål eller relevante observation noter testlederen disse ned på en notesblok. Det er vigtigt at der i tilfælde hvor testpersonen har spørgsmål til Scale questions, ikke forklares projektgruppens forståelse af spørgsmålet, men i stedet lader det være op til testpersonen, ved eksempelvis at sige: “det er ud fra din forståelse af det” eller “Hvad synes du det betyder?” \blankline
+\begin{itemize}
+	\item Robottens højde
+	\item Hvorfra robotten henvender sig
+	\item Hvordan robotten bevæger sig 
+	\item Formålet for denne observatør er at indsamle data der er relevant for hvordan robotten agerede ved den enkelte person. 
+\end{itemize}
+%
+\subsubsection*{Testleder}
+Personen der står for at henvende sig til testpersonen, når robotten følger dem mod shoppingområdet og bede dem besvarer skalaerne betegnes testlederen. Denne rolle har til opgave at introducere testpersonerne for testen og give dem tabletten til besvarelse af skalaerne. \blankline
+%
+Testlederen har desuden til opgave at observere og svare på spørgsmål under besvarelsen, hvis testpersonen måtte have nogle. Hvis der er spørgsmål eller relevante observation noter testlederen disse ned på en notesblok. Det er vigtigt at der i tilfælde hvor testpersonen har spørgsmål til Scale questions, ikke forklares projektgruppens forståelse af spørgsmålet, men i stedet lader det være op til testpersonen, ved eksempelvis at sige: “Det er ud fra din forståelse af det” eller “Hvad synes du det betyder?” \blankline
 % 
 Testleder skal efter besvarelsen af skalaerne stille nogle enkelte afsluttende spørgsmål, for derefter at takke testpersonen for deltagelse og sige farvel.  
+
+
 
