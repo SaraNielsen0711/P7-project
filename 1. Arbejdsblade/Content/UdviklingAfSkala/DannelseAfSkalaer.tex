@@ -1,99 +1,106 @@
 \section{Udvælgelse af skalaer}
 \label{ParametreDatabehandlingSkalaer}
 %
-%(OBS:NOGET OM HVORDAN PARAMETRENE ER "FUNDET") \\
-Ud fra de opstillede parametre, opstilles der skalaer, ved at gennemgå alle sætningerne markeret med S (for Scale). Kravet for opstilling af en skala er, at det er muligt at ændre på den specifikke parametre skalaen beskriver. Formålet er at opstille den optimale skala for hvert enkelt parameter, der er derfor ikke fastsat én specifik skala type på forhånd. 
+Ud fra de fundne parametre og de potentielle skala spørgsmål beskrevet i forrige afsnit vil der i dette afsnit fokuseres på at udvælge de skalaer, der fremadrette vil blive anvendt i forbindelse med at evaluere interaktionen med robotten. I det henseende kan det være at to eller flere tidligere foreslået skala spørgsmål bliver sammensat til ét i tilfælde af, at det vurderes, at de vedrører den samme parameter. Denne vurdering foretages blandt projektgruppen, hvorfor der er ikke er fastsatte kriterier for hvornår to skala spørgsmål sammensættes, udover at de vedrører det samme.
 
-Det vurderes at en bipolær skala er mest beskrivende da den har den største spænd og denne vil derfor fortrækkes, i tilfælde hvor der findes både en bipolær og unipolær. \blankline
+Et krav for udvælgelsen af et skala spørgsmål er, at det skal være muligt at ændre på den specifikke parameter. Derudover vil de udvalgte skala spørgsmål blive præsenteret på deres respektive skalaer. Det tilstræbes at opstille den optimale skala for hvert enkelt parameter, hvorfor der ikke er fastsat én specifik skala type på forhånd.\blankline
 %
-OBS: Nogen af de orange sticky notes fra det foregående afsnit bliver slået sammen, fordi de egentlig siger det samme og hører under det samme emne. \blankline
-%
-OBS: ANTALLET AF SKALAER ER REDUCERET FRA 30 TIL 24
-%
-OBS: Hvis potentielle skala spørgsmål fra det forrige afsnit er sat sammen til en "endelig" skala er det gjort på baggrund af egne vurderinger og der er derfor ikke opsat nogle kriterier for sammensætningen, udover at det skal dække over det samme.\blankline
-%
-\textbf{INTERAGERER IKKE MED R}\\
-Det ene potentielle skala spørgsmål \textit{Er det let at undgå R}, der var til \textit{Interagerer ikke med R}, er hører nu under \textit{Jeg synes at robotten er anmassende}.\blankline
-%
-\textbf{SKÆRMEN VIRKER IKKE}\\
-Dette vil ikke være en skala, der "behandles" på samme måde som de andre, men en skala, der kan være med til at undersøge hvorvidt det har en indflydelse. Skalaen vil derfor ikke indgå blandt de andre skalaer, men være en af de sidste spørgsmål testpersonerne i den næste test får. 
+I henhold til den første kategori: \textit{Interagerer ikke med R}, hvor der kun er ét potentielt skala spørgsmål: \textit{Er det let at undgå R}, så vil dette skala spørgsmål ikke fremgå på en endelig skala. Årsagen er, at spørgsmålet vil blive sammensæt med: \textit{Jeg synes at robotten er anmassende}. Vurderingen bygger på, at hvis robotten er anmassende vil den formentlig ikke være let at undgå, hvorimod hvis robotten slet ikke er anmassende så er robotten formentlig let at undgå. 
+
+Skala spørgsmålet: \textit{Hvordan synes du skærmen virkede}, vil ikke behandles på lige fod med de resterende parametre, men det kan være med til at undersøge hvorvidt skærmens reaktionsevne har en indflydelse på interaktionen. Grunden til at spørgsmålet ikke vil indgå på samme måde som de resterende parametre er, at det forventes at den færdig udviklede robot ikke vil have dette problem. Problemet med at skærmen reagerer dårligt skyldes formentlig, at \textit{wireframet} åbnes igennem robottens egen software. Derudover er det observeret at flere testpersoner har problemer med at trykke på skærmen, hvor teorien/hypotesen er, at de trykker for hårdt. På \autoref{fig:SkalaSkaermensReaktion} fremgår skalaen, hvorpå det vurderes hvordan skærmen reagerede.  
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/SkaermensReaktion} 
-\caption{NY.}
+\caption{Bipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Hvordan synes du skærmen reagerede?}}
 \label{fig:SkalaSkaermensReaktion}
 \end{figure}
 \noindent
 %
-\textbf{R KAN ASSISTERE MENNESKER}\\
-%
-\begin{figure}[H]
-\centering
-\includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/PersonligHjaelp} 
-\caption{NY.}
-\label{fig:SkalaPersonligHjaelp}
-\end{figure}
-\noindent
-%
-Jeg føler R kan hjælpe mig, R kan hjælpe mig så jeg ikke behøver at spørger personale slåes sammen til: Jeg føler at R kan hjælpe mig. Hvor \textit{ Jeg kan bruge R til at finde rundt i L slåes sammen til} tidligere blev slået sammen med at \textit{Jeg føler R kan hjælpe mig}.
+Årsagen til at der ikke er et label på midtpunktet på \autoref{fig:SkalaSkaermensReaktion} er, at det forventes, at der en logisk forståelse for hvad midten indikerer, hvor et label potentielt kan skævvride responsen.
+
+De to potentielle skala spørgsmål: \textit{Jeg føler at R kan hjælpe mig} og \textit{R kan hjælpe mig så jeg ikke behøver at spørger personale} bliver sammensat fordi de begge vedrører at robotten kan hjælpe dem. På \autoref{fig:SkalaRKanHjaelpe} fremgår den udvalgte skala for hvorvidt robotten kan hjælpe én.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/RobottenKanHjaelpe} 
-\caption{NY.}
+\caption{Bipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg føler at robotten kan hjælpe mig}.}
 \label{fig:SkalaRKanHjaelpe}
 \end{figure}
 \noindent
 %
-\textbf{R'S VÆREMÅDE}\\
+Årsagen til at der på \autoref{fig:SkalaRKanHjaelpe} fremgår et label på midtpunktet er for, at kalibrer skalaen omkring neutral i tilfælde af, at testpersonen ikke har en holdning om hvorvidt robotten kan hjælpe en. 
+
+Fra samme kategori: \textit{R kan assistere mennesker} udvælges skala spørgsmålet: \textit{Jeg oplever robottens hjælp som personlig}, hvilket fremgår på \autoref{fig:SkalaPersonligHjaelp}.
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/PersonligHjaelp} 
+\caption{Unipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg oplever robottens hjælp som personlig}.}
+\label{fig:SkalaPersonligHjaelp}
+\end{figure}
+\noindent
+%
+Årsagen til at skala spørgsmålet: \textit{Jeg oplever robottens hjælp som personlig} ikke præsenteres på en bipolær skala skyldes hovedsageligt, at der ikke findes en naturlig og logisk modpart til personlig. \textbf{Hvorfor bruger vi egentlig ikke "ekstremt upersonlig"?}.\blankline
+%
+I henhold til kategorien: \textit{R's væremåde} vil skala spørgsmålene vedrørende robottens bevægelse, hastighed samt hvorvidt robotten er irriterende vælges som de fremgår i \fullref{ParametreRsVaeremaade}. Skalaen tilhørende robottens bevægelse fremgår på \autoref{fig:SkalaBevaegelserR}, robottens hastighed fremgår på \autoref{fig:SkalaHastighedR} og hvorvidt robotten er irriterende fremgår på \autoref{fig:SkalaIrriterende}.  
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/BevaegelserR} 
-\caption{NY.}
+\caption{Bipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg synes at robottens bevægelser er}.}
 \label{fig:SkalaBevaegelserR}
 \end{figure}
 \noindent
 %
+Årsagen til at \autoref{fig:SkalaBevaegelserR} er bipolær er, at det vurderes at ekstremt rolige bevægelser er det modsatte af ekstremt vilde bevægelser. Hvor årsagen til at der ikke er et label på midtpunktet er, at det vurderes, at der er en logisk adskilles mellem de to yderpunkter. Derudover er det svært at finde et label, som ville kunne kobles til midtpunktet mellem rolige og vilde bevægelser.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/HastighedR} 
-\caption{NY.}
+\caption{Bipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg synes at robottens hastighed er}.}
 \label{fig:SkalaHastighedR}
 \end{figure}
 \noindent
 %
+Årsagen til at \autoref{fig:SkalaHastighedR} præsenteres på en bipolær skala er, at de to labels på endepunkterne gengiver testpersonernes egne formulering af robottens hastighed. Derudover er midtpunkt angivet med: \textit{Fin}, fordi det afspejler testpersonernes udsagn. Derudover så vurderes det, at der ikke findes en naturlig og logisk midte mellem de to yderpunkter, hvorfor der kalibreres omkring at robottens hastighed er fin. 
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/Irriterende} 
-\caption{NY.}
+\caption{Unipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg synes at robotten er irriterende}.}
 \label{fig:SkalaIrriterende}
 \end{figure}
 \noindent
 %
-Nedenstående skala er slået sammen af: \textit{Jeg synes at R er levende} fra kategori: \textit{R's væremåde} og \textit{Jeg synes at R ser menneskelig ud} fra kategori: \textit{R's udseende}, hvor \textit{Jeg foretrækker at R ser menneskelig ud} blev slået sammen.
+Årsagen til at \autoref{fig:SkalaIrriterende} præsenteres på en unipolær skala er, at det vurderes, at der ikke forekommer en naturlig og logisk modpart til irriterende.
+
+Derudover vælges det at sammensætte: \textit{Jeg synes at R er levende} fra kategori: \textit{R's væremåde} og \textit{Jeg synes at R ser menneskelig ud} fra kategori: \textit{R's udseende}, til ét enkelt skala spørgsmål præsenteret på \autoref{fig:SkalaMenneskeligR}.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/MenneskeligR} 
-\caption{NY.}
+\caption{Unipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg synes at robotten er menneskelig}.}
 \label{fig:SkalaMenneskeligR}
 \end{figure}
 \noindent
 %
-Nedenstående skala er slået sammen af: \textit{Jeg synes at R er anmassende}, \textit{Jeg synes at R er intimiderende} (fra kategori: \textit{Henvendelse}) og \textit{Er det let at undgå R} fra kategori: \textit{Interagerer ikke med R} 
+Årsagen til at \autoref{fig:SkalaMenneskeligR} præsenteres på en unipolær skala fremfor en bipolær skala er, at der ikke umiddelbart findes en naturlig og logisk modpart til menneskelig, hvertfald i forhold til robotten. Der kan argumenteres for, at anvende ordet: \textit{Umenneskelig}, hvor årsagen til at dette ord ikke anvendes er, at hvis en robot er umenneskelig er det så en maskine eller et dødt objekt, og i så fald hvilket ord skal da anvendes som label. På baggrund af dette blev det besluttet at angive modparten som: \textit{Slet ikke menneskelig}.
+
+Ydermere sammensættes: \textit{Jeg synes at R er anmassende}, \textit{Jeg synes at R er intimiderende} fra kategori: \textit{Henvendelse} og \textit{Er det let at undgå R} fra kategori: \textit{Interagerer ikke med R}. Årsagen til at \textit{Jeg synes at R er intimiderende} sammensættes med hvorhvidt robotten er anmassende er, at vurderes at hvis robotten perciperes som værende ekstremt anmassende vil den formentlig også blive perciperet som intimiderende, hvorhvis robotten ikke er anmassende så forventes det ligeledes at robotten heller ikke perciperes som intimiderende. Årsagen til at \textit{Er det let at undgå R} indgår er forklaret tidligere. Den valgte skala fremgår på \autoref{fig:SkalaAnmassende}.  
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/UdvalgteSkalaer/Anmassende} 
-\caption{NY.}
+\caption{Unipolær VAS med lukkede endepunkter til skala spørgsmålet: \textit{Jeg synes at robotten er anmassende}.}
 \label{fig:SkalaAnmassende}
 \end{figure}
 \noindent
 %
+Årsagen til at \autoref{fig:SkalaAnmassende} ikke præsenteres på en bipolær skala er, at det igen vurderes, at der ikke forekommer en naturlig og logisk modpart til anmassende.  
+
+
+
 \textbf{HENVENDELSE}\\
 %
 \begin{figure}[H]
@@ -246,3 +253,6 @@ Fjerner \textit{Jeg kan godt lide R's udseende} fordi det formentlig er en overk
 \end{figure}
 \noindent
 %
+
+
+OBS: ANTALLET AF SKALAER ER REDUCERET FRA 30 TIL 24
