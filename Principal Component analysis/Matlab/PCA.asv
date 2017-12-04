@@ -66,16 +66,13 @@ mean6 = mean(bread6);
 mean7 = mean(bread7);
 mean8 = mean(bread8);
 
-
+expl2=explained(1)+explained(2);
 input_data=[mean1;mean2;mean3;mean4;mean5;mean6;mean7;mean8];
 [coefs,scores,variances,tstat,explained] = pca(input_data); 
-scree = plot([0:7],[0,explained(1),sum(explained(1:2)),sum(explained(1:3)),sum(explained(1:4)),sum(explained(1:5)),sum(explained(1:6)),sum(explained(1:7))])
+scree = plot([1:7],[explained(1),explained(2),explained(3),explained(4),explained(5),explained(6),explained(7)])
  xlabel('Dimensions');
  ylabel('Stress')
-hold on 
-bar(1:7,explained, 'b');
-ylim([0 100]);
-hold off
+
 figure; plot(scores(:,1),scores(:,2),'+') 
 xlabel(['Principal Component 1 (' num2str(explained(1),'%.1f') '%)']) 
 ylabel(['Principal Component 2 (' num2str(explained(2),'%.1f') '%)']) 
