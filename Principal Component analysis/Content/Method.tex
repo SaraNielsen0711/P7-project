@@ -6,6 +6,7 @@ The method of choice in this paper is Principal Component Analysis (PCA). This m
 PCA uses linear algebra to extract the components. The PCA consists of different steps, an overview of these different steps is listed based on \textcite[pp. 211-213]{Naes2010}:
 
 \begin{enumerate}
+	\item Organise the data in a data matrix where each row in the table corresponds to an ‘object’ and each column to a ‘variable’
 	\item Computing the average of all the variables. 
 	\item The averages are subtracted from their corresponding variables.
 	\item Search for the direction in space that has as large variance as possible, which is the first principal component (PC1).
@@ -18,6 +19,9 @@ PCA uses linear algebra to extract the components. The PCA consists of different
 The variances of each PC is noted in percentage.
 The sum of the variances of the PC's is equal to the sum of the variances of the original variables. This means that if we have two components, the sum of this two components describes the total percentage covered be them. An example could be PC1 = 87 \% and PC2 = 9 \%. The total variances covered be having two components in this case will be 87 \% + 9 \% = 96 \% \parencite[p. 213]{Naes2010}. This could be useful when determine when the desired number of components has been extracted. \blankline
 %
+Score value is the principal component value 
+Loading values defines the contribution of each of the original variables in the calculation of the first score. This means that a high loading value for a specific variable indicates that this variable is strongly related to the PC, that the loading value is according to. 
+
 The results of the PCA is typically presented graphically in a scatter plot in two- or three-dimensions, where each dimension is based on a PC. This plot is called score plot. An example of a score plot in two dimensions is presented in \autoref{fig:PlotExample}
 %
 \begin{figure}[H]
@@ -28,3 +32,4 @@ The results of the PCA is typically presented graphically in a scatter plot in t
 \end{figure}
 \noindent
 %
+The scores plot is therefore simply a plot of the relation between the objects in the projected space.
