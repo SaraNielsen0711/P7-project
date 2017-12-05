@@ -37,33 +37,31 @@ For at opnå de 45 kombinationer af højde, afstand og indgangsvinkel kræver de
 \section{Rollefordeling}
 \label{TestAfSkalaRollefordeling}
 %
-For at strukturer testen opstilles der specifikke roller hvortil specifikke opgaver tildeles hver rolle. Der opstilles i alt tre forskellige roller. 
+For at udføre testen er det nødvendigt at definere nogle roller, hvortil specifikke opgaver tildeles. Der opstilles i alt tre forskellige roller. 
 %
 \subsubsection*{Robotstyrer}
-Som ved tidligere udført feltundersøgelse vælges det at fjernstyre en \textit{Double}-robot. Det er derfor nødvendigt at have en person til at styre robotten. \blankline
 %
-Robotstyren har til opgave at køre robotten rundt i lufthavnen og få den til at henvende sig til personer i området. Som beskrevet i \fullref{RobottensOpfoersel} skal robotstyreren følge \autoref{tab:Raekkefoelge}, når vedkommende styrer robotten.
+Som ved feltundersøgelsen vælges det ligeledes, at fjernstyre \textit{Double}-robotten, hvorfor det er nødvendigt at have en person til at styre robotten. Robotstyren har til opgave at køre robotten rundt i lufthavnen og få den til at henvende sig til de rejsende i området. Hvordan robotten skal bevæge sig i forhold til afstanden til testpersonen og indgangsvinklen for henvendelse fremgår af \autoref{tab:Raekkefoelge}.
 
-\subsection{Observatør af interaktion på skærmen}
-Denne observatør skal holde øje med hvad de rejsende trykker på skærmen. Hvis der trykkes “nej” skal observatøren indikere til robotstyreren at robotten skal køre væk og henvende sig til andre personer. Dette indikeres ved at vende tommelfingeren nedad. 
-Hvis personen, der interagerer med robotten, trykker "ja", skal observatøren holde øje med hvornår der står “følg venligst efter mig” på skærmen. Når der står dette på skærmen indikerer observatøren til robotstyreren, ved at vende tommelfingeren opad og robotstyreren lader robotten køre mod shopping området. 
+\subsubsection*{Observatør af interaktion på skærmen}
+%
+Observatøren skal holde øje med hvad de rejsende trykker på skærmen. Hvis der trykkes \textit{Nej} skal observatøren indikere til robotstyreren, at robotten skal køre væk. Dette indikeres ved, at observatøren vender tommelfingeren nedad. Hvis den rejsende, der interagerer med robotten, trykker \textit{Ja}, skal observatøren holde øje med, hvornår der står: \textit{Følg venligst efter mig} på skærmen. Dette indikeres ved, at observatøren vender tommelfingeren opad, hvorefter robotstyreren lader robotten køre mod shoppingområdet. 
 
-\subsection{Observatør af robotten}
-Personen med denne rolle har til formål at observere, hvordan robotten bevæger sig, og notere dette. De parametre, der er vigtige at notere, er følgende: 
+\subsubsection*{Observatør af robotten}
+%
+Personen med denne rolle har til opgave at observere og notere hvordan robotten bevæger sig i forhold til om det stemmer overens med robotstyrens plan, jævnfør \autoref{tab:Raekkefoelge}. De parametre, der er særlig vigtige at notere er:\blankline 
 %
 \begin{itemize}
-	\item Robottens højde
-	\item Hvorfra robotten henvender sig
-	\item Hvordan robotten bevæger sig 
-	\item Formålet for denne observatør er at indsamle data der er relevant for hvordan robotten agerede ved den enkelte person. 
+	\item Højde
+	\item Afstand
+	\item Indgangsvinkel\blankline
 \end{itemize}
+\noindent
 %
+I tilfælde af, at robotten bevæger sig anderledes end hvad den plejer skal dette ligeledes noteres af observatøren. Vurderer observatøren, at der er andre hændelser, der er vigtige at have til senere brug, noteres disse. Formålet med denne observatør er at indsamle data, der kan være relevant for hvordan robotten agerede ved den enkelte testperson i henhold til testpersonens evaluering.
+
 \subsubsection*{Testleder}
-Personen der står for at henvende sig til testpersonen, når robotten følger dem mod shoppingområdet og bede dem besvarer skalaerne betegnes testlederen. Denne rolle har til opgave at introducere testpersonerne for testen og give dem tabletten til besvarelse af skalaerne. \blankline
 %
-Testlederen har desuden til opgave at observere og svare på spørgsmål under besvarelsen, hvis testpersonen måtte have nogle. Hvis der er spørgsmål eller relevante observation noter testlederen disse ned på en notesblok. Det er vigtigt at der i tilfælde hvor testpersonen har spørgsmål til Scale questions, ikke forklares projektgruppens forståelse af spørgsmålet, men i stedet lader det være op til testpersonen, ved eksempelvis at sige: “Det er ud fra din forståelse af det” eller “Hvad synes du det betyder?” \blankline
-% 
-Testleder skal efter besvarelsen af skalaerne stille nogle enkelte afsluttende spørgsmål, for derefter at takke testpersonen for deltagelse og sige farvel.  
+Testlederens opgave er, at henvende sig til testpersonen, når robotten følger dem mod shoppingområdet, og spørger dem om de har tid til at svare på nogle spørgsmål. Spørgsmålene er skalaerne. Har testpersonen tid til at evaluere sin oplevelse på skalaerne følger testlederen dem hen til bordet, hvor de præsenteres for skalaerne på computeren. Testlederen har i den forbindelse til opgave at notere testpersonnummer i programmet, jævnfør \fullref{TestAfSkalaProgramSkala}, og efterfølgende eksekvere programmet, så testpersonen kan svare på skalaerne. Testlederen har desuden til opgave at observere og svare på spørgsmål vedrørende skalaerne, hvis testpersonen måtte have nogle. Dette vil testlederen sørger for at notere. 
 
-
-
+Det er vigtigt at testlederen, i tilfælde hvor testpersonen har spørgsmål til skalaerne, ikke forklarer projektgruppens forståelse af spørgsmålet, men i stedet lader det være op til den enkelte testpersonen, at danne sin egen forståelse af spørgsmålet. Det kan eksempelvis gøres ved, at testlederen siger: \textit{Det er ud fra din forståelse af det} eller \textit{Hvad synes du det betyder?}. Efter testpersonen har besvaret alle skalaer og udfyldt demografien, takker testlederen testpersonen for sin deltagelse og ønsker dem en god rejse. 
