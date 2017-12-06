@@ -4,13 +4,111 @@
 %Analyze the results from the example using PCA.
 
 %First plot a “profile” of all stimuli.
+Some text about the profile plot \autoref{fig:profile}.
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/profile_plot}
+\caption{}
+\label{fig:profile}
+\end{figure}
+\noindent
 
 %How much of the variance is explained by each component?
-
 %(Plot a scree-plot including cumulative variance).
+
+As shown on \autoref{tab:explained}, 81.04 \% of the variance is explained by PC1, 13.61 \% by PC2 and 3.31 \% by PC3. 
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\hline
+                         & \multicolumn{1}{l}{Variance Explained (\%)} \\ \hline
+\multicolumn{1}{l|}{PC1} & 81.04                                       \\
+\multicolumn{1}{l|}{PC2} & 13.61                                       \\
+\multicolumn{1}{l|}{PC3} & 3.31                                        \\
+\multicolumn{1}{l|}{PC4} & 1.28                                        \\
+\multicolumn{1}{l|}{PC5} & 0.65                                        \\
+\multicolumn{1}{l|}{PC6} & 0.10                                        \\
+\multicolumn{1}{l|}{PC7} & 0.01                                       
+\end{tabular}
+\caption{Table showing explained variance by each principal component}
+\label{tab:explained}
+\end{table}
+
+
+The explained variance from each principal component is plotted in a barplot and an accumulative scree-plot, see \autoref{fig:scree}. On the scree-plot in \autoref{fig:scree}, there is a knee point at PC2 and it is therefore chosen to use 2 principal components in the analysis. That means that 94.65 \% of the total variance is explained by the two principal components.
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/Screeplot}
+\caption{Accumulative scree plot and barplot showing how much of the variance is explained by each principal component}
+\label{fig:scree}
+\end{figure}
+\noindent
+
 
 %Plot your PCA solution graphically. Both a plot with just your stimuli (scores) and a biplot with both scores and loadings.
 
+Based on \autoref{fig:scoreplot}, it is apparent that B1 and B2 share similar overall properties. B4 and B5 also have quite similar properties, as well as B6 and B7. B8 is very different from all the other buns.
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/PCA_plot}
+\caption{PCA score plot}
+\label{fig:scoreplot}
+\end{figure}
+\noindent
+
+On \autoref{fig:biplot}, both the scores and loadings are plotted in a bi-plot. It shows that Krumme contributes to most of the PC1 and Kerner contributes to most of the PC2. Saftig doesn't really contribute that much to any of the two principal components.
+None of the variables are negatively correlated. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/biplot}
+\caption{Biplot with both scores and loadings}
+\label{fig:biplot}
+\end{figure}
+\noindent
+
+
 %Make a table of the loadings of each word-pair on each principal component.
 
+\begin{table}[H]
+\centering
+\begin{tabular}{llllllll}
+\hline
+\textbf{}                               & \textbf{PC1}    & \textbf{PC2}    & \textbf{PC3}    & \textbf{PC4}    & \textbf{PC5} & \textbf{PC6} & \textbf{PC7} \\ \hline
+\multicolumn{1}{l|}{\textbf{Skorpe}}    & 0.3678          & 0.0600          & -0.0046         & \textbf{0.6897} & 0.5477       & -0.1959      & 0.1392       \\
+\multicolumn{1}{l|}{\textbf{Krumme}}    & \textbf{0.5472} & -0.5240         & 0.0189          & -0.4872         & 0.3211       & -0.0521      & -0.1313      \\
+\multicolumn{1}{l|}{\textbf{Overflade}} & 0.2416          & 0.2748          & \textbf{0.9111} & -0.0847         & -0.1001      & 0.0329       & 0.0650       \\
+\multicolumn{1}{l|}{\textbf{Kerner}}    & 0.1719          & \textbf{0.6974} & -0.2236         & -0.3361         & 0.4033       & 0.3256       & -0.0727      \\
+\multicolumn{1}{l|}{\textbf{Tungt}}     & 0.2616          & -0.0693         & -0-1562         & 0.0663          & -0.1392      & 0.4939       & -0.1535      \\
+\multicolumn{1}{l|}{\textbf{Tæt}}       & 0.1806          & -0.2413         & 0.0132          & 0.0035          & -0.1153      & 0.3682       & 0.5569       \\
+\multicolumn{1}{l|}{\textbf{Saftigt}}   & 0.0904          & 0.0088          & 0.0413          & 0.2347          & -0.1858      & 0.1851       & -0.4137      \\
+\multicolumn{1}{l|}{\textbf{Mættende}}  & 0.3257          & 0.0166          & -0.0613         & 0.0962          & -0.1729      & -0.2379      & -0.0712      \\
+\multicolumn{1}{l|}{\textbf{Nærende}}   & 0.3163          & 0.0575          & -0.1049         & 0.2613          & -0.3638      & 0.3427       & -0.0214      \\
+\multicolumn{1}{l|}{\textbf{Fuldkorn}}  & 0.2783          & 0.2729          & -0.2608         & -0.1629         & -0.3320      & -0.3433      & 0.5211       \\
+\multicolumn{1}{l|}{\textbf{Fiber}}     & 0.2908          & 0.1368          & -0.1029         & -0.0573         & -0.2907      & -0.3823      & -0.4148     
+\end{tabular}
+\caption{My captio}
+\label{tab:loadings}
+\end{table}
+
 %Interpret the solution. Also, are there word-pairs that seem ”redundant” e.g. measures that same perceptual attribute?
+
+Based on \autoref{fig:biplot}, it looks like Overflade and Fuldkorn are highly correlated, but after looking at the 3D biplot, \autoref{fig:3Dbiplot}, it is clear to see that Overflade and Fuldkorn is actually quite different. From this plot, we can see that the attribute Overflade explains most of the PC3, since it is almost the only attribute that deviates in the third dimension. This is confirmed by the loadings table, where 91.1 \% of the principal component 3 is explained by Overflade.
+From \autoref{fig:biplot}, it also looks like Nærende, Mættende and Skorpe are highly correlated, which is confirmed by the 3D biplot on \autoref{fig:3Dcorrelation}. Therefore, some of these three attributes might be redundant. Saftig might also be redundant, since it doesn't really contribute to any of the three principal components.
+\autoref{fig:biplot3D}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/biplot_3D_maet}
+\caption{}
+\label{fig:3Dcorrelation}
+\end{figure}
+\noindent
+
+\begin{figure}[H]
+\centering
+\includegraphics[width =\textwidth]{Figure/biplot_3D_std}
+\caption{}
+\label{fig:3Dbiplot}
+\end{figure}
+\noindent
