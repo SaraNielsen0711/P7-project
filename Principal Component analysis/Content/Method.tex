@@ -1,14 +1,14 @@
 \section*{Method}
 \label{Method}
 %
-The method of choice in this paper is Principal Component Analysis (PCA). This method is typically used as an explorative technique to obtain an overview by reducing a complex data set to a lower number of dimensions. The dimensions found in PCA is called principal components (PC). Each PC explains a certain amount variation noted in percentage which describes how much of the variances of the original variables, the PC describes.\blankline
+The purpose for this article was to analyse the data. The method of choice in this paper is Principal Component Analysis (PCA). This method is typically used as an explorative technique to obtain an overview by reducing a complex data set to a lower number of dimensions. The dimensions found in PCA is called principal components (PC). Each PC explains a certain amount variation noted in percentage which describes how much of the variances of the original variables, the PC describes.\blankline
 %
 PCA uses linear algebra to extract the components. The PCA consists of different steps, an overview of these different steps is listed based on \textcite[pp. 211-213]{Naes2010}:
 
 \begin{enumerate}
 	\item Organise the data in a data matrix where each row in the table corresponds to an ‘object’ and each column to a ‘variable’
 	\item Computing the average of all the variables. 
-	\item The averages are subtracted from their corresponding variables.
+	\item The averages are subtracted from their corresponding variables. \fxnote{Julianeeeeeeeeeeee skriv det vi snakkede om - med pca() funktionen i Matlab gør det automatisk}
 	\item Search for the direction in space that has as large variance as possible, which is the first principal component (PC1).
 	\item Search for the second principal component(PC2). Same procedure as for PC1, but under the restriction that the direction of the PC2 is orthogonal to PC1. 
 	\item Extract new components that describe as much variance as possible under the restriction that each new PC-direction is orthogonal to the previous.
@@ -17,7 +17,7 @@ PCA uses linear algebra to extract the components. The PCA consists of different
 \blankline
 %
 The variances of each PC is noted in percentage.
-The sum of the variances of the PC's is equal to the sum of the variances of the original variables. This means that if we have two components, the sum of this two components describes the total percentage covered be them. An example could be PC1 = 87 \% and PC2 = 9 \%. The total variances covered be having two components in this case will be 87 \% + 9 \% = 96 \% \parencite[p. 213]{Naes2010}. This could be useful when determine when the desired number of components has been extracted. To get an overview of the total variances covered be each number of dimensions a scree-plot can be made, which shows exactly this. \blankline
+The sum of the variances of the PC's is equal to the sum of the variances of the original variables. This means that if we have two components, the sum of this two components describes the total percentage covered be them. An example could be PC1 = 87 \% and PC2 = 9 \%. The total variances covered be having two components in this case will be 87 \% + 9 \% = 96 \% \parencite[p. 213]{Naes2010}. This could be useful in determining when the desired number of components has been extracted. To get an overview of the total variances covered be each number of dimensions a scree-plot can be made, which shows exactly this. \blankline
 %
 %Score value is the principal component value 
 The results of the PCA is typically presented graphically in a scatter plot in two- or three-dimensions, where each dimension is based on a PC. There is different types of plots relevant to make when conducting PCA. 
@@ -34,16 +34,16 @@ The score plot gives an overview of the relation between the rating of the diffe
 %\end{figure}
 %\noindent
 %
-On a score plot the samples are plotted and if two samples are close to each other in the plot it means that they have similar overall properties and if the samples are fare away from each other in the plot it means that they are very different. It is important to take in to account the chosen number of dimensions. Some samples can be close to each other, and therefore similar, in two dimension but no longer close to each other if an extra dimension is added. 
+On a score plot the samples are plotted and if two samples are close to each other in the plot it means that they have similar overall properties and if the samples are far away from each other in the plot it means that they are very different. It is important to take in to account the chosen number of dimensions. Some samples can be close to each other, and therefore similar, in two dimension but no longer close to each other if an extra dimension is added. 
 %
 \subsection*{Loading plot}
-The other plot used when conducting PCA is loadings plot where the loading values are plotted.
-Loading values defines the contribution of each of the original variables in the calculation of the first score. This means that a high loading value for a specific variable indicates that this variable is strongly related to the PC, that the loading value is according to \parencite[p. 212]{Naes2010}. \blankline
+The other plot possibly used when conducting PCA is the PCA loadings plot.
+Loading values defines the contribution of each of the original variables in the calculation of the first score. This means that a high loading value for a specific variable indicates that this variable is strongly related to the PC or in other words strongly contributes to the PC \parencite[p. 212]{Naes2010}. \blankline
 %
-The loading plot is used to see which variables are correlated, by looking at which variables are plotted close to each other. If two variables are places on opposite sides of the origin(0,0) it means that these two variables are negative correlated \parencite[p. 216]{Naes2010}. 
+The loading plot is used to see which variables are correlated, by looking at which variables are plotted close to each other. If two variables are places on opposite sides of the origin(0,0) it means that these two variables are negatively correlated \parencite[p. 216]{Naes2010}. 
 %
 \subsection*{Bi-plot}
-If a score plot and a loading plot is plotted together in the same plot it is called a bi-plot  \parencite[p. 217]{Naes2010}. The advances of doing this is that it saves places in the paper. Other than that there isn't a big different between making a score plot and a loading plot or just making a bi-plot, it is primarily based on the preference of the author. The bi-plot is interpreted according to the score values in the same way as in the score plot and according to loading values in the same way as the loading plot is interpreted. 
+If a score plot and a loading plot is plotted together in the same plot it is called a bi-plot  \parencite[p. 217]{Naes2010}. The advances of doing this is that it saves places in the paper. Other than that there is not a big different between making a score plot and a loading plot or just making a bi-plot, it is primarily based on the preference of the author. The bi-plot is interpreted according to the score values in the same way as in the score plot and according to loading values in the same way as the loading plot is interpreted. 
 %
 \subsection*{Redundant}
 Redundancy means that some attributes, measured in the data, is highly correlated. 
