@@ -12,8 +12,8 @@ labels = [1,2,3,4,5,6,7,8,9,10,11];
 bread1_idx = find(Data(:,3)==1);
 breadAttr1 = Data(bread1_idx,5:end);
 bread1=[labels;breadAttr1];
-clear bread1_idx
-clear breadAttr1
+%clear bread1_idx
+%clear breadAttr1
 
 bread2_idx = find(Data(:,3)==2);
 breadAttr2 = Data(bread2_idx,5:end);
@@ -70,13 +70,14 @@ mean8 = mean(bread8);
 input_data=[mean1;mean2;mean3;mean4;mean5;mean6;mean7;mean8];
 [coefs,scores,variances,tstat,explained] = pca(input_data); 
 scree = plot([0:7],[0,explained(1),sum(explained(1:2)),sum(explained(1:3)),sum(explained(1:4)),sum(explained(1:5)),sum(explained(1:6)),sum(explained(1:7))])
- xlabel('Dimensions');
- ylabel('Stress')
+xlabel('Dimensions');
+ylabel('Stress')
 hold on 
 bar(1:7,explained, 'b');
 ylim([0 100]);
 hold off
-figure; plot(scores(:,1),scores(:,2),'+') 
+
+%figure; plot(scores(:,1),scores(:,2),'+') 
 xlabel(['Principal Component 1 (' num2str(explained(1),'%.1f') '%)']) 
 ylabel(['Principal Component 2 (' num2str(explained(2),'%.1f') '%)']) 
 text(scores(1,1),scores(1,2),'Sample1') 
@@ -87,5 +88,13 @@ text(scores(5,1),scores(5,2),'Sample5')
 text(scores(6,1),scores(6,2),'Sample6')
 text(scores(7,1),scores(7,2),'Sample7')
 text(scores(8,1),scores(8,2),'Sample8')
+varlabels = {'Skorpe','Krumme','Overflade','Kerner','Tungt','Taet','Saftigt','Maettende','Naerende','Fuldkorn','Fiber'};
+%OBSLABS = {'Sample1','Sample2','Sample3','Sample4','Sample5','Sample6','Sample7','Sample8'};
+biplot(coefs(:,1:2),'Scores', scores(:,1:2),'VarLabels', varlabels); 
+
+% 
+% title('Biplot of the first two Principal Components')
 %%pcaBread1=pca(mean1);
 %%cov=pcacov(mean1);
+
+

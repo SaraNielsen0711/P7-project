@@ -1,0 +1,30 @@
+\section{Sortering af data}
+\label{TestAfSkalaSorteringAfData}
+%
+%OBS: Jeg ved ikke om det skal være en sektion eller en undersektion endnu. 
+%
+Testpersonernes respons på skalaerne omregnes til procent, hvorfor det venstre endepunkt er 0 \% og det højre endepunkt er 100 \%. Ud fra datasættet fremgår det, at nogle skalaer har én eller flere besvarelser på 0 \%, problemet med det er, at det ikke vides med sikkerhed om testpersonen har svaret 0 eller om testpersonen slet ikke har angivet en respons på den pågældende skala. At det ikke er muligt at adskille de to tilfælde fra hinanden skyldes, at programmet automatisk gemmer værdien 0, hvis en skala ikke er besvaret. Det har derfor været nødvendigt at gennemgå datasættet og vurdere hver enkelte tilfælde i forhold til om det er en reel besvarelse eller om det er en manglende besvarelse. Dette afgøres på baggrund af to kriterier: 1) Hvis alle skalaerne, der er præsenteret på én af de syv sider, ikke er besvaret vil de alle være angivet med 0 i datasætte, hvorfor det kan fastslåes at det ikke er en reel besvarelse men derimod en manglende besvarelse. Årsagen til at der forekommer tilfælde, hvor en testperson ikke har besvaret en eneste skala på en af de præsenterede sider skyldes formentlig, at der har været problemer med programmet. Disse problemer relaterer sig hovedsageligt til \textit{Næste}-knappen i programmet, som reagerede dårligt og i nogle tilfælde kun ved dobbeltklik, så hvis en testperson klikkede flere gange på knappen er det muligt, at de sprang over en side og slet ikke blev præsenteret for de pågældende skalaer. 2) Hvis der ved en skala generelt er høje procentsatser og en besvarelse på 0 \% virker usandsynlig vil det betragtes som en manglende besvarelse. Er det tilfældet vil 0'et blive behandlet som en outlier, der er tre standard afvigelser fra det resterende data.
+
+I henhold til datasættet (LAV HENVISNING TIL DATASÆTTET) vil situationer, der opfylder kriterie 1) vedrørende manglende besvarelser, være markeret med en rød celle. Summeret forekommer det 16 gange, hvor største delen af fejlene er opstået på side syv, hvor hverken TP8, TP10, TP18, TP29, TP34 og TP36 har afgivet en besvarelse på hver af de fire præsenterede skalaer. 
+
+Der er 28 tilfælde hvor det er uvist hvorhvidt der enten er afgivet en besvarelse på 0 \% eller om 0 \% afspejler en manglende besvarelse. DET KIGGER VI PÅ NU... 
+
+To problemer i koden. 1 Den skal ikke gemme 0 hvis der ikke er markeret noget på skalaen. Gem NaN i stedet. 2 Man skal ikke kunne gå videre til næste side før der er svaret på alle spørgsmål på en side. Skete fordi det gik for hurtigt.
+
+Problemet med 0 gør at vi får nogle datapunkter hvor folk egentlig slet ikke har svaret. For at finde ud af hvilke punkter det drejer sig om, er to forskellige kriterier blevet brugt. 
+1. Hvis folk har svaret 0 til en hel side i interfacet, vurderes det at det er usandsynligt at de faktisk har svaret. Nogle gange kom folk til at trykke to gange på næste knappen, hvis den for eksempel reagerede for langsomt, og gik derfor forbi en hel side uden at opdage det.
+2. Hvis 0 er en outlier i forhold til hvad andre personer har svaret, undersøges det nærmere om det er sandsynligt at de rent faktisk har svaret 0.
+
+Efter 0'erne fra kriterie 1 er fjernet, er der kun 3 nuller tilbage som er outliers i forhold til andre testpersoners besvarelser. det drejer sig om forsøgsperson 30 til spørgsmål 9 og forsøgsperson 18 til spørgsmål 13 og 17. 
+hvis Julianes boksplot
+
+17: Spændende. Det er usandsynligt at forsøgspersonen har opfattet robotten som slet ikke spændende (0 \%), taget i betragtning at hun har valgt at interagere med robotten og generelt er glad for teknologi (91\%). Det vurderes at det er meget usandsynligt at hun aktivt har svaret 0 og punktet slettes derfor.
+
+13: Nem at interagere med. En af de største grunde til at robotten sommetider er svær at interagere med, kan være at skærmen har reageret dårligt. For forsøgsperson 18 vurderede hun skærmens reaktion til 54 \%. Der blev heller ikke observeret nogle problemer med interaktionen, som skulle gøre at hun havde oplevelsen af at den var svær at interagere med. Det vurderes at det er meget usandsynligt at hun aktivt har svaret 0 og punktet slettes derfor.
+
+9 (13): Viste det rigtige sted hen. Hvis man ved hvor man skal hen, og robotten kører en anden vej, er der stor sandsynlighed for at de ikke tror på at robotten kører det rigtige sted hen. Flere forsøgspersoner nævnte at robotten kørte den forkerte vej, hvis de for eksempel skulle på toilettet og den kørte ned mod taxfree, mad og gates. Desuden findes der også to andre outliers til dette spørgsmål, hvor folk aktivt har svaret. Det vurderes ikke at der er nok belæg for at slette punktet.
+
+Konklusion: sq 13 og 17 slettes fra fp 18. Alle hele sider der ikke er svaret på slettes. 
+
+Husk at rette tallene til, efter excel bliver opdateret
+

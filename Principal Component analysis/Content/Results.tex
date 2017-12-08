@@ -1,12 +1,12 @@
 \section*{Results and Analysis}
 \label{Results}
-The data from \textit{Men and Bread} is analysed using PCA and the results from the analysis will be presented in the following section\blankline
+The data from \textit{Men and Bread} is analysed using PCA and the results from the analysis will be presented in the following section.\blankline
 %
 %Analyze the results from the example using PCA.
 %First plot a “profile” of all stimuli.
 %
-The profile plot is made based on the mean attribute ratings of every test subject. The attributes is listed on the x-axis and the rating on the y-axis. A profile for each bread has been plotted together, see \autoref{fig:plot}. The profile plot gives an overview of how the different bread compare to each other. E.g. that Bread 1 was rated the highest on the attribute "Krumme" whereas it appears that the test subjects somewhat all agreed on the attribute "Saftigt".
-
+The profile plot is made based on the mean attribute ratings of every test subject. The attributes are listed on the x-axis and the rating on the y-axis. A profile for each bread has been plotted together, see \autoref{fig:plot}. The profile plot gives an overview of how the different bread compare to each other. E.g. \textit{Bread 1} was rated as the highest on the attribute "Krumme" whereas it appears that the test subjects somewhat all agreed on the attribute "Saftigt".
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Figure/profile_plot.png}
@@ -18,7 +18,8 @@ The profile plot is made based on the mean attribute ratings of every test subje
 %How much of the variance is explained by each component?
 %(Plot a scree-plot including cumulative variance).
 %
-In \autoref{tab:explained} the variance explained by each of the first seven privipal components are presented. It is shown that 81.04 \% of the variance is explained by PC1, 13.61 \% by PC2 and 3.31 \% by PC3. 
+In \autoref{tab:explained} the variance explained by each of the first seven principal components are presented. It is shown that 81.04 \% of the variance is explained by PC1, 13.61 \% by PC2 and 3.31 \% by PC3. 
+%
 \begin{table}[H]
 \centering
 \begin{tabular}{lc}
@@ -32,25 +33,26 @@ In \autoref{tab:explained} the variance explained by each of the first seven pri
 \multicolumn{1}{l|}{PC6} & 0.10                                        \\
 \multicolumn{1}{l|}{PC7} & 0.01                                       
 \end{tabular}
-\caption{Table showing explained variance by each principal component}
+\caption{Explained variance by each principal component.}
 \label{tab:explained}
 \end{table}
 \noindent
 %
-To get an overview of number of PC according to how much of the variance they explain, the explained variance from each principal component is plotted in a barplot and an accumulative scree-plot, see \autoref{fig:scree}. On the scree-plot in \autoref{fig:scree}, there is a knee point at PC2 and it is therefore chosen to use two principal components in the analysis. In total 94.65 \% of the variance is explained by the two principal components.
+To get an overview of the number of PC according to how much of the variance they explain, the explained variance from each principal component is plotted in a barplot and an accumulative scree-plot, see \autoref{fig:scree}. On the scree-plot in \autoref{fig:scree}, there is a knee point at PC2 and it is therefore chosen to use two principal components in the analysis. In total 94.65 \% of the variance is explained by the two principal components.
+%
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/Screeplot}
-\caption{Accumulative scree plot and barplot showing how much of the variance is explained by each principal component}
+\caption{Accumulative scree plot and barplot showing how much of the variance is explained by each principal component.}
 \label{fig:scree}
 \end{figure}
 \noindent
 %
 %Plot your PCA solution graphically. Both a plot with just your stimuli (scores) and a biplot with both scores and loadings.
 %
-The principal component analysis is conducted. The first plot from the analysis is presented in \autoref{fig:scoreplot} on the next page and is a score plot with two dimensions. \blankline
+The principal component analysis is conducted. The first plot from the analysis is presented on \autoref{fig:scoreplot}, which is a score plot with two dimensions. \blankline
 %
-From the score plot it is apparent that B1 and B2 are placed close together and they therefore share similar overall properties, based on this plot. B4 and B5 also have quite similar properties, as well as B6 and B7. Both B8 and B3 are very different from all the other buns.
+From the score-plot it is apparent that B1 and B2 are placed close together and they therefore share similar overall properties, based on this plot. B4 and B5 also have quite similar properties, as well as B6 and B7. Both B8 and B3 are very different from all the other buns.
 \newpage
 %
 \begin{figure}[H]
@@ -71,11 +73,10 @@ The next plot is presented on \autoref{fig:biplot} where both the scores and loa
 \end{figure}
 \noindent
 %
-The bi-plot shows that ``Krumme'' contributes to most of the PC1 and ``Kerner'' contributes to most of the PC2. ``Saftig'' doesn't really contribute that much to any of the two principal components.
+The bi-plot shows that "Krumme" contributes to most of the PC1 and "Kerner" contributes to most of the PC2. "Saftig" doesn't really contribute that much to any of the two principal components.
 None of the variables are placed on different sides of the origin compared to each other and therefore none of the variables seems to be negatively correlated. \blankline
-
 %Make a table of the loadings of each word-pair on each principal component.
-A table with the loadings of each word-pair on each of the seven first principal component is presented on \autoref{tab:loadings}.
+A table with the loadings of each word-pair on each of the first seven principal components are presented in \autoref{tab:loadings}.
 %
 \begin{table}[H]
 \centering
@@ -94,7 +95,7 @@ A table with the loadings of each word-pair on each of the seven first principal
 \multicolumn{1}{l|}{\textbf{Fuldkorn}}  & 0.2783          & 0.2729          & -0.2608         & -0.1629         & -0.3320      & -0.3433      & 0.5211       \\
 \multicolumn{1}{l|}{\textbf{Fiber}}     & 0.2908          & 0.1368          & -0.1029         & -0.0573         & -0.2907      & -0.3823      & -0.4148     
 \end{tabular}
-\caption{Loadings of each word-pair on each of the seven first principal component. Values in bold indicates high load and therefore contributes to most of the PC.}
+\caption{Loadings of each word-pair on each of the first seven principal components. Values in bold indicates high load and therefore contributes to most of the PC.}
 \label{tab:loadings}
 \end{table}
 %
@@ -103,14 +104,14 @@ A table with the loadings of each word-pair on each of the seven first principal
 \begin{figure}[H]
 \centering
 \includegraphics[width =\textwidth]{Figure/biplot_3D_std}
-\caption{Bi-plot in three dimensions}
+\caption{Bi-plot in three dimensions.}
 \label{fig:3Dbiplot}
 \end{figure}
 \noindent
 %
-Based on \autoref{fig:biplot}, it looks like ``Overflade'' and ``Fuldkorn'' are highly correlated, but after looking at the 3D bi-plot, \autoref{fig:3Dbiplot}, it is clear to see that ``Overflade'' and ``Fuldkorn'' is actually quite different. From this plot, we can see that the attribute ``Overflade'' explains most of the PC3, since it is almost the only attribute that deviates in the third dimension. This is confirmed by the loadings table, where 91.1 \% of the principal component 3 is explained by ``Overflade''.\blankline
+Based on \autoref{fig:biplot}, it looks like "Overflade" and "Fuldkorn" are highly correlated, but after looking at the 3D bi-plot, \autoref{fig:3Dbiplot}, it is clear that "Overflade" and "Fuldkorn" are actually quite different. From this plot, we can see that the attribute "Overflade" explains most of the PC3, since it is almost the only attribute that deviates in the third dimension. This is confirmed by the loadings presented in \autoref{tab:loadings}, where 91.1 \% of PC3 is explained by "Overflade".\blankline
 %
-From \autoref{fig:biplot}, it also looks like ``Nærende'', ``Mættende'' and ``Skorpe'' are highly correlated, which is confirmed by the 3D biplot on \autoref{fig:3Dcorrelation}. Therefore, some of these three attributes might be redundant. 
+From \autoref{fig:biplot}, it also looks like "Nærende", "Mættende", and "Skorpe" are highly correlated, which is confirmed by the 3D biplot on \autoref{fig:3Dcorrelation}. Therefore, some of these three attributes might be redundant. 
 %
 \begin{figure}[H]
 \centering
@@ -120,4 +121,4 @@ From \autoref{fig:biplot}, it also looks like ``Nærende'', ``Mættende'' and ``
 \end{figure}
 \noindent
 %
-The attribute ``Saftig'' doesn't really contribute to any of the three principal components and according to \autoref{fig:plot} the rating of this attribute doesn't vary that much between the different buns which also indicates that this attribute isn't that important for this PCA.
+The attribute "Saftig" doesn't really contribute to any of the three principal components and according to \autoref{fig:plot} the rating of this attribute doesn't vary that much between the different buns which also indicates that this attribute isn't that important for this PCA.

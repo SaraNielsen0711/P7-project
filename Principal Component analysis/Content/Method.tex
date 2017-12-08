@@ -1,26 +1,34 @@
 \section*{Method}
 \label{Method}
 %
+<<<<<<< HEAD
 The purpose of this article is to analyse the data. The method of choice in this paper is Principal Component Analysis (PCA). This method is typically used as an explorative technique to obtain an overview by reducing a complex data set to a lower number of dimensions. The dimensions found in PCA is called principal components (PC). Each PC explains a certain amount variation noted in percentage which describes how much of the variances of the original variables, the PC describes.\blankline
+=======
+The purpose for this article was to analyse the data. The method of choice in this paper is \textit{Principal Component Analysis} (PCA). This method is typically used as an explorative technique to obtain an overview by reducing a complex data set to a lower number of dimensions. The dimensions found in PCA are called principal components (PC). Each PC explains a certain amount variation noted in percentage, which describes how much of the variances of the original variables, the PC describes.\blankline
+>>>>>>> ad024fa761c2fdb0b59931c6f6a1eb4b88ee637a
 %
 PCA uses linear algebra to extract the components. The PCA consists of different steps, an overview of these different steps is listed based on \textcite[pp. 211-213]{Naes2010}:
 
 \begin{enumerate}
-	\item Organise the data in a data matrix where each row in the table corresponds to an ‘object’ and each column to a ‘variable’
+	\item Organise the data in a data matrix where each row in the table corresponds to an ‘object’ and each column to a ‘variable’.
 	\item Computing the average of all the variables. 
-	\item The averages are subtracted from their corresponding variables. \fxnote{Julianeeeeeeeeeeee skriv det vi snakkede om - med pca() funktionen i Matlab gør det automatisk}
+	\item The averages are subtracted from their corresponding variables.
 	\item Search for the direction in space that has as large variance as possible, which is the first principal component (PC1).
-	\item Search for the second principal component(PC2). Same procedure as for PC1, but under the restriction that the direction of the PC2 is orthogonal to PC1. 
+	\item Search for the second principal component (PC2). Same procedure as for PC1, but under the restriction that the direction of the PC2 is orthogonal to PC1. 
 	\item Extract new components that describe as much variance as possible under the restriction that each new PC-direction is orthogonal to the previous.
 	\item Stop extraction when the desired number of components have been extracted. In many cases 2-3 components is enough to explain most of the variation. 
 \end{enumerate}
 \blankline
 %
+<<<<<<< HEAD
 The variances of each PC is noted in percentage.
 The sum of the variances of the PC's is equal to the sum of the variances of the original variables. This means that if we have two components, the sum of these two components describes the total percentage covered by them. An example could be PC1 = 87 \% and PC2 = 9 \%. The total variances covered be having two components in this case will be 87 \% + 9 \% = 96 \% \parencite[p. 213]{Naes2010}. This could be useful in determining when the desired number of components has been extracted. To get an overview of the total variances covered be each number of dimensions a scree-plot can be made, which shows exactly this. \blankline
+=======
+The variances of each PC is noted in percentage. The sum of the variances of the PC's is equal to the sum of the variances of the original variables. This means that if we have two components, the sum of these two components describes the total percentage covered by them. An example could be PC1 = 87 \% and PC2 = 9 \%. The total variances covered by having two components will in this case be 87 \% + 9 \% = 96 \%, \parencite[p. 213]{Naes2010}. This could be useful in determining when the desired number of components have been extracted. To get an overview of the total variances covered by each number of dimensions a scree-plot can be made, which shows exactly this. \blankline
+>>>>>>> ad024fa761c2fdb0b59931c6f6a1eb4b88ee637a
 %
 %Score value is the principal component value 
-The results of the PCA is typically presented graphically in a scatter plot in two- or three-dimensions, where each dimension is based on a PC. There is different types of plots relevant to make when conducting PCA. 
+The results of the PCA are typically presented graphically in a scatter plot in two- or three-dimensions, where each dimension is based on a PC. There is different types of plots that are relevant to make when conducting PCA. 
 
 \subsection*{Score plot}
 The score plot gives an overview of the relation between the rating of the different object and their relation to PC for the plot. \blankline
@@ -34,19 +42,32 @@ The score plot gives an overview of the relation between the rating of the diffe
 %\end{figure}
 %\noindent
 %
+<<<<<<< HEAD
 On a score plot the samples are plotted and if two samples are close to each other in the plot it means that they have similar overall properties and if the samples are far away from each other it means that they are very different. It is important to take into account the chosen number of dimensions. Some samples can be close to each other, and therefore similar, in two dimension but no longer close to each other if an extra dimension is added. 
+=======
+On a score plot the samples are plotted and if two samples are close to each other in the plot it means that they have similar overall properties and if the samples are far away from each other in the plot it means that they are very different. It is important to take in to account the chosen number of dimensions. Some samples can be close to each other, and therefore similar, in two dimensions but no longer close to each other if an extra dimension is added. 
+>>>>>>> ad024fa761c2fdb0b59931c6f6a1eb4b88ee637a
 %
 \subsection*{Loading plot}
 The other plot possibly used when conducting PCA is the PCA loadings plot.
-Loading values defines the contribution of each of the original variables in the calculation of the first score. This means that a high loading value for a specific variable indicates that this variable is strongly related to the PC or in other words strongly contributes to the PC \parencite[p. 212]{Naes2010}. \blankline
+Loading values defines the contribution of each of the original variables in the calculation of the first score. This means that a high loading value for a specific variable indicates that this variable is strongly related to the PC or in other words strongly contributes to the PC, \parencite[p. 212]{Naes2010}. \blankline
 %
+<<<<<<< HEAD
 The loading plot is used to see which variables are correlated, by looking at which variables are plotted close to each other. If two variables are places on opposite sides of the origin(0,0) it means that these two variables are negatively correlated \parencite[p. 216]{Naes2010}.
+=======
+The loading plot is used to see which variables are correlated, by looking at which variables are plotted close to each other. If two variables are placed on opposite sides of the origin (0,0) it means that these two variables are negatively correlated, \parencite[p. 216]{Naes2010}. 
+>>>>>>> ad024fa761c2fdb0b59931c6f6a1eb4b88ee637a
 %
 \subsection*{Bi-plot}
-If a score plot and a loading plot is plotted together in the same plot it is called a bi-plot  \parencite[p. 217]{Naes2010}. The advances of doing this is that it saves places in the paper. Other than that there is not a big different between making a score plot and a loading plot or just making a bi-plot, it is primarily based on the preference of the author. The bi-plot is interpreted according to the score values in the same way as in the score plot and according to loading values in the same way as the loading plot is interpreted. 
+If a score plot and a loading plot are plotted together in the same plot it is called a bi-plot, \parencite[p. 217]{Naes2010}. The advances of doing this is that it saves places on the paper. Other than that there is not a big different between making a score plot and a loading plot or just making a bi-plot, it is primarily based on the preference of the author. The bi-plot is interpreted according to the score values in the same way as in the score plot and according to loading values in the same way as the loading plot is interpreted. 
 %
 \subsection*{Redundant}
+<<<<<<< HEAD
 Redundancy means that some attributes measured in the data are unnecesary, maybe because they are highly correlated. 
 In some cases redundant attributes are both highly correlated and measuring the same thing, but this is not always the case. It is possible to have to very different attributes that aren't the same thing but still highly correlated. \blankline
+=======
+Redundancy means that some attributes, measured in the data, are highly correlated. 
+In some cases redundant attributes are both highly correlated and measuring the same thing, but this is not always the case. It is possible to have to very different attributes that aren't the same thing but still are highly correlated. \blankline
+>>>>>>> ad024fa761c2fdb0b59931c6f6a1eb4b88ee637a
 %
 If there is redundancy in a dataset, it often means that variance from a large number of attributes can be described with only a few number of principal components and in this way give an easy overview of the data. 

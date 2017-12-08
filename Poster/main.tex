@@ -1,0 +1,148 @@
+\documentclass[paperwidth=160cm,paperheight=100cm,portrait,fontscale=0.2941]{baposter}
+\usepackage{lipsum} 
+%841mm x 1189mm
+\usepackage[font=small,labelfont=bf,hypcap=false]{caption} % Required for specifying captions to tables and figures
+%\usepackage{cite}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+%\usepackage[urlcolor  = blue]{hyperref}
+%\graphicspath{{figures/}} % Directory in which figures are stored
+\usepackage{multicol}
+%\usepackage[style=ieee]{biblatex}
+%\addbibresource{bib.bib}
+\usepackage[utf8]{inputenc} 
+%\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage[]{graphicx}
+\usepackage{natbib}
+\usepackage{times}
+
+\bibliographystyle{abbrvnat}
+
+\selectcolormodel{RGB} %<-- Add colour model defintion
+\definecolor{bordercol}{RGB}{255,255,255}%{33,26,82} % Border color of content boxes
+\definecolor{headercol1}{RGB}{255,255,255}%{33,26,82} % Background color for the header in the content boxes (left side)
+%\definecolor{headercol2}{RGB}{5,2,82} % Background color for the header in the content boxes (right side)
+\definecolor{headerfontcol}{RGB}{0,0,0}%{255,255,255} % Text color for the header text in the content boxes
+\definecolor{boxcolor}{RGB}{255,255,255} % Background color for the content in the content boxes
+
+\begin{document}
+\graphicspath{{Pictures/}}
+\background{ % Set the background to an image (background.pdf)
+
+}
+
+\begin{poster}{
+grid=false,
+headerheight=0.17\textheight,
+borderColor=bordercol, % Border color of content boxes
+headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+%headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
+headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+boxColorOne=boxcolor, % Background color for the content in the content boxes
+headershape=rectangle, % Specify the rounded corner in the content box headers
+headershade=plain,
+headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+textborder=rectangle,
+background=user,
+headerborder=open, % Change to closed for a line under the content box headers
+boxshade=plain,
+eyecatcher=true
+}
+%
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR NAME
+%----------------------------------------------------------------------------------------
+%
+%\vspace{2em}
+% Eye Catcher Images to go left of your title.
+{
+\includegraphics[height=0.13\textheight]{aau_logo_new.eps}
+} %will not show if put eyecatcher=false
+% Title
+{\vspace{2pt}
+Subjective Experience of Interacting with a Social Robot at a Danish Airport}
+% Author
+{
+\vspace{3pt}
+\normalsize{\textbf{Andreas Kornmaaler Hansen, Emil Bonnerup, Juliane Nilsson, Lucca Julie Nellemann \& Sara Nielsen}\\
+Psychology Engineering - 17gr782 - Fall 2017 - School of Information and Communication Technology\\ Aalborg University, Aalborg, Denmark\\ }
+$\{$akha12, ebonne14, jnils12, ljne14, snie14$\}$@student.aau.dk\\
+}
+{
+\includegraphics[height=0.13\textheight]{aau_logo_new.eps}
+}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+\headerbox{Introduction}
+{name=introduction,column=0,row=0, span=1}
+{\parskip 5pt   
+
+}
+
+
+\headerbox{Method - Elicitation of words}
+{name=method1,span=1,column=0,below=introduction, span=1}
+{\parskip 5pt 
+
+}
+
+\headerbox{Results - Elicitation of words}
+{name=results1,span=1,column=0,below=method1, span=1}
+{\parskip 5pt 
+
+}
+
+
+\headerbox{Method - Scale Testing}
+{name=method2,span=1,column=1,aligned=introduction}
+{\parskip 5pt 
+
+
+}
+
+\headerbox{Results - Scale Testing}
+{name=results2,span=1,column=1,below=method2}
+{\parskip 5pt
+
+
+}
+
+
+\headerbox{Conclusion}
+{name=conclusion,span=1,column=2,aligned=introduction}
+{\parskip 5pt
+
+}
+
+
+\headerbox{Acknowledgements}
+{name=akn,span=1,column=2,below=conclusion}
+{\parskip 5pt
+
+}
+
+
+\headerbox{References}
+{name=references,column=2,below=akn}
+{
+\renewcommand{\section}[2]{}%
+%\parskip 5pt
+ %   \bibliography{bib.bib}
+%\tiny
+\footnotesize
+%Dorte har skrevet kilder ind på følgende måde
+%Abdala C (1996) JASA \textbf{100}(6):3726-3740.
+%Bonfils P et al. (1991) \textit{Arch Otolaryngol Head Neck Surg} \textbf{117}(10):1167–1171.
+%Brown DK et al. (2000) \textit{Hearing Res}. \textbf{145}(1-2):17-24.
+}
+
+
+%-------------------------------------------------------------------------
+
+\end{poster}
+\end{document}
