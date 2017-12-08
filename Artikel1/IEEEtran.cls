@@ -2676,7 +2676,8 @@
 % protect you from other double floats. Happy vspace'ing.
 
 \@dblfptop 0pt plus 1fil
-\@dblfpsep 0.75\baselineskip plus 2fil
+%\@dblfpsep 0.75\baselineskip plus 2fil
+\@dblfpsep 0.05\baselineskip plus 2fil
 \@dblfpbot 0pt plus 1fil
 \def\dbltopfraction{0.8}
 \def\dblfloatpagefraction{0.8}
@@ -2694,7 +2695,10 @@
 \newlength\belowcaptionskip
 % but only \abovecaptionskip is used above figure captions and *below* table
 % captions
-\setlength\abovecaptionskip{0.5\baselineskip}
+\setlength\abovecaptionskip{0.75\baselineskip} %tidligere stod der 0.75. Er gjort for at figur teksten kommer tættere på figuren. hvis der står -.75 så passer til det til skalaerne men ikke double.. Derfor tilføjes den her sætning \setlength\abovecaptionskip{-0.75\baselineskip} før hver caption i skalaer
+\setlength\belowcaptionskip{0.75\baselineskip} %lavet den her linje for at tabel teksten står det sted den skal være, da den ellers tidligere var defineret med den samme afstand som ved figurer, men så står teksten oveni den øverste celle i tabellen. 
+
+
 % compsoc journals are a little more generous
 \ifCLASSOPTIONcompsoc\ifCLASSOPTIONjournal
   \setlength\abovecaptionskip{0.75\baselineskip}
@@ -2703,7 +2707,7 @@
 % V1.6 create hooks in case the caption spacing ever needs to be
 % overridden by a user
 \def\@IEEEfigurecaptionsepspace{\vskip\abovecaptionskip\relax}%
-\def\@IEEEtablecaptionsepspace{\vskip\abovecaptionskip\relax}%
+\def\@IEEEtablecaptionsepspace{\vskip\belowcaptionskip\relax}% Er ændret til belowcaptionsskip for at afstanden mellem tekst og tabel passer.
 
 
 % 1.6b revise caption system so that \@makecaption uses two arguments
