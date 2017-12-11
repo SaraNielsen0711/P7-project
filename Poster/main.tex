@@ -42,7 +42,7 @@
 
 \begin{poster}{
 grid=false,
-headerheight=0.17\textheight,
+headerheight=0.14\textheight,
 borderColor=bordercol, % Border color of content boxes
 headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
 %headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
@@ -65,7 +65,7 @@ eyecatcher=true
 %\vspace{2em}
 % Eye Catcher Images to go left of your title.
 {
-\includegraphics[height=0.13\textheight]{aau_logo_new.eps}
+\includegraphics[height=0.10\textheight]{aau_logo_new.eps}
 } %will not show if put eyecatcher=false
 % Title
 {\vspace{2pt}
@@ -78,7 +78,7 @@ Psychology Engineering - 17gr782 - Fall 2017 - School of Information and Communi
 $\{$akha14, ebonne14, jnils12, ljne14, snie14$\}$@student.aau.dk\\
 }
 {
-\includegraphics[height=0.13\textheight]{aau_logo_new.eps}
+\includegraphics[height=0.10\textheight]{aau_logo_new.eps}
 }
 
 %----------------------------------------------------------------------------------------
@@ -114,35 +114,34 @@ From the second test \textbf{Beskriv kort den databehandling}
 }
 
 
-\headerbox{Results - Elicitation of words}
+\headerbox{Results - Elicitation of variables}
 {name=results1,span=1,column=1,aligned=introduction, span=1}
 {\parskip 5pt 
-%\begin{center}
-%	\includegraphics[width=0.4\linewidth]{TilpassetSkaermensReaktion.eps}
-%		\includegraphics[width=0.4\linewidth]{TilpassetOplevede.eps}
-%	
-%	\textbf{Figure~1. }\textit{Double}'s front and profile.
-%\end{center}
-%\vspace{-10pt}  
-SQ1: How do think the screen on the robot reacted? \\%(Hvordan synes du, at skærmen på robotten reagerede?)\\
-SQ2: How did you experience the robot? \\ %(Hvordan oplevede du robotten?)\\
-SQ3: How was it to use the robot?\\% (Hvordan var det at bruge robotten?)\\
-SQ4: How did you experience the robot's movements? \\%(Hvordan oplevede du robottens bevægelser?)\\
-SQ5: I think that the robot stopped... \\%(Jeg synes, at robotten stoppede...)\\
-SQ6: I think that the robot's speed is... \\%(Jeg synes, at robottens hastighed er...)\\ 
-SQ7: I think that the robot's height is... \\%(Jeg synes, at robottens højde er..)\\
-SQ8: I feel that the robot can help me\\% (Jeg føler, at robotten kan hjælpe mig)\\
-SQ9: I think that the robot was obstructing me\\%(Jeg synes, at robotten stod i vejen)\\
-SQ10: I feel safe around the robot\\%(Jeg føler mig tryg ved robotten)\\
-SQ11: The robot startled me\\ %(Robotten gjorde mig forskrækket)\\
-SQ12: I like to be served by the robot\\% (Jeg kan godt lide at blive betjent af robotten)\\
-SQ13: I counted on the robot to lead me to the location I chose\\% (Jeg regnede med, at robotten fulgte mig hen til det sted jeg valgte)\\
-SQ14: How personal did you experience the robot's help?\\% (Hvor personlig oplevede du robottens hjælp?)\\
-SQ15: How surprised were you by the robot's approach?\\% (Hvor overrasket blev du over robottens henvendelse?)\\
-SQ16: What do you think about the robot?\\% (Hvad synes du om robotten)\\
-SQ17: What else do you think about the robot?\\%(Hvad synes du ellers om robotten?)\\
+From the first tests 23 variables were elicitated, which led to 17 scale questions answered on 23 VAS scales (see tabel 1 and figure 2). Scale questions (SQ) are as stated below and is answered on appurtenant scales (S):\\
+\vspace{-20pt}
+  
+\begin{itemize}
+	\setlength\itemsep{-2em}
+	\item SQ1: How do think the screen on the robot reacted? (S1)\\
+	\item SQ2: How did you experience the robot? (S2)\\
+	\item SQ3: How was it to use the robot? (S3)\\
+	\item SQ4: How did you experience the robot's movements? (S4) \\
+	\item SQ5: I think that the robot stopped... (S5)\\
+	\item SQ6: I think that the robot's speed is... (S6)\\
+	\item SQ7: I think that the robot's height is... (S7)\\
+	\item SQ8: I feel that the robot can help me (S8-S13)\\
+	\item SQ9: I think that the robot was obstructing me (S8-S13)\\
+	\item SQ10: I feel safe around the robot (S8-S13)\\
+	\item SQ11: The robot startled me (S8-S13)\\
+	\item SQ12: I like to be served by the robot (S8-S13)\\
+	\item SQ13: I counted on the robot to lead me to the location I chose (S8-S13)\\
+	\item SQ14: How personal did you experience the robot's help? (S14)\\
+	\item SQ15: How surprised were you by the robot's approach? (S15)\\
+	\item SQ16: What do you think about the robot? (S16-S19)\\
+ 	\item SQ17: What else do you think about the robot? (S20-S23)\\\vspace{-15pt}
+\end{itemize}
 
-%
+
 \begin{center}
 		\begin{tabular}{l|c|c|c}
 		S     & Left label & Mid point & Right label \\\hline
@@ -165,7 +164,18 @@ SQ17: What else do you think about the robot?\\%(Hvad synes du ellers om robotte
 		22   & Not at all funny & - & Extremely funny          \\\hline
 		23   & Not at all human & - & Extremely human
 	\end{tabular}        
+\textbf{Tabel~1. }Scale labels for every scale.
 \end{center}
+\vspace{-15pt}
+Three different types of VAS are used with the desribed labels (see figure 2). Scales 1-5 and 8-13 have a middle point in the middle but no label, scales 6 and 7 have a middle point with a label and scales 14-23 have no middle point.
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{TilpassetRStoppede.eps}
+	\includegraphics[width=0.7\linewidth]{TilpassetHoejdeR.eps}
+	\includegraphics[width=0.7\linewidth]{TilpassetPersonligHjaelp.eps}
+
+	\textbf{Figure~2. }The three types of VAS developed from the elicitated variables.
+\end{center}
+\vspace{-10pt}
 }
 
 
