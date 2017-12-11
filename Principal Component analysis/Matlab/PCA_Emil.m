@@ -90,7 +90,7 @@ text(scores(7,1),scores(7,2),'Sample7')
 text(scores(8,1),scores(8,2),'Sample8')
 varlabels = {'Skorpe','Krumme','Overflade','Kerner','Tungt','Taet','Saftigt','Maettende','Naerende','Fuldkorn','Fiber'};
 %OBSLABS = {'Sample1','Sample2','Sample3','Sample4','Sample5','Sample6','Sample7','Sample8'};
-biplot(coefs(:,1:2),'Scores', scores(:,1:2),'VarLabels', varlabels); 
+biplot(coefs(:,1:3),'Scores', scores(:,1:3),'VarLabels', varlabels); 
 
 % 
 % title('Biplot of the first two Principal Components')
