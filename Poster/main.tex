@@ -20,6 +20,11 @@
 \usepackage{natbib}
 \usepackage{times}
 
+\usepackage[utf8]{inputenc}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+
 \bibliographystyle{abbrvnat}
 
 \selectcolormodel{RGB} %<-- Add colour model defintion
@@ -112,6 +117,58 @@ From the second test \textbf{Beskriv kort den databehandling}
 \headerbox{Results - Elicitation of words}
 {name=results1,span=1,column=1,aligned=introduction, span=1}
 {\parskip 5pt 
+%\begin{center}
+%	\includegraphics[width=0.4\linewidth]{TilpassetSkaermensReaktion.eps}
+%		\includegraphics[width=0.4\linewidth]{TilpassetOplevede.eps}
+%	
+%	\textbf{Figure~1. }\textit{Double}'s front and profile.
+%\end{center}
+%\vspace{-10pt}  
+SQ1: How do think the screen on the robot reacted? \\%(Hvordan synes du, at skærmen på robotten reagerede?)\\
+SQ2: How did you experience the robot? \\ %(Hvordan oplevede du robotten?)\\
+SQ3: How was it to use the robot?\\% (Hvordan var det at bruge robotten?)\\
+SQ4: How did you experience the robot's movements? \\%(Hvordan oplevede du robottens bevægelser?)\\
+SQ5: I think that the robot stopped... \\%(Jeg synes, at robotten stoppede...)\\
+SQ6: I think that the robot's speed is... \\%(Jeg synes, at robottens hastighed er...)\\ 
+SQ7: I think that the robot's height is... \\%(Jeg synes, at robottens højde er..)\\
+SQ8: I feel that the robot can help me\\% (Jeg føler, at robotten kan hjælpe mig)\\
+SQ9: I think that the robot was obstructing me\\%(Jeg synes, at robotten stod i vejen)\\
+SQ10: I feel safe around the robot\\%(Jeg føler mig tryg ved robotten)\\
+SQ11: The robot startled me\\ %(Robotten gjorde mig forskrækket)\\
+SQ12: I like to be served by the robot\\% (Jeg kan godt lide at blive betjent af robotten)\\
+SQ13: I counted on the robot to lead me to the location I chose\\% (Jeg regnede med, at robotten fulgte mig hen til det sted jeg valgte)\\
+SQ14: How personal did you experience the robot's help?\\% (Hvor personlig oplevede du robottens hjælp?)\\
+SQ15: How surprised were you by the robot's approach?\\% (Hvor overrasket blev du over robottens henvendelse?)\\
+SQ16: What do you think about the robot?\\% (Hvad synes du om robotten)\\
+SQ17: What else do you think about the robot?\\%(Hvad synes du ellers om robotten?)\\
+
+%
+\begin{center}
+	\caption{Scale labels PAGE 1} 
+	\begin{tabular}{l|c|c|c}
+		S     & Left label & Mid point & Right label \\\hline
+		1   & \makecell{Extremely bad\\(Ekstremt dårligt)}  & No label & \makecell{Extremely well \\(Ekstremt godt)}        \\\hline
+		2   & \makecell{Extremely unwelcoming \\(Ekstremt afvisende)} & No label & \makecell{Extremely welcoming \\(Ekstremt imødekommende)}         \\\hline
+		3   & \makecell{Extremely difficult \\(Ekstremt svært)} & No label & \makecell{Extremely easy \\(Ekstremt nemt)}         \\\hline
+		4   & \makecell{Extremely wild \\(Ekstremt vilde)} & No label & \makecell{Extremely calm \\(Ekstremt rolige)} 
+		5   & \makecell{Way too close\\(Alt for tæt på)}  & No label & \makecell{Way too far \\(Alt for langt fra)}        \\\hline
+		6   & \makecell{Way too slow\\(Alt for langsom)} & \makecell{Fine\\(Fin)} & \makecell{Way too fast \\(Alt for hurtig)}         \\\hline
+		7   & \makecell{Way too low \\(Alt for lav)} & \makecell{Fine\\(Fin)} & \makecell{Way too high\\(Alt for høj)} 
+		8-13   & \makecell{Completely disagree\\(Helt uenig)}  & No label & \makecell{Completely agree\\(Helt enig)}   
+		14   & \makecell{Not at all personal\\(Slet ikke personlig)}  & - & \makecell{Extremely personal\\(Ekstremt personlig)}        \\\hline
+		15   & \makecell{Not at all surprised\\(Slet ikke overrasket)} & - & \makecell{Extremely surprised \\(Ekstremt overrasket)}     
+		16   & \makecell{Not at all annoying\\(Slet ikke irriterende)}  & - & \makecell{Extremely annoying \\(Ekstremt irriterende)}        \\\hline
+		17   & \makecell{Not at all elegant \\(Slet ikke elegant)} & - & \makecell{Extremely elegant \\(Ekstremt elegant)}         \\\hline
+		18   & \makecell{Not at all exciting\\(Slet ikke spændende)} & - & \makecell{Extremely exciting \\(Ekstremt spændende)}         \\\hline
+		19   & \makecell{Not at all cute\\(Slet ikke sød)} & - & \makecell{Extremely cute \\(Ekstremt sød)}                                 
+		20   & \makecell{Not at all cool\\(Slet ikke sej)}  & - & \makecell{Extremely cool \\(Ekstremt sej)}        \\\hline
+		21   & \makecell{Not at all intrusive \\(Slet ikke anmassende)} & - & \makecell{Extremely intrusive \\(Ekstremt anmassende)}         \\\hline
+		22   & \makecell{Not at all funny\\(Slet ikke sjov)} & - & \makecell{Extremely funny \\(Ekstremt fun)}         \\\hline
+		23   & \makecell{Not at all human \\(Slet ikke menneskelig)} & - & \makecell{Extremely human \\(Ekstremt menneskelig)}         
+	\end{tabular}        
+\end{center}
+%\noindent
+
 
 }
 
