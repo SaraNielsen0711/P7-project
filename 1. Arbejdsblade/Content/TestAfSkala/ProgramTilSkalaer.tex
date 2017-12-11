@@ -34,4 +34,5 @@ Man kan gå videre uden at vælge noget. Kan løses ved at tjekke om data er gem
 Den skriver 0 når der ikke bliver valgt noget. Ved at løse problemet med at folk gik videre uden at svare, forsvinder dette problem også, da der aldrig vil være ubesvarede skalaer. Alternativt kan det vælges at skrive ``NaN'', hvis ikke brugeren har valgt noget.
 
 Den reagerer dårligt på tryk. Problemet skyldes sandsynligvis at programmet er en smule ineffektivt og bruger meget processorkraft på at læse kode som ikke bruges på det pågældende skærmbillede. For at optimere det, kan man med fordel lave en PDPGUI for hvert skærmbillede, frem for at slette de gamle widgets og loade de nye hver gang. Man burde også bruge while-loops for hvert skærmbillede, frem for if-statements, så computeren ikke skal gennem hele koden i hver iteration, men kun skal læse den kode som bruges på det tilstedeværende skærmbillede.
-\fxnote{Skal nok itemizes}
+
+Programmet fremgår af \fullref{ElektroniskBilagProgram}.

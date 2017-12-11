@@ -1,4 +1,5 @@
-\documentclass[paperwidth=160cm,paperheight=100cm,landscape,fontscale=0.2941]{baposter}
+\documentclass[paperwidth=160cm,paperheight=100cm,landscape,fontscale=0.3010]{baposter}
+%Dortes fontscale: 0.2941
 \usepackage{lipsum} 
 %841mm x 1189mm
 \usepackage[font=small,labelfont=bf,hypcap=false]{caption} % Required for specifying captions to tables and figures
@@ -78,36 +79,57 @@ $\{$akha12, ebonne14, jnils12, ljne14, snie14$\}$@student.aau.dk\\
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
-%\begin{multicols}{4}
 \headerbox{Introduction}
 {name=introduction,column=0,row=0, span=1}
 {\parskip 5pt   
 This study originates from a social robot research project at Aalborg University with the aim of developing and implementing robots in a variety of contexts. This raises questions on how social robots should behave and which variables in a social robot is important. When important variables are eliciteted scales can be developed from these variables which can be use to test a social robot. The study consists of two tests, one where variables are elicitated and one where the scales are used to evaluate the robot. 
 }
-%\end{multicols}
 
 \headerbox{Method - Elicitation of words}
 {name=method1,span=1,column=0,below=introduction, span=1}
 {\parskip 5pt 
+The first test was conducted on Danish travellers who interacted with a social robot in natural settings. The test was conducted at Aalborg Airport (AAL). The travellers who interacted with the robot were asked to participate in a semi-structured interview about their first impressions while being observed during both the interaction and the interview. 
 
+\textbf{Materials}
+For the test a \textit{Double} robot with an iPad Air 2 was used. The head mount was changed angeling the iPad upwards. The modified \textit{Double} robot is shown on figure 1. The \textit{Double} robot was remotely controlled via a computer and a present controller. On the screen a developed wireframe to help with wayfinding in AAL was presented. 
+\vspace{-10pt}  
+
+\begin{center}
+\includegraphics[width=0.30\linewidth]{ModificeretDoubleFront.eps}
+\includegraphics[width=0.30\linewidth]{ModificeretDoubleSide.eps}
+
+\textbf{Figure~1. }\textit{Double}'s front and profile.
+\end{center}
+\vspace{-10pt}  
+
+\textbf{Subject Recruitment}
+16 females and 14 males with a mean age of 37.9 years (SD=17.1) participated. The subjects were recruited by the robot, because it provides a more ecological and undisturbed interaction between robot and subject. The robot approached potential subjects after the security check and asked to help travellers with wayfinding. If travellers wanted help, they were presented with four wayfinding options: Food, Shopping, Toilets or Gate information. After the interaction the robot led subjects to an interviewer. 
+
+\textbf{Semi-structured Interview}
+The interview was a two part interview. The first part consisted of probing the subjects for their first impression and experience of interacting with the robot in regard to their thoughts about the robot itself. Subjects were asked about their opinion regarding the robot's approach, relevance, and reliability. The second part consisted of asking questions relating to the robots physical characteristics such as speed, height, distance, movements, appearance, and approach. These questions were asked because the variables are known to affect the experience of HRI.
+
+\textbf{Data Processing}
+The interviews and observations were coded into affinity notes and an affinity diagram was made. This affinity diagram is pivotal in eliciting the variables that affect HRI, and thereafter in creating the scales to be used for further work. 
+567 affinity notes were sorted into 10 green categories with individual subcategories. To gain more insight it was decided to mix the spontaneous answers from the conversation topics with the answers from the specific questions. These were not differentiated in the affinity diagram.
 }
 
+
 \headerbox{Results - Elicitation of words}
-{name=results1,span=1,column=1,below=method1, span=1}
+{name=results1,span=1,column=1,aligned=introduction, span=1}
 {\parskip 5pt 
 
 }
 
 
 \headerbox{Method - Scale Testing}
-{name=method2,span=1,column=1,aligned=introduction}
+{name=method2,span=1,column=1,below=results1}
 {\parskip 5pt 
 
 
 }
 
 \headerbox{Results - Scale Testing}
-{name=results2,span=1,column=1,below=method2}
+{name=results2,span=1,column=2,aligned=introduction}
 {\parskip 5pt
 
 
@@ -115,21 +137,21 @@ This study originates from a social robot research project at Aalborg University
 
 
 \headerbox{Conclusion}
-{name=conclusion,span=1,column=2,aligned=introduction}
+{name=conclusion,span=1,column=3,aligned=introduction}
 {\parskip 5pt
 
 }
 
 
 \headerbox{Acknowledgements}
-{name=akn,span=1,column=2,below=conclusion}
+{name=akn,span=1,column=3,below=conclusion}
 {\parskip 5pt
 
 }
 
 
 \headerbox{References}
-{name=references,column=2,below=akn}
+{name=references,column=3,below=akn}
 {
 \renewcommand{\section}[2]{}%
 %\parskip 5pt
