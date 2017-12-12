@@ -1,0 +1,49 @@
+\section{Analyse af kønsforskel}
+\label{TestAfSkalaKoensforskel}
+%
+Det ønskes at undersøge om der er forskel mellem kvinder og mænds besvarelser til skalaerne. Til at undersøge det anvendes Multivariate analysis of variance (MANOVA) som kan betragtes som en ANOVA for situationer hvor der er mere end én afhængig variabel \parencite[s. 697]{FieldMANOVA}. 
+De afhængige variable er besvarelserne til skalaerne. Da skalaerne ikke måler det samme, kategoriseres de som forskelle variable, og antallet af afhængige variable vil derfor være det antal af skalaer hvor besvarelserne til ønskes at analyseres. Den uafhængig variabel er kønnet, der består af to grupper, som er henholdsvis mænd og kvinder. 
+%
+\subsection{Skalabesvarelser der analyseres}
+%
+Før analysen udføres undersøges det hvilke skalaer der er relevante at analysere i forhold til køn. Ud fra \autoref{fig:BarPlotKoen}, præsenteret i \fullref{TestAfSkalaPraesentationAfData}, bestemmes det er de besvarelser der ser ud til at vareriere i besvarelser mellem mænd og kvinder er SQ 4 \textit{Hvordan oplevede du robottens bevægelser?} (Ekstremt rolige/Ekstremt vilde), SQ11 \textit{Robotten gjorde mig forskrækket }(Helt uenig/Helt enig), SQ13 \textit{Jeg regnede med, at robotten fulgte mig hen til det sted jeg valgte} (Helt uenig/Helt enig) og SQ21 \textit{Hvad synes du ellers om robotten?} (Slet ikke menneskelig/Ekstremt menneskelig). Det vil være disse fire skalabesvarelser der analyseres i følgende afsnit. \blankline
+%
+\subsection{Testpersoners besvarelser}
+%
+Analysen udføres i databehandlings programmet R. Dette program kræver, i forhold denne analyse, et fuldstændigt datasæt hvor der ikke mangler nogle værdier. Det er derfor nødvendigt at eksludere besvarelser fra de testpersoner som ikke har besvaret alle fire SQ. De testpersoner hvorfra data eksluderes er testperson 21 og 27 der begge ikke har besvaret SQ 11 og 13. Derudover eksluderes besvarelserne fra testperson 9, 11, 19, 30, 35 og 37 da ingen af dem har besvaret SQ 21. \blankline
+%
+En oversigt over besvarelserne hvorpå analysen udføres er præsenteret på \autoref{fig:UdvalgteSkalaer}.
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.6\textwidth]{Figure/DatabehandlingSkalaer/UdvalgteSkalaerKoen} 
+\caption{Søjlediagram over den gennemsnitlige besvarelse til de fire udvalgte skala spørgsmål fordelt på kvinder (rød) og mænd (blå) }
+\label{fig:UdvalgteSkalaer}
+\end{figure}
+\noindent
+%
+\subsection{Antagelser for MANOVA}
+Før MANOVA kan udføres er der fire antagelser der skal opfyldes \parencite[s. 717]{FieldMANOVA}. De fire antagelser minder om dem der er til ANOVA, og er følgende: 
+
+\begin{itemize}
+	\item \textbf{Uafhængighed} Observationerne skal være uafhængige af hinanden. 
+	\item \textbf{Tilfældig indsamling} Data der analyseres skal være indsamlet tilfældigt fra den ønskede målgruppe og som minimum være målt på en interval skala. 
+	\item \textbf{Homogenitet af kovariansmatricer} For hver afhængig variabel skal variansen i hver gruppe være nogenlunde lige. Derudover skal korrelationen mellem hvert par af afhængige variable være den samme i alle grupper. 
+	\item \textbf{Multivariat normalitet} At de afhængige variabler har multivariat normalitet indenfor hver gruppe. 
+\end{itemize}
+
+De første to antagelser der er listet er opfyldt, da dataindsamlingen er baseret på at testpersonerne selv har valgt at interagere med robotten. OBservationerne der sammenlignes er afgivet af forskellige personer og derved uafhængige af hinanden. Sidst er besvarelserne afgivet på en VAS skala og opfylder derved antagelsen om at data som minimum skal indsamles på en intervalskala. \blankline
+% 
+Antagelsen om homogenitet af kovariansmatricerne undersøges ved at..
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{Figure/DatabehandlingSkalaer/Normality} 
+\caption{Varians-Kovarians matrice for henholdsvis mænd og kvinder. Værdien for SQ4 (gul), SQ11 (rød), SQ13 (blå) og SQ21 (grøn) er markeret i hver matrice.}
+\label{fig:Normality}
+\end{figure}
+\noindent
+%
+For at undersøge antagelsen om multivariat normalitet \blankline
+%
+Resultatet af Shapiro normality test er for mænd: W = 0.7303, p-værdi = 6.739e-05 og for kvinder: W = 0.6299, p-værdi = 0.00012. For begge grupper er der signifikant forskel, hvilket betyder at ingen af grupperne har multivariat normalitet og bryder derfor med antagelsen for at udføre MANOVA. 
