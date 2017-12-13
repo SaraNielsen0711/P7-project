@@ -1,9 +1,25 @@
 \section{Indgangsvinkel}
 \label{DatabehandlingRIndgangsvinkel}
+%
+I dette afsnit analyseres resultaterne med udgangspunkt i de tre forskellige indgangsvinkler robotten havde til testpersonerne i testen og hvis testpersonerne selv henvendte sig. De forskellige indgangsvinkler fremgår af \autoref{tab:RDistance}, hvor antallet af testpersoner ligeledes er opgivet. 
 
-
-
-
+Det undersøges, hvordan robottens indgangsvinkel for henvendelse påvirker de rejsendes oplevelse af robotten ved at undersøge, hvordan resultaterne ændrer sig afhængigt af de tre forskellige indgangsvinkler samt testpersonernes egen henvendelse. Det er et \textit{Between-subject} design, da hver testperson kun har oplevet robotten i én af indgangsvinklerne eller selv henvendt sig, og svaret ud fra dette.
+%
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+Indgangsvinkel & Antal testpersoner \\ \hline
+Venstre (1) & 4    \\ \hline
+Forfra (2) & 18    \\ \hline
+Højre (3) & 8     \\ \hline
+TP henvender sig (4) & 13 \\
+\end{tabular}
+\caption{Oversigt over antallet af testpersoner (TP) til hver af de tre indgangsvinkler robotten havde samt hvis testpersonerne selv henvendte sig.}
+\label{tab:RDirection}
+\end{table}
+\noindent
+%
+Ud fra \textit{Scree}-plottet på \autoref{fig:Direction-Scree} fremgår det at cirka 60 \& af variansen kan forklares ud fra den første \textit{Principal Component} (PC) og 90 \% af variansen kan forklares ud fra to PCs, hvor PC2 bidrager med cirka 30 \%. Gøres der brug af alle tre PCs forklares 100 \% af variationen. 
 %
 \begin{figure}[H]
 \centering
@@ -12,24 +28,24 @@
 \label{fig:Direction-Scree}
 \end{figure}
 \noindent
-%
-
-
+% 
+Ud fra \textit{Score}-plottet på \autoref{fig:Direction-Score} fremgår det, at der generelt er en del spredning mellem resultaterne ud fra de tre forskellige indgangsvinkler, hvilket foreskriver, at de tre indgangsvinkler ikke umiddelbart har ens karakteristikas. Dog ligger \textit{Kommer selv}, svarende til at testpersonerne selv henvendte sig til robotten, meget tæt på \textit{Forfra}, hvilket afspejler lignende karakteristikas for de to \textit{scores}. 
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Figure/DatabehandlingSkalaer/PCAfigures/Direction-Scores}
-\caption{\textit{Score}-plot for PC1 og PC2 i forhold til de tre afstande robotten holder til testpersonerne.}
+\caption{\textit{Score}-plot for PC1 og PC2 i forhold til de tre indgangsvinkler robotten henvendte sig til testpersonerne med samt hvis testpersonerne selv henvendte sig.}
 \label{fig:Direction-Score}
 \end{figure}
 \noindent
 %
+Ud fra \textit{Bi}-plottet på \autoref{fig:Direction-Biplot}, hvorpå \textit{loadings} og \textit{scores} for hver parameter er præsenteret, fremgår det at SQ10, vedrørende hvor tryg testpersonerne er ved robotten, forklare den største varians for PC1. For PC2 fremgår det, at både SQ1, vedrørende skærmens reaktion, SQ20, vedrørende hvor sej robotten opleves, samt SQ22, vedrørende hvor sjov robotten opleves, forklarer størstedelen af variansen. Da den forklaret varians fra SQ5, vedrørende robottens afstand, SQ6, vedrørende robottens hastighed, SQ7, vedrørende robottens højde, samt SQ16, vedrørende hvor irriterende robotten opleves, er relativt lille, vil disse parametre ikke blive yderligere beskrevet medmindre de indgår i en korrelation med en mere betydende parameter.  
+
+I forhold til korrelationen mellem parametrene, fremgår det at SQ18, vedrørede hvor spændende robotten opleves, og SQ20, vedrørende hvor sej robotten opleves, har en positiv korrelation. Den positive korrelation er gennemgående for flere af parametrene, SQ8, vedrørende hvorvidt testpersonerne føler at robotten kan hjælpe dem, og SQ10, vedrørende hvor tryg testpersonerne er ved robotten, korrelerer ligeledes.  
 
 
-SQ10 størst indflydelse på PC1
-SQ1, SQ20 og SQ22 størst indflydelse på PC2
 
-SQ18 + SQ20 korrelation
+
 SQ8 + SQ10 korrelation
 SQ9 + SQ14 korrelation
 SQ4 + SQ13 korrelation 
@@ -105,3 +121,8 @@ SQ2 + SQ7 korrelation
 SQ21 + SQ22 er ikke negativt korrelation 
 
 SQ13 + SQ21 er negativt korrelation
+
+
+
+\subsection{Tendenser i forhold til robottens afstand}
+\label{DatabehandlingAfstandTendenser}
