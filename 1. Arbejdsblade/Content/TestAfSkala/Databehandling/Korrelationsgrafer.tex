@@ -1,6 +1,9 @@
 \section{Korrelationsgrafer}
 \label{DatabehandlingKorrelationsgrafer}
 %
+Som beskrevet udføres der en PCA analyse relativt til forskellige grupperinger. Ud fra disse PCA analyser ses det, at nogle af de fundme og testede parametre korrlerer. For yderliger at undersøge disse korrelationer opsættes relevante grafer, hvor forholdet mellem de forskellige parametre og skala spørgsmål visualiseres. På alle grafer i det følgende afsnit vil x-aksen indikere testpersoner, men ikke nødvendigvis i kronologisk rækkefølge, hvorfor værdier på x-aksen er fjernet.
+
+\subsubsection{Korrelation relativt til højde}
 Når PCA analysen udføres relativt til højde, tyder det, som beskrevet i \fullref{DatabehandlingRHeight}, på, at en positiv korrelation mellem følgende parametre finder sted:
 \begin{itemize}
 	\item SQ12 og SQ18
@@ -17,8 +20,6 @@ Derudover ses der negativ korrelation mellem følgende parametre:
 	\item SQ16 og SQ19
 \end{itemize}
 %
-For at undersøge dette nærmere opsættes relevante grafer, hvor forholdet mellem de forskellige parametre og skala spørgsmål visualiseres. På alle følgende grafer vil x-aksen indikere testpersoner, men ikke nødvendigvis i kronologisk rækkefølge, hvorfor værdier på x-aksen er fjernet.
-
 På \autoref{fig:SammenligningSQ12SQ18} ses sammenhængen mellem SQ12 og SQ18, hvor der kan se en tendens i at når testpersonerne kan lide at blive betjent af robotten synes de også at robotten er spændende. 
 %
 \begin{figure}[H]
@@ -97,5 +98,40 @@ Selvom \autoref{fig:RHeight-Biplot} vise en negativ korrelation mellem SQ4 og SQ
 	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ16 og SQ19, der begge har samme skala spørgsmål: \textit{Hvad synes du om robotten?} og forskellige labels.}
 	\label{fig:SammenligningSQ16SQ19}
 \end{figure}
-\noindent
+
+\subsubsection{Korrelation relativt til afstand}
+Når PCA analysen udføres relativt til højde, tyder det, som beskrevet i \fullref{DatabehandlingRHeight}, på, at en positiv korrelation mellem følgende parametre finder sted:
+\begin{itemize}
+	\item SQ1 og SQ12
+	\item SQ10 og SQ22
+	\item SQ8 og SQ21
+	\item SQ7 og SQ17
+\end{itemize}
 %
+Derudover ses der negativ korrelation mellem følgende parametre:
+\begin{itemize}
+	\item SQ2 og SQ9
+	\item SQ14 og SQ16
+	\item SQ10 og SQ13
+	\item SQ13 og SQ22
+	\item SQ5 og SQ8
+	\item SQ5 og SQ21
+	\item SQ19 og SQ20
+\end{itemize}
+
+\subsubsection{Korrelation relativt til indgangsvinkel}
+Når PCA analysen udføres relativt til højde, tyder det, som beskrevet i \fullref{DatabehandlingRHeight}, på, at en positiv korrelation mellem følgende parametre finder sted:
+\begin{itemize}
+	\item SQ8 og SQ10
+	\item SQ9 og SQ14
+	\item SQ5 og SQ7
+\end{itemize}
+%
+Derudover ses der negativ korrelation mellem følgende parametre:
+\begin{itemize}
+	\item SQ1 og SQ12
+	\item SQ9 og SQ10
+	\item SQ10 og SQ14
+	\item SQ6 og SQ23
+	\item SQ13 og S21
+\end{itemize}
