@@ -31,19 +31,34 @@ Før MANOVA kan udføres er der fire antagelser der skal opfyldes \parencite[s. 
 	\item \textbf{Homogenitet af kovariansmatricer} For hver afhængig variabel skal variansen i hver gruppe være nogenlunde lige. Derudover skal korrelationen mellem hvert par af afhængige variable være den samme i alle grupper. 
 	\item \textbf{Multivariat normalitet} At de afhængige variabler har multivariat normalitet indenfor hver gruppe. 
 \end{itemize}
-
+%
 De første to antagelser der er listet er opfyldt, da dataindsamlingen er baseret på at testpersonerne selv har valgt at interagere med robotten. OBservationerne der sammenlignes er afgivet af forskellige personer og derved uafhængige af hinanden. Sidst er besvarelserne afgivet på en VAS skala og opfylder derved antagelsen om at data som minimum skal indsamles på en intervalskala. \blankline
 % 
-Antagelsen om homogenitet af kovariansmatricerne undersøges ved at..
+Antagelsen om homogenitet af kovariansmatricerne undersøges ved at opstille matricerne for derefter at sammenligne værdierne i dem. Kovariansmatricerne for både mænd og kvinder er præsenteret i \autoref{fig:Kovarians}.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.4\textwidth]{Figure/DatabehandlingSkalaer/Normality} 
 \caption{Varians-Kovarians matrice for henholdsvis mænd og kvinder. Værdien for SQ4 (gul), SQ11 (rød), SQ13 (blå) og SQ21 (grøn) er markeret i hver matrice.}
-\label{fig:Normality}
+\label{fig:Kovarians}
 \end{figure}
 \noindent
+%
+For SQ 1 er forskellen mellem kønnene ikke så stor (491,456) og det kan derfor konkluderes at SQ1 opfylder antagelsen. For SQ13 (440,675) og SQ21 (133,327) er der lidt større forskel mellem kvinder, men dog ikke så stor forskel som der kan ses ved SQ11 (75,560). \\
+
 %
 For at undersøge antagelsen om multivariat normalitet \blankline
 %
 Resultatet af Shapiro normality test er for mænd: W = 0.7303, p-værdi = 6.739e-05 og for kvinder: W = 0.6299, p-værdi = 0.00012. For begge grupper er der signifikant forskel, hvilket betyder at ingen af grupperne har multivariat normalitet og bryder derfor med antagelsen for at udføre MANOVA. 
+
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/AQplot} 
+\caption{AQ plot for køn ift SQ4, SQ11, SQ13 og SQ21.}
+\label{fig:AQplot}
+\end{figure}
+\noindent
+%
+
+\subsection{Robust MANOVA}
