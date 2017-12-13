@@ -32,9 +32,9 @@ Før MANOVA kan udføres er der fire antagelser der skal opfyldes \parencite[s. 
 	\item \textbf{Multivariat normalitet} At de afhængige variabler har multivariat normalitet indenfor hver gruppe. 
 \end{itemize}
 %
-De første to antagelser der er listet er opfyldt, da dataindsamlingen er baseret på at testpersonerne selv har valgt at interagere med robotten. OBservationerne der sammenlignes er afgivet af forskellige personer og derved uafhængige af hinanden. Sidst er besvarelserne afgivet på en VAS skala og opfylder derved antagelsen om at data som minimum skal indsamles på en intervalskala. \blankline
+De første to antagelser der er listet er opfyldt, da dataindsamlingen er baseret på at testpersonerne selv har valgt at interagere med robotten. Observationerne der sammenlignes er afgivet af forskellige personer og derved uafhængige af hinanden. Sidst er besvarelserne afgivet på en VAS skala og opfylder derved antagelsen om at data som minimum skal indsamles på en intervalskala. \blankline
 % 
-Antagelsen om homogenitet af kovariansmatricerne undersøges ved at opstille matricerne for derefter at sammenligne værdierne i dem. Kovariansmatricerne for både mænd og kvinder er præsenteret i \autoref{fig:Kovarians}.
+Antagelsen om homogenitet af kovariansmatricerne undersøges ved at opstille varianse-kovarians matricer for hver gruppe, her én for mænd og én for kvinder, for derefter at sammenligne værdierne i matricerne \parencite[s. 725]{FieldMANOVA}. Matricerne for både mænd og kvinder er præsenteret i \autoref{fig:Kovarians}.
 %
 \begin{figure}[H]
 \centering
@@ -44,13 +44,14 @@ Antagelsen om homogenitet af kovariansmatricerne undersøges ved at opstille mat
 \end{figure}
 \noindent
 %
-For SQ 1 er forskellen mellem kønnene ikke så stor (491,456) og det kan derfor konkluderes at SQ1 opfylder antagelsen. For SQ13 (440,675) og SQ21 (133,327) er der lidt større forskel mellem kvinder, men dog ikke så stor forskel som der kan ses ved SQ11 (75,560). \\
+For SQ1 er forskellen mellem kønnene ikke så stor (491,456) og det kan derfor konkluderes at SQ1 opfylder antagelsen. For SQ13 (440,675) og SQ21 (133,327) er der lidt større forskel mellem kvinder og mænd, men dog ikke så stor forskel som der kan ses ved SQ11 (75,560). \\
+Når der er stor forskel som ved SQ11 undersøges sample størrelserne ift forksellen, for hvis en gruppe har flere målinger end den anden, og det er den største gruppe der har den største varians, vil det være acceptabelt at fortage analysen selvom antagelsen egentlig ikke er opfyldt \parencite[s. 725]{FieldMANOVA}. For de tre SQ hvor der er forskel, er det værdien for gruppen med mænd der er størst og da sample størrelsen for mænd også er større end for kvinderne forsættes analysen. \blankline
 
+For at undersøge antagelsen om multivariat normalitet udføres en Shapiro-Wilk test for multivariate normality \parencite[s. 726]{FieldMANOVA}. \blankline
 %
-For at undersøge antagelsen om multivariat normalitet \blankline
+Resultatet af Shapiro normality test er for mænd: W = 0.7303, p-værdi = 6.739e-05 og for kvinder: W = 0.6299, p-værdi = 0.00012. For begge grupper er der signifikant forskel, hvilket betyder at ingen af grupperne har multivariat normalitet og bryder derfor med antagelsen for at udføre MANOVA. \blankline
 %
-Resultatet af Shapiro normality test er for mænd: W = 0.7303, p-værdi = 6.739e-05 og for kvinder: W = 0.6299, p-værdi = 0.00012. For begge grupper er der signifikant forskel, hvilket betyder at ingen af grupperne har multivariat normalitet og bryder derfor med antagelsen for at udføre MANOVA. 
-
+Da antagelsen om multivariat normalitet ikke opfyldes, vælges det at undersøge om det kan skyldes enkelte multivariat outlier, som så kan eksluderes fra analysen \parencite[s. 727]{FieldMANOVA}. På \autoref{fig:AQplot} ses AQ plot for mænd og kvinder.  
 %
 \begin{figure}[H]
 \centering
@@ -60,5 +61,10 @@ Resultatet af Shapiro normality test er for mænd: W = 0.7303, p-værdi = 6.739e
 \end{figure}
 \noindent
 %
-
+På AQ plottet er mulige outlier skrevet i rød, og på de nederste to plots kan det ses at besvarelser fra 14 testperson ser ud til at være outlier (2, 4, 5, 6, 9, 12, 14, 15, 16, 17, 18, 20, 27 og 31). \blankline
+%
+På plottet i øverste højre hjørne på \autoref{fig:AQplot} vil de værdier der ligger til højre for de lodrette linjer (blå og lyseblå) være outlier \parencite[s. 727]{FieldMANOVA}. På dette plottet er der også en del outlier. Da der er del outlier vurderes det at det er for mange datapunkter, til at de kan ekskluderes og forsætte analysen uden dem. Det betyder derfor at ntagelsen ikke kan opfyldes, og grundlaget for at udføre en MANOVA på datasættet er der ikke. 
+%
 \subsection{Robust MANOVA}
+%
+Ifølge \textcite[s. 733]{FieldMANOVA} er det muligt at udføre en robust MANOVA, som udføres i R ved at anvende pakken \textit{WRS}. Siden bogens udgivelse er denne pakke opdateret til \textit{WRS2} og i denne opdatering er funktionen til udførelse af en robust MANOVA ikke inkluderet. Ifølge \textcite[s. 30]{WEB:WRS2}, der er forfatterne bag pakken, er funktion til robust MANOVA under udvikling, men ikke udgivet endnu. Det er derfor ikke muligt at udføre den robuste MANOVA indenfor tidsrammen af dette projekt. 
