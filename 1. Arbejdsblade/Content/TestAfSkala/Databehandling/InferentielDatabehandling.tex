@@ -11,15 +11,14 @@ Først laves en \textit{Principal Component Analysis} (PCA) analyse på det saml
 \end{figure}
 \noindent
 %
-
 Ud fra \textit{Scree}-plottet på \autoref{fig:Scree} fremgår det at der ikke er en tydelig sammenhæng i variansen fra datasættet, da kun 29.9 \% af variansen kan forklares af PC1 og 13.4 \% af PC2. Selv hvis de tre første principal components medregnes, er det kun 53.1 \% af variansen som forklares af modellen. Dette skyldes formentligt at der ikke er nok data og at for mange variable er blevet varieret på én gang, hvilket har gjort det svært at se hvilke parametre der har indflydelse på hvilke vurderinger.
 
 Ud fra \textit{Score}-plottet på \autoref{fig:Score} fremgår det også at PC1 kun forklarer en lille del af variansen, da der er meget spredning i datapunkterne og spredningen ikke er systematisk. Hvis PC1 havde forklaret en større del af variansen, ville data være mere centreret omkring den horisontale akse.
 %
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Figure/DatabehandlingSkalaer/PCAfigures/RHeight-Scores}
-\caption{\textit{Score}-plot for PC1 og PC2 i forhold til robottens højde.}
+\includegraphics[width=\textwidth]{Figure/DatabehandlingSkalaer/PCAfigures/Scores}
+\caption{\textit{Score}-plot for PC1 og PC2.}
 \label{fig:Score}
 \end{figure}
 \noindent
@@ -34,8 +33,6 @@ For at undersøge hvilke loadings der bidrager til hver principal component, ops
 \end{figure}
 \noindent
 %
-
 Ud fra 3D plottet kan man se at 7 ikke bidrager meget til nogle af de tre PCs. Som nævnt i \fullref{TestAfSkalaVarians} på \autoref{fig:Varians} har Q7 en meget lille varians, og det er derfor ikke overraskende at den ikke bidrager mere til de tre principal components end den gør resultat er derfor ikke overraskende. Det betyder at spørgsmål 7 har fået nogenlunde samme besvarelser på tværs af grupperne og at den derfor ikke er særlig vigtig for den samlede oplevelse. Det kan dog både være frdi at den ikke er et vigtigt parameter, men det kan også være at der bare ikke er nogle af testpersonerne som blev udsat for en oplevelse der påvirkede dette parameter, men at det måske er vigtigt i andre sammenhænge. 
-
 
 Resultaterne fra PCA'en fra det samlede datasæt giver ikke nogle håndgribelige konklusioner. For at undersøge om der er nogle tendenser i forhold til de objektive parametre som blev justeret undervejs i testen, højde, retning og afstand, undersøges hvordan hver af disse parametre påvirker en PCA-analyse. Dette gøres ved at kigge på et parameter ad gangen og dele det op i de grupper som allerede findes.
