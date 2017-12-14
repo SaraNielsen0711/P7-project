@@ -18,7 +18,7 @@ Langt fra (3) & 8     \\
 \end{table}
 \noindent
 %
-Ud fra \textit{Scree}-plottet på \autoref{fig:Distance-Scree} fremgår det at cirka 80 \& af variansen kan forklares ud fra den første \textit{Principal Component} (PC) og 100 \% af variansen kan forklares ud fra to PCs. 
+
 %
 \begin{figure}[H]
 \centering
@@ -28,7 +28,7 @@ Ud fra \textit{Scree}-plottet på \autoref{fig:Distance-Scree} fremgår det at c
 \end{figure}
 \noindent
 %
-Ud fra \textit{Score}-plottet på \autoref{fig:Distance-Score} fremgår det, at der generelt er en del spredning mellem resultaterne ud fra de tre forskellige afstande, hvilket foreskriver at de tre afstanden ikke umiddelbart har ens karakteristikas. 
+Ud fra \textit{Scree}-plottet på \autoref{fig:Distance-Scree} fremgår det at cirka 80 \& af variansen kan forklares ud fra den første \textit{Principal Component} (PC) og 100 \% af variansen kan forklares ud fra to PCs. 
 %
 \begin{figure}[H]
 \centering
@@ -38,21 +38,80 @@ Ud fra \textit{Score}-plottet på \autoref{fig:Distance-Score} fremgår det, at 
 \end{figure}
 \noindent
 %
+Ud fra \textit{Score}-plottet på \autoref{fig:Distance-Score} fremgår det, at der generelt er en del spredning mellem resultaterne ud fra de tre forskellige afstande, hvilket foreskriver at de tre afstanden ikke umiddelbart har ens karakteristikas. 
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Figure/DatabehandlingSkalaer/PCAfigures/Distance-Biplot.png}
+\caption{\textit{Bi}-plot med både \textit{loadings} (angivet med blå) og \textit{scores} (angivet med rød) fremgår i forhold til robottens afstand.}
+\label{fig:Distance-Biplot}
+\end{figure}
+\noindent
+%
+I henhold til de tre afstande tyder det ikke på, at afstanden \textit{Langt fra} påvirkes særlig meget af nogen af parametrene, da ingen \textit{loadings} peger direkte mod eller er tæt på denne afstand, jævnfør \autoref{fig:Distance-Biplot}. Det tyder derimod mod på, at afstanden \textit{Tilpas} hovedsageligt er domineret af SQ2, SQ10 og SQ22, hvor afstanden \textit{Tæt på} primært domineres af SQ1 og tildels SQ14.     
+
 Ud fra \textit{Bi}-plottet på \autoref{fig:Distance-Biplot}, hvorpå \textit{loadings} og \textit{scores} for hver parameter er præsenteret, fremgår det at SQ1, omhandlende skærmens reaktion, og SQ15, vedrørende hvor overraskede testpersonerne blev ved robottens henvendelse, bidrager mest til PC1. Hvor for PC2 er det SQ10, vedrørende hvor tryg testpersonerne følte sig ved robotten, som har det største bidrag. Derudover tyder det på at både SQ11, vedrørende hvorvidt robotten gjorde testpersonerne forskrækket, og SQ17, vedrørende robottens elegance, kun beskriver en lille del af variansen, hvorfor det ikke giver mening at kommentere på hvordan de indbyrdes ligger, medmindre de indgår i en korrelation med en mere betydende parameter.  
 
-Ud fra \autoref{fig:Distance-Biplot} fremgår det, at SQ1, vedrørende skærmens reaktion, og SQ12, vedrørende hvor godt testpersonen kan lide at blive betjent af robotten, ligger tæt på hinanden, hvorfor de er korrelerede. Korrelationen skyldes ikke at de to parametre måler det samme, men formentlig påvirker hinanden, så når skærmen reagerer dårligt så vil det have en negativ effekt på hvor godt testpersonerne kan lide at blive betjent af robotten. Da det forventes at den færdigudviklede robot vil have en skærm, hvis reaktionsevne er væsentligt bedre end hvad der har været tilfældet i projektet, vurderes det at SQ1 formentlig kan være redundant. 
+Ud fra \autoref{fig:Distance-Biplot} fremgår det, at SQ1, vedrørende skærmens reaktion, og SQ12, vedrørende hvor godt testpersonen kan lide at blive betjent af robotten, ligger tæt på hinanden, hvorfor de er korrelerede. Korrelationen skyldes ikke at de to parametre måler det samme, men formentlig påvirker hinanden, så når skærmen reagerer dårligt så vil det have en negativ effekt på hvor godt testpersonerne kan lide at blive betjent af robotten. Da det forventes at den færdigudviklede robot vil have en skærm, hvis reaktionsevne er væsentligt bedre end hvad der har været tilfældet i projektet, vurderes det at SQ1 formentlig kan være redundant. Sammenholdes de to skala spørgsmål tyder det ikke på, at der er en korrelation mellem dem, hvorfor grafen forefindes i \fullref{ElektroniskBilagKorrelationsgrafer}.
 
-Lignende gør sig gældende for SQ10, vedrørende hvor tryg testpersonerne følte sig ved robotten, og SQ22, vedrørende hvor sjov robotten er. Det giver mening, at de to parametre korrelerer da det antages, at hvis testpersonerne føler sig utrygge så vil de formentlig heller ikke opleve robotten som værende sjov. De to parametre måler derfor ikke det samme.  
+Lignende gør sig gældende for SQ10, vedrørende hvor tryg testpersonerne følte sig ved robotten, og SQ22, vedrørende hvor sjov robotten er. Det giver mening, at de to parametre korrelerer da det antages, at hvis testpersonerne føler sig utrygge så vil de formentlig heller ikke opleve robotten som værende sjov. De to parametre måler derfor ikke det samme. Sammenholdes de to skala spørgsmål tyder det på, at der er en lille tendens til at desto mere tryg testpersonerne er ved robotten, desto sjovere opleves robotten, jævnfør \autoref{fig:SammenligningSQ10SQ22}. 
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ10+SQ22}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ10: \textit{Jeg føler mig tryg ved robotten} og SQ22: \textit{Hvad synes du ellers om robotten?} i forhold til \textit{sjov}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\label{fig:SammenligningSQ10SQ22}
+\end{figure}
+\noindent
+%
+For SQ8, vedrørende hvorvidt testpersonerne føler, at robotten kan hjælpe dem, og SQ21, vedrørende hvor anmassende robotten er, forekommer samme tendens; at de to parametre er positivt korreleret. Denne korrelation skyldes formentlig ikke at de to parametre måler det samme, da anmassende også kan vedrører at robotten kommer for tæt på. 
 
-For SQ8, vedrørende hvorvidt testpersonerne føler, at robotten kan hjælpe dem, og SQ21, vedrørende hvor anmassende robotten er, forekommer samme tendens; at de to parametre er korreleret.  
 
+Da der forefindes en positiv korrelation mellem de to skala spørgsmål på \autoref{fig:Distance-Biplot}, hvorfor det forventes at tendenslinjen stiger, men når de to skala spørgsmål sammenholdes på \autoref{fig:SammenligningSQ8SQ21} tyder det ikke på, at det er tilfældet.  
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ8+SQ21}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ8: \textit{Jeg føler, at robotten kan hjælpe mig} og SQ21: \textit{Hvad synes du ellers om robotten?} i forhold til \textit{anmassende}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\label{fig:SammenligningSQ8SQ21}
+\end{figure}
+\noindent
+%
+Selvom SQ17 kun har en minimal betydningen fremgår det på \autoref{fig:Distance-Biplot}, at SQ17 er højt korreleret med SQ7, vedrørende robottens højde. Sammenholdes de to skala spørgsmål tyder det ikke på, at der er en korrelation mellem dem, hvorfor grafen forefindes i \fullref{ElektroniskBilagKorrelationsgrafer}.
 
+Udover de positive korrelationer forekommer der ligeledes negative korrelationer, hvilket blandt andet gør sig gældende for SQ2, vedrørende robottens bevægelser, og SQ9, vedrørende hvorvidt testpersonerne synes, at robotten stod i vejen. Denne korrelation er præsenteret på \autoref{fig:SammenligningSQ2SQ9}. Som tidligere nævnt forefindes der en positiv korrelation mellem SQ8 og SQ21, hvor de to parametre er negativt korrelerede med SQ5, vedrørende robottens afstand til testpersonen. Sammenlignes SQ5 og SQ8, jævnfør \autoref{fig:SammenligningSQ5SQ8}, er det svært at udlede, hvorvidt parametrene afhænger af hinanden eller følges ad ved tilfældighed. På trods af tidligere fundet negativ korrelation relateret til afstand, tyder det ikke til at testpersonerne har en ændret oplevelse af om robotten kan hjælpe dem, når robotten stopper tættere på eller længere væk. Det samme gør sig gældende, når SQ5 og SQ21 sammenlignes, hvorfor grafen forefindes i \fullref{ElektroniskBilagKorrelationsgrafer}. 
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ5+SQ8}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ5: \textit{Jeg synes robotten stoppede...} og SQ8: \textit{Jeg føler, at robotten kan hjælpe mig}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\label{fig:SammenligningSQ5SQ8}
+\end{figure}
+\noindent
+%
+Lignende er gældende for den positive korrelation mellem SQ10 og SQ22, som har en negativ korrelation med SQ13, vedrørende hvorvidt testpersonerne følte, at robotten fulgte dem hen til det valgte sted. Sammenholdes SQ10 med SQ13 forekommer der ud fra \autoref{fig:SammenligningSQ10SQ13} ikke en negativ korrelation mellem de to parametre, da begge grafer stiger samtidig. Dog indikerer \autoref{fig:SammenligningSQ10SQ13}, at når testpersonerne regnede med at robotten fulgte dem hen til det valgte sted, så var de også mere trygge ved robotten. 
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ10+SQ13}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ10: \textit{Jeg føler mig tryg ved robotten} og SQ13: \textit{Jeg regnede med, at robotten fulgte mig hen til det sted jeg valgte}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\label{fig:SammenligningSQ10SQ13}
+\end{figure}
+\noindent
+%
+Lignende er gældende for korrelationen mellem SQ13 og SQ22, hvor der heller ikke forefindes en negativ korrelation, men derimod tyder det på at når testpersonerne regnede med at robotten fulgte dem hen til det valgte sted, så var de mere tilbøjelige til at vurdere robotten som sjov. Dog forekommer der en del manglende besvarelser til SQ22, hvorfor grafen for dette forefindes i \fullref{ElektroniskBilagKorrelationsgrafer}. 
 
-Selvom SQ17 kun har en minimal betydningen fremgår det på \autoref{fig:Distance-Biplot}, at SQ17 er højt korreleret med SQ7, vedrørende robottens højde. 
-
-Udover de positive korrelationer forekommer der ligeledes negative korrelationer, hvilket blandt andet gør sig gældende for SQ2, vedrørende robottens bevægelser, og SQ9, vedrørende hvorvidt testpersonerne synes, at robotten stod i vejen. Som tidligere nævnt forefindes der en positiv korrelation mellem SQ8 og SQ21, hvor de to parametre er negativt korrelerede med SQ5, vedrørende robottens afstand til testpersonen. Lignende er gældende for den positive korrelation mellem SQ10 og SQ22, som har en negativ korrelation med SQ13, vedrørende hvorvidt testpersonerne følte, at robotten fulgte dem hen til det valgte sted. Ydermere forekommer der negativ korrelation mellem SQ14, vedrørende hvor personlig robottens hjælp opleves, og SQ16, vedrørende hvor irriterende robotten opleves. Derudover tyder det på, at der er en negativ korrelation mellem SQ19, vedrørende hvor sød robotten opleves, og SQ20, vedrørende hvor sej robotten opleves.        
-
-I henhold til de tre afstande tyder det ikke på, at afstanden \textit{Langt fra} påvirkes særlig meget af nogen af parametrene, da ingen \textit{loadings} peger direkte mod eller er tæt på denne afstand, jævnfør \autoref{fig:Distance-Biplot}. Det tyder derimod mod på, at afstanden \textit{Tilpas} hovedsageligt er domineret af SQ2, SQ10 og SQ22, hvor afstanden \textit{Tæt på} primært domineres af SQ1 og tildels SQ14.     
+Ydermere forekommer der negativ korrelation mellem SQ14, vedrørende hvor personlig robottens hjælp opleves, og SQ16, vedrørende hvor irriterende robotten opleves. Dette fremgår ligeledes af \autoref{fig:SammenligningSQ14SQ16}, hvor det tyder på, at desto mere personlig testpersonerne oplever robottens hjælp, desto mindre irriterende synes de robotten er. 
+%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ14+SQ16}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ14: \textit{Hvor personlig oplevede du robottens hjælp?} og SQ16: \textit{Hvad synes du om robotten?}, i forhold til \textit{irriterende}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\label{fig:SammenligningSQ14SQ16}
+\end{figure}
+\noindent
+%
+Derudover tyder det på, at der er en negativ korrelation mellem SQ19, vedrørende hvor sød robotten opleves, og SQ20, vedrørende hvor sej robotten opleves. Det er mærkeligt, at denne korrelation er negativ i forhold til de to parametre, og når de sammenholdes forefindes der ikke en negativ korrelation, men nærmere en postiv korrelation, dog er der en del manglende besvarelser til SQ20, hvorfor grafen forefindes i \fullref{ElektroniskBilagKorrelationsgrafer}.
 %
 \begin{figure}[H]
 \centering
