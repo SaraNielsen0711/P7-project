@@ -1,26 +1,28 @@
 \section{Korrelationsgrafer}
 \label{DatabehandlingKorrelationsgrafer}
 %
-Som beskrevet udføres der en PCA analyse relativt til forskellige grupperinger. Ud fra disse PCA analyser ses det, at nogle af de fundme og testede parametre korrlerer. For yderliger at undersøge disse korrelationer opsættes relevante grafer, hvor forholdet mellem de forskellige parametre og skala spørgsmål visualiseres. På alle grafer i det følgende afsnit vil x-aksen indikere testpersoner, men ikke nødvendigvis i kronologisk rækkefølge, hvorfor værdier på x-aksen er fjernet.
+Som beskrevet udføres der en PCA analyse relativt til forskellige grupperinger. Ud fra disse PCA analyser forefindes der korrelation mellem nogen af de fundne og testede parametre. For yderliger at undersøge disse korrelationer opsættes relevante grafer, hvor forholdet mellem de forskellige parametre og skala spørgsmål visualiseres. På alle grafer i det følgende afsnit vil x-aksen indikere testpersoner, men ikke nødvendigvis i kronologisk rækkefølge, hvorfor værdier på x-aksen er fjernet.
 
 \subsubsection{Korrelation relativt til højde}
 Når PCA analysen udføres relativt til højde, tyder det, som beskrevet i \fullref{DatabehandlingRHeight}, på, at en positiv korrelation mellem følgende parametre finder sted:
 \begin{itemize}
 	\item SQ12 og SQ18
 	\item SQ14 og SQ15
-	\item SQ8 og SQ17
+	\item SQ8 og SQ17\blankline
 \end{itemize}
+\noindent
 %
-Derudover ses der negativ korrelation mellem følgende parametre:
+Derudover forefindes der negativ korrelation mellem følgende parametre:
 \begin{itemize}
 	\item SQ12 og S21
 	\item SQ18 og SQ21
 	\item SQ2 og SQ9
 	\item SQ4 og SQ9
-	\item SQ16 og SQ19
+	\item SQ16 og SQ19\blankline
 \end{itemize}
+\noindent
 %
-På \autoref{fig:SammenligningSQ12SQ18} ses sammenhængen mellem SQ12 og SQ18, hvor der kan se en tendens i at når testpersonerne kan lide at blive betjent af robotten synes de også at robotten er spændende. 
+Korrelationen mellem SQ12 og SQ18 skyldes ikke at de måler det samme, men derimod at når testpersonerne godt kan lide at blive betjent af robotten, så synes de også robotten er spændende, hvilket fremgår på \autoref{fig:SammenligningSQ12SQ18}. 
 %
 \begin{figure}[H]
 	\centering
@@ -30,7 +32,7 @@ På \autoref{fig:SammenligningSQ12SQ18} ses sammenhængen mellem SQ12 og SQ18, h
 \end{figure}
 \noindent
 %
-På \autoref{fig:SammenligningSQ14SQ15} ses sammenhængen mellem SQ14 og SQ15. Kigges der på tendenslinjen kan der tilnærmelsesvis ses en sammenhæng mellem de to parametre, men kigges der på punkterne på grafen virker det ikke umiddelbart til at hvor personlig robottens hjælp blev oplevet og hvor overrasket testpersonerne blev over henvendelsen har indflydelse på hinanden.
+Korrelationen mellem SQ14 og SQ15 skyldes ikke at de måler det samme, og ud fra tendenslinjen på \autoref{fig:SammenligningSQ14SQ15} tyder det på, at der tilnærmelsesvis er en sammenhæng mellem de to parametre. Fokuseres der derimod på punkterne på graferne virker det ikke som om, at der er en korrelation mellem hvor overrasket testpersonerne bliver og hvor personlig robottens hjælp opleves.
 %
 \begin{figure}[H]
 	\centering
@@ -40,7 +42,7 @@ På \autoref{fig:SammenligningSQ14SQ15} ses sammenhængen mellem SQ14 og SQ15. K
 \end{figure}
 \noindent
 %
-På \autoref{fig:SammenligningSQ8SQ17} ses der en lille tendens, hvor robotten rates mere elegant, når testpersonerne føler robotten kan hjælpe dem. Igen ligger datapunkterne dog meget spredt, så det betyder ikke nødvendigvis at en direkte sammenhæng er tilfældet. 
+Korrelationen mellem SQ8 og SQ17 skyldes ikke at de måler det sammen, det tyder derimod på, at korrelationen forekommer når testpersonerne føler, at robotten kan hjælpe dem og samtidig vurderer at robotten er elegant. Dog er denne korrelation lille, fordi datapunkterne varierer en del, særligt i forhold til SQ17, jævnfør \autoref{fig:SammenligningSQ8SQ17}.  
 %
 \begin{figure}[H]
 	\centering
@@ -49,8 +51,7 @@ På \autoref{fig:SammenligningSQ8SQ17} ses der en lille tendens, hvor robotten r
 	\label{fig:SammenligningSQ8SQ17}
 \end{figure}
 \noindent
-%
-På \autoref{fig:SammenligningSQ12SQ21} ses sammenhængen mellem SQ12 og SQ21, der har en negativ korrelation, jævnfør \autoref{fig:RHeight-Biplot}. Her ses det, at robotten anses som værende mindre anmasende, jo bedre testpersonerne kunne lide at blive betjent af robotten.
+I forhold til den negative korrelation mellem SQ21 og SQ12, vedrørende hvor godt testpersonerne kan lide at blive betjent af robotten, fremgår det ud fra \autoref{fig:SammenligningSQ12SQ21}, at når at desto mindre anmassende robotten opleves, desto bedre kan testpersonerne lide at blive betjent af robotten, hvilket giver god mening. 
 %
 \begin{figure}[H]
 	\centering
@@ -60,44 +61,53 @@ På \autoref{fig:SammenligningSQ12SQ21} ses sammenhængen mellem SQ12 og SQ21, d
 \end{figure}
 \noindent
 %
-\autoref{fig:SammenligningSQ18SQ21} viser sammenhængen mellem SQ18 og SQ21. Her ses det, at det er en sammenhæng i testpersonernes ratings, da robotten anses som værende mindre anmasende, når robotten anses som værende mere spændende.
+I forohold til den negative korrelation mellem SQ18, vedrørende hvor spændende robotten opleves, og SQ21, fremgår det at ud fra \autoref{fig:SammenligningSQ18SQ21}, at desto mindre anmassende robotten opleves desto mere spændende vurderes robotten. 
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ18+SQ21}
-	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ18: \textit{Hvad synes du om robotten} og SQ21: \textit{Hvad synes du ellers om robotten?}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ18: \textit{Hvad synes du om robotten?}, i forhold til \textit{spændende}, og SQ21: \textit{Hvad synes du ellers om robotten?}, i forhold til \textit{anmassende}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
 	\label{fig:SammenligningSQ18SQ21}
 \end{figure}
 \noindent
 %
-På \autoref{fig:SammenligningSQ2SQ9} ses sammenhængen mellem SQ2 og SQ9. Figuren viser en tendens for, at ratings omkring hvorvidt robotten stod i vejen falder, når robotten opleves som mere imødekommende.
+I henhold til den negative korrelation mellem SQ2, vedrørende hvorvidt robotten er imødekommende eller afvisende, og SQ9, fremgår det at desto mere imødekommende robotten opleves, desto mindre er den i vejen, jævnfør \autoref{fig:SammenligningSQ2SQ9}.
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ2+SQ9}
-	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ2: \textit{Hvordan oplevede du robotten?} og SQ9: \textit{Jeg synes, at robotten stod i vejen}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ2: \textit{Hvordan oplevede du robotten?}, i forhold til \textit{afvisende} og \textit{imødekommende}, og SQ9: \textit{Jeg synes, at robotten stod i vejen}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
 	\label{fig:SammenligningSQ2SQ9}
 \end{figure}
 \noindent
 %
-Selvom \autoref{fig:RHeight-Biplot} vise en negativ korrelation mellem SQ4 og SQ9, ses det på \autoref{fig:SammenligningSQ4SQ9}, at dette ikke nødvendigvis er tilfældet.
+Selvom det på \autoref{fig:RHeight-Biplot} tyder på, at der er en negativ korrelation mellem SQ4, vedrørende robottens bevægelser, og SQ9, så fremgår denne korrelation ikke som negativ på \autoref{fig:RHeight-3D} eller på \autoref{fig:SammenligningSQ4SQ9}, at dette ikke nødvendigvis er tilfældet.
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ4+SQ9}
-	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ4: \textit{Hvordan oplevede du robottens bevægelser?} og SQ9: \textit{Jeg synes, at robotten stod i vejen}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ4: \textit{Hvordan oplevede du robottens bevægelser?}, i forhold til \textit{vilde} og \textit{rolige} og SQ9: \textit{Jeg synes, at robotten stod i vejen}. At den orange kurve ikke er kontinuerlig skyldes, at nogle testpersoner ikke har angivet en respons på skalaen.}
 	\label{fig:SammenligningSQ4SQ9}
 \end{figure}
 \noindent
 %
-\autoref{fig:SammenligningSQ16SQ19} ses sammenhængen mellem SQ16 og SQ19, hvor der ses en lille tendens af at testpersonerne synes robotten var mindre sød jo mere irriterende de synes den var. 
+Den negative korrelation mellem SQ16 og SQ19 forekommer både på \autoref{fig:RHeight-Biplot} og på \autoref{fig:RHeight-3D}, men korrelationen er ikke lige så markant på \autoref{fig:SammenligningSQ16SQ19}, da datapunkterne for SQ19 varierer en del.  
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Figure/Korrelationsgrafer/SQ16+SQ19}
-	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ16 og SQ19, der begge har samme skala spørgsmål: \textit{Hvad synes du om robotten?} og forskellige labels.}
+	\caption{Sammenhæng mellem hvad testpersonerne angiver (\%) på skalaen til SQ16 og SQ19, der begge har samme skala spørgsmål: \textit{Hvad synes du om robotten?}, men vedrører henholdvist \textit{irriterende} og \textit{sød}.}
 	\label{fig:SammenligningSQ16SQ19}
 \end{figure}
+\noindent
+%
+
+
+
+
+
+
+
 
 \subsubsection{Korrelation relativt til afstand}
 Når PCA analysen udføres relativt til afstand, tyder det, som beskrevet i \fullref{DatabehandlingRAfstand}, på, at en positiv korrelation mellem følgende parametre finder sted:
@@ -120,6 +130,7 @@ Derudover ses der negativ korrelation mellem følgende parametre:
 \end{itemize}
 
 Laves graferne for sammenhængen for SQ1 og SQ12 samt SQ7 og SQ17 ses der ikke nogen relevant sammenhæng, hvorfor disse kun er at finde i det elektroniske bilag, \fullref{ELEKTRONISK BILAG}.
+
 På \autoref{fig:SammenligningSQ10SQ22} ses sammenhængen mellem SQ10 og SQ22. Det ses at der en lille tendens af, at testpersonerne synes robotten er mere sjov, når de samtidig føler sig mere tryg ved robotten.
 %
 \begin{figure}[H]
