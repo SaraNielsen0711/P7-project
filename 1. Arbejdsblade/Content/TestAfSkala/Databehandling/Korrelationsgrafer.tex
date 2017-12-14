@@ -1,12 +1,14 @@
 \section{Korrelationsgrafer}
 \label{DatabehandlingKorrelationsgrafer}
-%
+% SKRIV AT DER IKKE TAGES HØJDE FOR GRUPPER ELLER PCA'ER
+%DER SKAL VÆRE BESVARELSER PÅ BEGGE SKALAER, ELLERS SLETTES PUNKTET
 Som beskrevet udføres der en PCA analyse relativt til forskellige grupperinger. Ud fra disse PCA analyser forefindes der korrelation mellem nogen af de fundne og testede parametre. For yderliger at undersøge disse korrelationer opsættes relevante grafer, hvor forholdet mellem de forskellige parametre og skala spørgsmål visualiseres. På alle grafer i det følgende afsnit vil x-aksen indikere testpersoner, men ikke nødvendigvis i kronologisk rækkefølge, hvorfor værdier på x-aksen er fjernet.
 
 \subsubsection{Korrelation relativt til højde}
 Når PCA analysen udføres relativt til højde, tyder det, som beskrevet i \fullref{DatabehandlingRHeight}, på, at en positiv korrelation mellem følgende parametre finder sted:
 \begin{itemize}
 	\item SQ12 og SQ18
+	\item SQ10 OG SQ13 (MANGLER FIGUR)
 	\item SQ14 og SQ15
 	\item SQ8 og SQ17\blankline
 \end{itemize}
@@ -41,7 +43,7 @@ Korrelationen mellem SQ14 og SQ15 skyldes ikke at de måler det samme, og ud fra
 	\label{fig:SammenligningSQ14SQ15}
 \end{figure}
 \noindent
-%
+% SKRIV AT DET TYDER PÅ KORRELATION
 Korrelationen mellem SQ8 og SQ17 skyldes ikke at de måler det sammen, det tyder derimod på, at korrelationen forekommer når testpersonerne føler, at robotten kan hjælpe dem og samtidig vurderer at robotten er elegant. Dog er denne korrelation lille, fordi datapunkterne varierer en del, særligt i forhold til SQ17, jævnfør \autoref{fig:SammenligningSQ8SQ17}.  
 %
 \begin{figure}[H]
@@ -61,7 +63,7 @@ I forhold til den negative korrelation mellem SQ21 og SQ12, vedrørende hvor god
 \end{figure}
 \noindent
 %
-I forohold til den negative korrelation mellem SQ18, vedrørende hvor spændende robotten opleves, og SQ21, fremgår det at ud fra \autoref{fig:SammenligningSQ18SQ21}, at desto mindre anmassende robotten opleves desto mere spændende vurderes robotten. 
+I forohold til den negative korrelation mellem SQ18, vedrørende hvor spændende robotten opleves, og SQ21, fremgår det at ud fra \autoref{fig:SammenligningSQ18SQ21}, at desto mindre anmassende robotten opleves desto mere spændende vurderes robotten. DOG TYDER DET PÅ AT NÅR SQ18 ER HØJEST SÅ STIGER SQ21
 %
 \begin{figure}[H]
 	\centering
@@ -131,7 +133,7 @@ Derudover ses der negativ korrelation mellem følgende parametre:
 
 Laves graferne for sammenhængen for SQ1 og SQ12 samt SQ7 og SQ17 ses der ikke nogen relevant sammenhæng, hvorfor disse kun er at finde i det elektroniske bilag, \fullref{ELEKTRONISK BILAG}.
 
-På \autoref{fig:SammenligningSQ10SQ22} ses sammenhængen mellem SQ10 og SQ22. Det ses at der en lille tendens af, at testpersonerne synes robotten er mere sjov, når de samtidig føler sig mere tryg ved robotten.
+På \autoref{fig:SammenligningSQ10SQ22} ses sammenhængen mellem SQ10 og SQ22. Det ses at deE IKKE tendens af, at testpersonerne synes robotten er mere sjov, når de samtidig føler sig mere tryg ved robotten. INGEN KORRELATION
 %
 \begin{figure}[H]
 	\centering
@@ -141,7 +143,7 @@ På \autoref{fig:SammenligningSQ10SQ22} ses sammenhængen mellem SQ10 og SQ22. D
 \end{figure}
 \noindent
 %
-På \autoref{fig:SammenligningSQ8SQ21} vises sammenhængen mellem SQ8 og SQ21. Det forventes at tendenslinjen stiger i stedet for at falde, da en positiv korrelation mellem SQ8 og SQ21 er påvist på \autoref{fig:Distance-Biplot}. Dette er ikke nødvendigvis tilfældet, hvilket kan indikere at robotten findes mindre anmasende, når testpersonerne føler, at robotten kan hjælpe dem. 
+På \autoref{fig:SammenligningSQ8SQ21} vises sammenhængen mellem SQ8 og SQ21. Det forventes at tendenslinjen stiger i stedet for at falde, da en positiv korrelation mellem SQ8 og SQ21 er påvist på \autoref{fig:Distance-Biplot}. Dette er ikke nødvendigvis tilfældet, hvilket kan indikere at robotten findes mindre anmasende, når testpersonerne føler, at robotten kan hjælpe dem. INGEN KORRELATION
 %
 \begin{figure}[H]
 	\centering
@@ -151,7 +153,7 @@ På \autoref{fig:SammenligningSQ8SQ21} vises sammenhængen mellem SQ8 og SQ21. D
 \end{figure}
 \noindent
 %
-Undersøges den negative korrelation er sammenhængen mellem SQ2 og SQ9 allerede vist på \autoref{fig:SammenligningSQ2SQ9}. På \autoref{fig:SammenligningSQ14SQ16} vises sammenhængen for SQ14 og SQ16, hvor der ses en lille tendens for at robotten opleves som mindre sej, når den opleves som mere personlig.
+Undersøges den negative korrelation er sammenhængen mellem SQ2 og SQ9 allerede vist på \autoref{fig:SammenligningSQ2SQ9}. På \autoref{fig:SammenligningSQ14SQ16} vises sammenhængen for SQ14 og SQ16, hvor der ses en lille tendens for at robotten opleves som mindre sej, når den opleves som mere personlig. INGEN KORRELATION FORKERTE NÆVNTE PARAMETRE
 %
 \begin{figure}[H]
 	\centering
@@ -163,7 +165,7 @@ Undersøges den negative korrelation er sammenhængen mellem SQ2 og SQ9 allerede
 %
 Laves graferne for SQ10 og SQ13, SQ13 og SQ22 samt SQ19 og SQ20, vedlagt i \fullref{ELEKTRONISK BILAG}, ses det at graferne stiger samtidig. Dette er ikke forventet, da \autoref{fig:Distance-Biplot} viser en negativ korrelation ved disse parametre. Dog indikerer graferne at testpersonerne regnede med at blive fugt det sted de havde valgt, når de stolede på robotten og at robotten var sjov, når de troede de blev fulgt det rigtige sted hen. Ydermere indikerer graferne, at robotten blev perciperet som sej, når den også blev perciperet som sød.
 
-Sammenlignes SQ5 og SQ8, jævnfør \autoref{fig:SammenligningSQ5SQ8}, er det svært at udlede, hvorvidt parametrene afhænger af hinanden eller følges ad ved tilfældighed. På trods af tidligere vist negativ korrelation relateret til afstand, virker det ikke til at testpersonerne har en ændret oplevelse af om robotten kan hjælpe dem, når robotten stopper tættere på eller længere væk. Det samme gør sig gældende, når SQ5 og SQ21 sammenlignes, hvilket kan ses på figuren i \fullref{ELEKTRONISK BILAG}. 
+Sammenlignes SQ5 og SQ8, jævnfør \autoref{fig:SammenligningSQ5SQ8}, er det svært at udlede, hvorvidt parametrene afhænger af hinanden eller følges ad ved tilfældighed. På trods af tidligere vist negativ korrelation relateret til afstand, virker det ikke til at testpersonerne har en ændret oplevelse af om robotten kan hjælpe dem, når robotten stopper tættere på eller længere væk. Det samme gør sig gældende, når SQ5 og SQ21 sammenlignes, hvilket kan ses på figuren i \fullref{ELEKTRONISK BILAG}. ORANGE STOR VARIATION OG BLÅ LILLE VARIATION  INGEN KORRELATION
 
 \begin{figure}[H]
 	\centering
@@ -191,7 +193,7 @@ Derudover ses der negativ korrelation mellem følgende parametre:
 %
 Laves graferne for de positive korrelationer, SQ8 og SQ10, SQ9 og SQ14 samt SQ5 og SQ7 ses der ingen relevant sammenhæng, hvorfor disse kun medtages i det elektroniske bilag, \fullref{ELEKTRONISK BILAG}. Det samme gør sig gældende for de negative korrelationer, SQ1 og SQ12, SQ10 og SQ14 samt SQ6 og SQ23. 
 
-Sammenlignes SQ9 og SQ10, jævnfør \autoref{fig:SammenligningSQ9SQ10} ses der en tendens, hvor testpersonerne føler sig mindre trygge ved robotten, jo mere de synes den stod i vejen. 
+Sammenlignes SQ9 og SQ10, jævnfør \autoref{fig:SammenligningSQ9SQ10} ses der en tendens, hvor testpersonerne føler sig mindre trygge ved robotten, jo mere de synes den stod i vejen. LILLE BITTE NEGATIV KORRELATION
 
 %
 \begin{figure}[H]
@@ -202,7 +204,7 @@ Sammenlignes SQ9 og SQ10, jævnfør \autoref{fig:SammenligningSQ9SQ10} ses der e
 \end{figure}
 \noindent
 %
-På \autopageref{fig:SammenligningSQ13SQ21} sammenlignes SQ13 og SQ21. Her ses en negativ korrelation mellem parametrene, hvor testpersonerne synes robotten blev mindre anmasende, når de regnede med den fulgte dem hen til det valgte sted.
+På \autopageref{fig:SammenligningSQ13SQ21} sammenlignes SQ13 og SQ21. Her ses en negativ korrelation mellem parametrene, hvor testpersonerne synes robotten blev mindre anmasende, når de regnede med den fulgte dem hen til det valgte sted. MÅSKR LILLE KORRELATION
 %
 \begin{figure}[H]
 	\centering
