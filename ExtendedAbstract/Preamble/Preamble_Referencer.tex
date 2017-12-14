@@ -1,0 +1,19 @@
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} (\textit{\nameref*{#1}})}}
+% Makro: \fullref{LABEL_HER}. Refererer til et afsnit eller kapitel, med (afsnits- eller kapitelnavn) bagefter
+
+
+%\usepackage{hyperref}
+% Klikbare referencer (hyperlinks) i dokumentet
+
+\usepackage[hidelinks]{hyperref}
+%Så der ikke er en kasse rundt om links til henvisninger mm. 
+
+\def\partautorefname{\partnamecustom}
+\def\chapterautorefname{\chapternamecustom}
+\def\sectionautorefname{\sectionnamecustom}
+\def\subsectionautorefname{\subsectionnamecustom}
+\def\figureautorefname{\figurenamecustom}
+\def\appendixautorefname{\appendixnamecustom}
+\def\tableautorefname{\tablenamecustom}
+\def\equationautorefname{\equationnamecustom}
+% Definitioner til brug ved \autoref
