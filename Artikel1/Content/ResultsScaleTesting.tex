@@ -15,13 +15,13 @@ The different ratings on the scales in the second test are visualised on \autore
 \end{figure}
 \noindent
 %
-From \autoref{fig:Boxplot} it is notable that their exists much greater variation in some scales compared to others. For some SQ, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some boxplot data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being to broadly describing. \\ 
+From \autoref{fig:Boxplot}\fxnote{Ifølge Dorte kunne vi sagtens gøre brug af farver her til at gruppere boksplottet. Jeg r enig! (fx. 1,4, 8, 12, 14, 19 er én farve, da de beskriver boxplots med stor variation osv.)... undskyld, Juliane.} it is notable that their exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being too broadly describing. \\ 
 
 \noindent
 When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Females rate SQ4 and SQ21 twice as high as males, which means that they experience the robot's movements more calm but also more intrusive compared to males.\\
 
 \noindent
-Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree}. It shows that only 80 \% of the variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance.
+Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree}\fxnote{Bør ikke være dette plot, der ikke viser noget, men i stedet eksempelvis scree for højde.}. It shows that only 80 \% of the total variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance. The results were:
 %
 \begin{figure}
 	\centering
@@ -42,7 +42,11 @@ Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree
 \end{figure}
 \noindent
 %
-From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and SQ1 to PC2 relative to the robot's height. Groupings relating to distance shows that SQ1 and partly SQ15 contributes to PC1 and SQ10 contributes to PC2. For direction SQ10 contributes to PC1 and SQ22, and partly SQ1 and SQ20, contributes to PC2. Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between variables/scale questions. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
+\textbullet \textbf{Height:} SQ19 appears to contribute the most to PC1. SQ1 the most to PC2. \\
+\textbullet \textbf{Distance:} SQ1 appears to contribute the most to PC1 along with SQ15. SQ10 contributes most to PC2.\\
+\textbullet \textbf{Direction:} SQ10 contributes most to PC1. SQ22 and SQ23 contributes almost equally much to PC2.\\
+
+Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between variables/scale questions. These correlations are presented in \autoref{tab:CorrelationsFromPCA}\fxnote{jeg har føjet et par flere korrelationer til Table VII (pos. SQ18 + SQ20, neg. SQ21+SQ22) synes der er flere, men jeg vil gerne høre jeres kriterier for at udvælge nogen frem for andre :) - korn}.
 %
 \begin{table}
 	\centering
@@ -62,17 +66,20 @@ From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and S
 		& SQ10 + SQ22 & SQ13 + SQ22 \\
 		&  & SQ14 + SQ16 \\	
 		&  & SQ19 + SQ20 \\ \hline	
-		\multirow{5}{*}{Distance} & SQ05 + SQ07 & SQ01 + SQ12 \\
+		\multirow{5}{*}{Direction} 
+		& SQ05 + SQ07 & SQ01 + SQ12 \\
 		& SQ08 + SQ10 & SQ06 + SQ23 \\
 		& SQ09 + SQ14 & SQ09 + SQ10 \\
-		&  & SQ10 + SQ14 \\
-		&  & SQ13 + SQ21 
+		& SQ18 + SQ20 & SQ10 + SQ14 \\
+		&  & SQ13 + SQ21 \\
+		&  & SQ21 + SQ22
+	
 	\end{tabular}        
 \end{table}
 \noindent
 %
 
-To investigate these correlations further ratings from correlating SQ are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparison does not take groupings into consideration. This might be why some correlations is not found when comparing SQ. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Furthermore variables that has a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
+To investigate these correlations further ratings from correlating SQs are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparisons do not take groupings into consideration. This might be why some correlations is not found when comparing SQ \fxnote{De her to sætninger føler jeg ikke giver mening - korn}. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Also variables that has a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
 %
 \begin{figure}[H]
 	\centering
@@ -100,7 +107,7 @@ To investigate these correlations further ratings from correlating SQ are compar
 \noindent
 %
 
-In the same manner as comparing SQ with each other the physical parameters can be compared with SQ as well as the demographic parameters. \autoref{fig:HeightSQ6} shows SQ6 compared with the robot's height, which shows that when the robot's height increases the robot is percieved less annoying. Other tendenses seen from theese comparisons is {\color{red} skriv nogle eksempler fra hvordan robotten ellers perciperes med hensyn til demografi.}
+The physical parameters can be compared with SQ as well as the demographic parameters in the same manner as comparing SQs with each other. \autoref{fig:HeightSQ6} shows SQ6 compared with the robot's height, which shows that when the robot's height increases the robot is perceived as less annoying. Other tendencies seen from these comparisons are {\color{red} skriv nogle eksempler fra hvordan robotten ellers perciperes med hensyn til demografi. (kan ikke huske om den viste en tendens: Jo gladere man er for teknologi, jo bedre kunne man lide at blive betjent ($\leftarrow$ lol) af robotten?}
 %
 \begin{figure}[H]
 	\centering
