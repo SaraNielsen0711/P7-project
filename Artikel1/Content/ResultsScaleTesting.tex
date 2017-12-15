@@ -1,7 +1,7 @@
 \section{Results - Scale Testing}
 \label{ResultsScaleTesting}
 %
-The dataset contains several zero-answers, which can happen when subjects doesn't answer on a scale. To exclude some of the zero-points that occured because of a non-answered scale two criterias is stated: 1) If all scale ratings presented on one of the pages are zero, it's probably because subjects skipped a page and 2) If there is a tendency for high ratings on a scale and a zero-answer seems unlikely, it's probably a missing answer.\\
+The dataset contains several zero-answers which, due to a programming error, could happen when subjects did not answer on a scale. Two criteria were used to determine when to exclude some of the zero-points that occurred because of a non-answered scale. 1) If all scale ratings presented on one of the pages are zero, it was probably because subjects skipped a page and 2) If there is a strong tendency for high ratings on a scale and a single zero-answer seems unlikely, it was denoted as a missing answer.\\
 
 \noindent
 The different ratings on the scales in the second test are visualised on \autoref{fig:Boxplot}.
@@ -10,38 +10,39 @@ The different ratings on the scales in the second test are visualised on \autore
 	\centering
 	\includegraphics[width = 0.49\textwidth]{Figure/Boksplot24uden0}
 	\setlength\abovecaptionskip{-1.2\baselineskip} 
-	\caption{Boxplot showing the 24 variables. The boxplot contains a median, the box ranging from 25-75 \% and the whiskers from 0-25 \% and 25-100 \%, respectively.}
+	\caption{Boxplot showing the 24 variables. The boxplot shows the median, where the box is ranging from 25-75 \% of the data, and the whiskers from 0-25 \% and 25-100 \% of the data.}
 	\label{fig:Boxplot}
 \end{figure}
 \noindent
 %
-From the boxplots it is seen that the distribution varys. For some SQ, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for xothers a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings looks normal distrubuted (1, 2, 6, 17, 20, 21) and others are skewed (8, 9, 10, 11, 13, 18). In some boxplot data aggregates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 is centered around the mid point, which can reltate to the label (fine) having to wide a meaning. \\ 
+From \autoref{fig:Boxplot} it is notable that their exists much greater variation in some scales compared to others. For some SQ, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some boxplot data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being to broadly describing. \\ 
 
 \noindent
-When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Women rates SQ4 and SQ21 twice as high as men, which means that they experience the robot's movements more calm but also more intrusive.\\
+When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Females rate SQ4 and SQ21 twice as high as males, which means that they experience the robot's movements more calm but also more intrusive compared to males.\\
 
 \noindent
-Conducting a PCA on the data results in the screeplot on \autoref{fig:Scree}. It shows that when using 7 dimension only 80 \% of the variance is explained, which is why PCA relating to different groups as the robot's height, distance and direction is conducted. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance.
+Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree}. It shows that only 80 \% of the variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance.
 %
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.40\textwidth]{Figure/Scree.png}
-	\setlength\abovecaptionskip{-1.2\baselineskip} 
+	\setlength\abovecaptionskip{-0.5\baselineskip} 
 	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained [\%].}
 	\label{fig:Scree}
 \end{figure}
 \noindent
+
 %
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.40\textwidth]{Figure/RHeight-Biplot.png}
-	\setlength\abovecaptionskip{-1.2\baselineskip} 
+	\setlength\abovecaptionskip{-0.5\baselineskip} 
 	\caption{Biplot showing how the different variables contributes to components and which variables correlates. The black numbers denotes SQ and the red to the different heights in cm.}
 	\label{fig:biplot}
 \end{figure}
 \noindent
 %
-From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and SQ1 to PC2 relative to the robot's height. Groupings relating to distance shows that SQ1 and partly SQ15 contributes to PC1 and SQ10 contributs to PC2. For direction SQ10 contributes to PC1 and SQ22, and partly SQ1 and SQ20, contributes to PC2. Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between variables/scale questions. These correlations is presented in \autoref{tab:CorrelationsFromPCA}.
+From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and SQ1 to PC2 relative to the robot's height. Groupings relating to distance shows that SQ1 and partly SQ15 contributes to PC1 and SQ10 contributes to PC2. For direction SQ10 contributes to PC1 and SQ22, and partly SQ1 and SQ20, contributes to PC2. Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between variables/scale questions. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
 %
 \begin{table}
 	\centering
@@ -50,20 +51,20 @@ From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and S
 	\begin{tabular}{ c|c|c }
 		\centering
 		PCA & Positive correlation & Negative correlation \\ \hline
-		\multirow{5}{*}{Height} & SQ8 + SQ17 & SQ2 + SQ9 \\
-		& SQ10 + SQ13 & SQ4 + SQ12 \\
+		\multirow{5}{*}{Height} & SQ08  + SQ17 & SQ02  + SQ09 \\
+		& SQ10 + SQ13 & SQ04 + SQ12 \\
 		& SQ12 + SQ18 & SQ12 + SQ21 \\
 		& SQ14 + SQ15 & SQ16 + SQ19 \\
 		&  & SQ18 + SQ21\\ \hline
-		\multirow{6}{*}{Distance} & SQ1 + SQ12 & SQ2 + SQ9 \\
-		& SQ7 + SQ17 & SQ5 + SQ21 \\
-		& SQ8 + SQ21 & SQ10 + SQ13 \\
+		\multirow{6}{*}{Distance} & SQ01 + SQ12 & SQ02 + SQ09 \\
+		& SQ07 + SQ17 & SQ05 + SQ21 \\
+		& SQ08 + SQ21 & SQ10 + SQ13 \\
 		& SQ10 + SQ22 & SQ13 + SQ22 \\
 		&  & SQ14 + SQ16 \\	
 		&  & SQ19 + SQ20 \\ \hline	
-		\multirow{5}{*}{Distance} & SQ5 + SQ7 & SQ1 + SQ12 \\
-		& SQ8 + SQ10 & SQ6 + SQ23 \\
-		& SQ9 + SQ14 & SQ9 + SQ10 \\
+		\multirow{5}{*}{Distance} & SQ05 + SQ07 & SQ01 + SQ12 \\
+		& SQ08 + SQ10 & SQ06 + SQ23 \\
+		& SQ09 + SQ14 & SQ09 + SQ10 \\
 		&  & SQ10 + SQ14 \\
 		&  & SQ13 + SQ21 
 	\end{tabular}        
@@ -71,7 +72,7 @@ From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and S
 \noindent
 %
 
-To investigate these correlations further ratings from correlating SQ are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparison doesn't take groupings into consideration. This might be why some correlations isn't found when comparing SQ. From \autoref{fig:SQ12+SQ18} it's seen that the robot is percieved more exciting when subjects like to be served by the robot. Furthermore variables that has a clear correlating from this kind of comparison is shown in \autoref{tab:CorrelationsFromGraphs}.
+To investigate these correlations further ratings from correlating SQ are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparison does not take groupings into consideration. This might be why some correlations is not found when comparing SQ. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Furthermore variables that has a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
 %
 \begin{figure}[H]
 	\centering
@@ -89,9 +90,9 @@ To investigate these correlations further ratings from correlating SQ are compar
 	\begin{tabular}{ c|c }
 		\centering
 		Positive correlation & Negative correlation \\ \hline
-		SQ4 + SQ9 & SQ2 + SQ9 \\ 
-		SQ8 + SQ10 & SQ9 + SQ10 \\ 
-		SQ8 + SQ17 & SQ12 + SQ21 \\ 
+		SQ04 + SQ09 & SQ02 + SQ09 \\ 
+		SQ08 + SQ10 & SQ09 + SQ10 \\ 
+		SQ08 + SQ17 & SQ12 + SQ21 \\ 
 		SQ10 + SQ13 & SQ13 + SQ21 \\ 
 		SQ12 + SQ18 & SQ18 + SQ21		
 	\end{tabular}        
