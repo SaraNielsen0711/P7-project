@@ -7,20 +7,21 @@ The dataset contains several zero-answers, which can happen when subjects doesn'
 The different ratings on the scales in the second test are visualised on \autoref{fig:Boxplot}.
 %
 \begin{figure}[H]
-\centering
-\includegraphics[width = 0.49\textwidth]{Figure/Boksplot0er}
-\setlength\abovecaptionskip{-1.2\baselineskip} 
-\caption{Boxplot showing the 24 variables. The boxplot contains a median, the box ranging from 25-75 \% and the whiskers from 0-25 \% and 25-100 \%, respectively.}
-\label{fig:Boxplot}
+	\centering
+	\includegraphics[width = 0.49\textwidth]{Figure/Boksplot24uden0}
+	\setlength\abovecaptionskip{-1.2\baselineskip} 
+	\caption{Boxplot showing the 24 variables. The boxplot contains a median, the box ranging from 25-75 \% and the whiskers from 0-25 \% and 25-100 \%, respectively.}
+	\label{fig:Boxplot}
 \end{figure}
 \noindent
 %
-From the boxplot it is seen that......\\
- 
-\noindent
-SQ5 and SQ7 is centered around the mid point, which can reltate to the label (fine) being to wide a label. Subjects are answering around the midpoint regardless of the height of the robot or how close to them it stops. The two variables are seen to have an impact on the experience interacting with robots in the reviewed litterature, so they might be expressed even though they are not included as scales.
+From the boxplots it is seen that the distribution varys. For some SQ, a big part of the scale is used (1, 4, 8, 12, 14, 19), where others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings looks normal distrubuted (1, 2, 6, 17, 20, 21) and others are skewed (8, 9, 10, 11, 13, 18). In some boxplot data aggregates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 is centered around the mid point, which can reltate to the label (fine) having to wide a meaning. \\ 
 
-When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Women rates SQ4 and SQ21 twice as high as men, which means that they experience the robot's movements more calm but also more intrusive.
+\noindent
+When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Women rates SQ4 and SQ21 twice as high as men, which means that they experience the robot's movements more calm but also more intrusive.\\
+
+\noindent
+Conducting a PCA on the data results in the screeplot on \autoref{fig:Scree}. It shows that when using 7 dimension only 80 \% of the variance is explained, which is why PCA relating to different groups as the robot's height, distance and direction is conducted. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance.
 %
 \begin{figure}[H]
 	\centering
@@ -31,13 +32,41 @@ When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Wo
 \end{figure}
 \noindent
 %
-Conducting a PCA on the data results in the screeplot on \autoref{fig:Scree}. It shows that when using 7 dimension only 80 \% of the variance is explained, which is why PCA relating to different groups as the robot's height, distance and direction is conducted. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots are made for direction and distance. 
+From \autoref{fig:biplot} it appears that SQ19 contributes the most to PC1 and SQ1 to PC2. 
+%
+\begin{table}[H]
+	\centering
+	\caption{Correlations from PCA}
+	\label{tab:CorrelationsFromPCA} 
+	\begin{tabular}{ c|c|c }
+		\centering
+		PCA & Positive correlation & Negative correlation \\ \hline
+		\multirow{5}{*}{Height} & SQ8 + SQ17 & SQ2 + SQ9 \\
+		& SQ10 + SQ13 & SQ4 + SQ12 \\
+		& SQ12 + SQ18 & SQ12 + SQ21 \\
+		& SQ14 + SQ15 & SQ16 + SQ19 \\
+		&  & SQ18 + SQ21\\ \hline
+		\multirow{6}{*}{Distance} & SQ1 + SQ12 & SQ2 + SQ9 \\
+		& SQ7 + SQ17 & SQ5 + SQ21 \\
+		& SQ8 + SQ21 & SQ10 + SQ13 \\
+		& SQ10 + SQ22 & SQ13 + SQ22 \\
+		&  & SQ14 + SQ16 \\	
+		&  & SQ19 + SQ20 \\ \hline	
+		\multirow{5}{*}{Distance} & SQ5 + SQ7 & SQ1 + SQ12 \\
+		& SQ8 + SQ10 & SQ6 + SQ23 \\
+		& SQ9 + SQ14 & SQ9 + SQ10 \\
+		&  & SQ10 + SQ14 \\
+		&  & SQ13 + SQ21 
+	\end{tabular}        
+\end{table}
+\noindent
+%
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = 0.49\textwidth]{Figure/RHeight-Biplot.png}
 	\setlength\abovecaptionskip{-1.2\baselineskip} 
-	\caption{Biplot showing how the different variables contributes to components and which variables correlates. The black numbers relates the the SQ and the red to the different heights.}
+	\caption{Biplot showing how the different variables contributes to components and which variables correlates. The black numbers denotes SQ and the red to the different heights in cm.}
 	\label{fig:biplot}
 \end{figure}
 \noindent
@@ -47,7 +76,7 @@ Conducting a PCA on the data results in the screeplot on \autoref{fig:Scree}. It
 	\centering
 	\includegraphics[width = 0.49\textwidth]{Figure/SQ12+SQ18}
 	\setlength\abovecaptionskip{-1.2\baselineskip} 
-	\caption{NEW.}
+	\caption{Comparison between ratings on SQ12 and SQ18 based on 41 subjects. Two were removed due to incomplete datasets.}
 	\label{fig:SQ12+SQ18}
 \end{figure}
 \noindent
