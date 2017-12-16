@@ -2,19 +2,19 @@
 \label{TestAfSkalaFordeling}
 %
 %
-I følgende afsnit vil fordelingen af besvarelserne blive præsenteret. Dette dækker over den gennemsnitlige besvarelse til hver af de 23 skalaer samt eksmpler på forskellige fordelinger, der er med til at vise, at der eksisterer stor varians på tværs af besvarelserne. Til sidst vil data blive præsenteret i et boksplot og diskuteret.
+I følgende afsnit vil fordelingen af besvarelserne blive præsenteret. Dette dækker over den gennemsnitlige besvarelse til hver af de 23 skalaer samt eksempler på forskellige fordelinger, der er med til at vise, at der eksisterer stor varians på tværs af besvarelserne. Til sidst vil data blive præsenteret i et boksplot og diskuteret.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/DataPresentation/MeanBarplot} 
- \caption{Søjlediagram over den gennemsnitlige besvarelse (\%) til hvert skala spørgsmål (SQ) samt barer der viser standard afvigelsen for hver SQ.}
+ \caption{Søjlediagram over den gennemsnitlige besvarelse (\%) til hvert skala spørgsmål (SQ) samt barer, der viser standardafvigelsen for hver SQ.}
 \label{fig:BarPlotGennemsnit}
 \end{figure}
 \noindent
 %
-På \autoref{fig:BarPlotGennemsnit} fremgår den gennemsnitlige besvarelse for hver af de 23 skalaer, angivet med \textit{SQ} efterfulgt af nummer. På grafen er standard afvigelsen for vurderingerne til hver SQ præsenteret, for at give ind blik i spredningen af data for hver SQ. \blankline
+På \autoref{fig:BarPlotGennemsnit} fremgår den gennemsnitlige besvarelse for hver af de 23 skalaer, angivet med \textit{SQ} efterfulgt af nummer. På grafen er standardafvigelsen for vurderingerne til hvert skala spørgsmål præsenteret, for at give indblik i spredningen af data for hver skala. \blankline
 %
-Der er lavet et kombineret histogram og normalfordelingsplot for hver skala, for at få en mere nøjagtig forståelse for, hvordan besvarelserne er fordelt. Enkelte af dem vil blive diskuteret i dette afsnit, men de er også alle samlet i \fullref{ElektroniskBilagHistNormal}.
+Der er lavet et kombineret histogram og normalfordelingsplot for hver skala, for at få en mere nøjagtig forståelse for, hvordan besvarelserne er fordelt. Enkelte af dem vil blive beskrevet i dette afsnit, mens resten findes samlet i \fullref{ElektroniskBilagHistNormal}.
 
 \begin{figure}[H]
 \centering
@@ -24,9 +24,9 @@ Der er lavet et kombineret histogram og normalfordelingsplot for hver skala, for
 \end{figure}
 \noindent
 %
-På \autoref{fig:histogram17} ses et eksempel på et af histogrammerne med tilhørende normalfordelingskurve. Da en stor del af data befinder sig under den sorte kurve, tyder det på at besvarelserne for skalaspørgsmål 17 er tilnærmelsesvist normalfordelte. Det undersøges dog ikke med signifikanstest, da formålet med gennemgangen blot er at få et overblik over fordelingerne.\blankline
+\autoref{fig:histogram17} viser histogrammet for SQ17 med tilhørende normalfordelingskurve og er et eksempel på hvordan resten af hisogrammerne er visualiseret. Da en stor del af data befinder sig under den sorte kurve, tyder det på, at besvarelserne for SQ17 er tilnærmelsesvist normalfordelte. Dette undersøges dog ikke med en signifikanstest, \textit{Shapiro-Wilk Normality Test}, da formålet med gennemgangen blot er at få et overblik over fordelingerne.\blankline
 %
-Kurverne i flere af plottene er meget flade, hvilket skyldes at akserne holdes konstante på tværs af plottene, for bedre at kunne sammenligne dem indbyrdes. Det er dog med undtagelse af SQ5, SQ7 og SQ11, da data er så centreret på disse, at det bliver svært at se fordelingerne på de andre plots hvis akserne defineres ud fra SQ5, SQ7 og SQ11.\blankline
+Kurverne i flere af plottene ser meget flade ud, hvilket skyldes, at akserne holdes konstante på tværs af plottene, for bedre at kunne sammenligne dem indbyrdes. Dette er dog med undtagelse af histogrammer og normalfordelinger for SQ5, SQ7 og SQ11, da data er meget centreret i midten og til venstre på disse histogrammer. Det kan derfor være svært at se fordelingerne på de resterende histogrammer, hvis akserne defineres ud fra SQ5, SQ7 og SQ11.\blankline
 %
 I mange af plottene er der en ret stor varians, hvilket viser at en stor del af skalaen er blevet anvendt. Her skal det tilføjes at besvarelserne er givet ud fra forskellige højder, indfaldsvinkler og afstande og at variansen derfor ikke nødvendigvis er et udtryk for at folk er uenige, men snarere at de har vurderet forskellige stimuli. Et eksempel er givet på \autoref{fig:histogram14}.\blankline
 %
@@ -51,13 +51,13 @@ I disse historgram- og normalfordelingsplot blev der kigget på, hvordan besvare
 
 Boksplottet deler alle besvarelserne for det pågældende skalaspørgsmål op i fire kvartiler. Medianen adskiller de to midterste kvartiler, og kanterne på kasserne adskiller disse fra de to yderste kvartiler. Outliers er ikke medregnet i kvartilerne for boksplottet, men er stadig plottet for at give en idé om hvordan de fordeler sig i forhold til resten af besvarelserne. \blankline
 %
-Ud fra boksplottet på \autoref{fig:boksplots} kan det ses at fordelingerne adskiller sig ret meget fra hinanden. Nogle af dem udnytter en stor del af skalaen (1, 4, 8, 12, 14, 19, 22, 23), hvor andre fordeler sig over mindre områder af skalaen (2, 3, 5, 7, 9, 11, 13, 16). Nogle ser tilnærmelsesvis normalfordelte ud (1, 2, 6, 17, 20, 21), hvor andre er skæve enten den ene eller anden vej (8, 9, 10, 11, 13, 18). Der ses også enkelte boksplots hvor datapunkterne ophober sig meget omkring endepunkterne eller midtpunktet (5, 7, 9, 10, 11, 13). \blankline
+Ud fra boksplottet på \autoref{fig:boksplots} kan det ses, at fordelingerne adskiller sig meget fra hinanden. Nogle af dem udnytter en stor del af skalaen (SQ1, SQ4, SQ8, SQ12, SQ14, SQ19, SQ22, SQ23), hvorimod andre fordeler sig over mindre områder af skalaen (SQ2, SQ3, SQ5, SQ7, SQ9, SQ11, SQ13, SQ16). Nogle boksplot ser tilnærmelsesvis normalfordelte ud (SQ1, SQ2, SQ6, SQ17, SQ20, SQ21), mens andre er skævevredet den ene eller anden vej (SQ8, SQ9, SQ10, SQ11, SQ13, SQ18). Der ses også enkelte boksplots, hvor datapunkterne ophober sig meget omkring endepunkterne eller midtpunktet (SQ5, SQ7, SQ9, SQ10, SQ11, SQ13). \blankline
 %
-Den lave varians som ses i flere af boksplottene, kan skyldes flere forskellige ting. Det kan enten skyldes at variablen ikke er vigtig for oplevelsen af interaktion og at folk derfor har svaret neutralt. Det kan også skyldes at det ikke er en variabel som er blevet påvirket af de specifikke stimuli som testpersonerne blev udsat for, men at den kan være vigtig i andre situationer med robotten. Effekten forstærkes især ved 5 og 7, som er bipolare skalaer, da midtpunkterne på disse skalaer kan fungere som et anker, som testpersoner ofte vil centrere deres vurderingerne omkring. Labellet ”Fin” som anvendes i spørgsmål 7 blev valgt, da det var testpersonerne fra første tests egne ord. Det kan dog være at beskrivelsen ”Fin” dækker over et for stort spænd af skalaen, og at folk derfor har valgt at sætte stregen lige på midten, selvom robotten måske har været en lille smule for høj eller lav. Dette kan også være med til at centrere datapunkterne omkring midtpunktet og dermed mindske variansen i vurderingerne. \blankline
+Den lave varians, som ses i nogle af boksplottene, kan skyldes forskellige ting. Det kan enten skyldes, at variablen ikke er vigtig for oplevelsen af interaktion og at folk derfor har svaret neutralt. Det kan også skyldes, at det ikke er en variabel som er blevet påvirket af de specifikke stimuli testpersonerne blev udsat for, men at den kan være vigtig i andre situationer med robotten. Effekten forstærkes især ved SQ5 og SQ7, som er bipolare skalaer. Midtpunkterne på disse skalaer kan fungere som et anker, hvor testpersonerne ofte vil centrere deres vurderingerne omkring. Labellet ”Fin”, som anvendes i SQ7 blev valgt på baggrund af testpersonernes udtalelser i feltundersøgelsen. Det kan dog være, at ordet ”Fin” dækker over for bredt et spænd af skalaen, hvilket kan medføre at folk har sat en markering i midten, selvom robotten har været en lille smule for høj eller lav. Dette kan også være med til at centrere datapunkterne omkring midtpunktet og dermed mindske variansen i vurderingerne. \blankline
 %
-De lukkede endepunkter som blev anvendt på skalaerne, kan være med til at gøre at data ophobes meget omkring disse. Ophobningen af data omkring endepunkterne betyder også at fordelingen bliver skævvredet, da den ofte stopper brat i den ende med endepunktet, men har en lang hale i den anden ende.  \blankline
+De lukkede endepunkter, som blev anvendt på skalaerne, kan ophobe data meget omkring disse. Ophobningen af data omkring endepunkterne betyder også, at fordelingen bliver skævvredet, da den ofte stopper brat i den ende med endepunktet, men har en lang hale i den anden ende.  \blankline
 %
-Nogle steder bruges kun øverste halvdel, hvor der andre steder kun bruges nederste halvdel. Det hænger sammen med formuleringerne på endepunkterne, da den positive label sommetider vil være ved 100 (Eks.: ekstremt sød) og i andre tilfælde ved 0 (Eks.: slet ikke anmassende).
+Nogle steder bruges kun øverste halvdel, hvor der andre steder kun bruges nederste halvdel. Det hænger sammen med formuleringerne på endepunkterne, da den positive label sommetider vil være ved 100 (Eks.: Ekstremt sød) og i andre tilfælde ved 0 (Eks.: Slet ikke anmassende).
 
 
 %%\subsection{Varians}
