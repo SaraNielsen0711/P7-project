@@ -28,47 +28,29 @@ Da testpersonerne besvarede skalaerne var, der som regel en testleder i nærhede
 
 Andre ting, der kan have påvirket testpersonernes opleves relaterer sig blandt andet til, at alle testpersoner ikke blev fulgt lige langt, enten fordi de vidste hvor de rent faktisk skulle hen og robotten fulgte dem den forkerte vej, eller fordi testpersonerne startede interaktionen i nærheden af Duty Free, hvor robotten som regel stoppede. Dette gør sig blandt andet gældende for TP14 og TP27, som ikke blev fulgt afsted af robotten, da testlederen stod lige ved siden af dem. I relation til det, fremgår det fra observationerne, jævnfør \fullref{TestAfSkalaLufthavnsBesog}, at TP21 misforstod SQ5: \textit{Jeg synes, at robotten stoppede}, hvor de to rejsende tror det handler om, hvorvidt robotten stoppede tæt på det sted, som de havde valgt at den skulle følge dem hen til. Det virker også til at TP16 ikke forstod SQ5. 
 
-Andre testpersoner har haft en samtale med testlederen samtidig med, at de evaluerede interaktionen med robotten på de præsenterede skalaer, dette, dog uvist, kan have haft en indflydelse på deres besvarelser, både fordi samtalen kan have hjulpet dem til at forstå skala spørgsmålene, men også fordi det måske, har påvirket dem til at svare mere positivt end hvad de reelt mener.
-
-Derudover har der også været situationer, hvor en familie enten skiftes til at trykke på robottens skærm, eller hvor det kun er én, der trykker på skærmen, men hvor det er et andet familiemedlem, som svarer på skalaerne. Derfor er der situationer hvor en testperson har svaret på skalaerne, men ikke interagerede med robotten. Det er uvist hvilken indflydelse det har haft og om det overhovedet har haft en indflydelse.  
+Andre testpersoner har haft en samtale med testlederen samtidig med, at de evaluerede interaktionen med robotten på de præsenterede skalaer, dette, dog uvist, kan have haft en indflydelse på deres besvarelser, både fordi samtalen kan have hjulpet dem til at forstå skala spørgsmålene, men også fordi det måske, har påvirket dem til at svare mere positivt end hvad de reelt mener. Derudover har der også været situationer, hvor en familie enten skiftes til at trykke på robottens skærm, eller hvor det kun er én, der trykker på skærmen, men hvor det er et andet familiemedlem, som svarer på skalaerne. Derfor er der situationer hvor en testperson har svaret på skalaerne, men ikke interagerede med robotten. Det er uvist hvilken indflydelse det har haft og om det overhovedet har haft en indflydelse.  
 
 
 \section{Fysiske parametre}
 \label{DiskussionFysiskeParametre}
 %
+I \fullref{RobottensBevaegelse} er der beskrevet og argumenteret for valget af de højder, som robotten havde under testen. Dog kan det være, at det har været unødvendigt at anvende alle fem højder, særligt 123.5 cm, som kun er 5.5 cm fra den laveste højde (118 cm) og midtpunktet (129 cm). Ved at have undladt denne højde, kunne antallet af testpersoner præsenteret for de fire andre højder være steget. Derudover forefindes der ikke en markant tendens til at testpersonerne, som interagerede med robotten på 123.5 cm svarer anderledes end de testpersoner, som interagerede med robotten på 129 cm. Dog med forbehold for at der generelt forekommer stor variation i besvarelserne. 
 
+I forhold til robottens højde, så blev det observeret, at det havde en indflydelse på hvor hurtigt robotten kørte. Når robotten var på sit laveste (118 cm) kørte den væsenligt hurtigere end når den var på sit højeste (151 cm). Problemet med at hastigheden robotten kører med afhænger af dens højde er, at det ikke vides hvordan de hver især påvirker testpersonernes opleves, og at der ikke er nogen kontrol over robottens hastighed. Det betyder også at testpersonerne, der har interagerede med robotten når den var 118 cm, har interagerede med en hurtigere robot end dem der interagerede med robotten når den var 151 cm, hvor hastigheden var langsommere. Dette kommer blandt andet til udtryk på \autoref{fig:TendensHeightSQ6}, hvor det netop fremgår, at når robotten er 118 cm bliver den vurderet hurtigere end når den er 151 cm. \blankline
+%
+I forhold til robottens afstand var det ikke muligt, at foruddefinere bestemte afstande, hvilket formentlig heller ikke havde været hensigtmæssigt, da testpersonerne så ikke selv kunne have indflydelse på afstanden fordi robotten konstant vil tilpasse sin afstand afhængigt af testpersonens placering. Dog havde fordelen med foruddefineret afstanden været, at det på samme måde som ved højde, havde været muligt at inddele testpersonerne i mere specifikke grupper end hvad der har været tilfældet, hvor de er inddelt i langt fra, tilpas og tæt på. Den manglende kontrol over afstanden kan være årsagen til, at SQ5 forklarer så lidt af variationen i de forskellige PCA'er.
 
-
-
-Det havde været nemmere at se noget hvis vi kunne kontrollere vores variable mere og hvis vi ikke havde testet alt på en gang, og at vi har forskellige typer grupper. 
-
-Diskuter valg af højder, det kunne være at 123.5 cm ikke havde været nødvendig. 
-
-
-Fart og højde ændres af Double, hvilket kan være et problem fordi vi ingen kontrol har over det. 
-
+Fordi det har været så svært, at kontrollere afstanden til testpersonerne og notere hvorvidt afstanden var langt fra, tilpas eller tæt på, og fordi testpersonerne undervejs i interaktionen har mulighed for at ændre afstanden, er det ikke sikkert at en PCA er det bedste valg. Det samme gør sig gældende for indgangsvinkel, som ligeledes har været svært at kontrollere, specielt at få robotten til at henvende sig fra venstre i AAL grundet placeringen. Derudover, har det ikke været muligt at kontrollere hvilken indgangsvinkel testperson, som selv henvendte sig til robotten havde. 
 
 
 \section{Redundans}
 \label{DiskussionRedundansSkalaer}
 %
-Kig på hvilke skalaer der kan undværes - sød og sjov. 
+Som beskrevet i \fullref{DatabehandlingSammenligningKorrelerede} korrelerer nogle af parametrene. Det er derfor være relevant at undersøge, hvorvidt nogle af de korrelerede parametre dækker over det samme og derfor kan slås sammen under ét dækkende parameter. Det vælges kun at diskutere de parametre, hvor det giver mening at slå dem sammen. 
 
+Jævnfør \autoref{fig:SammenligningSQ12SQ18}, hvor der forefindes en positiv korrelation mellem at kunne lide at blive betjent af robotten og hvor spændende den er, samt \autoref{fig:SammenligningSQ12SQ21}, hvor der forefindes en negativ korrelation mellem at kunne lide at blive betjent af robotten og hvor anmassende den er, kan det overvejes at erstatte skala spørgsmålet vedrørende at blive betjent af robotten med parametrene spændende og anmassende. Det kan være en tilfældighed, at der forefindes en korrelation, men hvis de rejsende ikke synes, at robotten er spændende kan de formentlig heller ikke lide at blive betjent af den. Det samme gør sig gældende med anmassende. Hvis de rejsende kan lide at blive betjent af robotten, så synes de højst sandsynligt heller ikke at den er anmassende. På den måde kan udledes hvorvidt testpersonerne kan lide at blive betjent af robotten, ved at spørge dem om de synes, at robotten er anmassende og spændende, uden at skulle spørge direkte om deres oplevelse af betjeningen.
 
+Fokuseres der på \autoref{fig:SammenligningSQ20SQ22}, for sej og sjov, \autoref{fig:SammenligningSQ19SQ20}, for sød og sej samt \autoref{fig:SammenligningSQ18SQ20}, for spændende og sej, forefindes der positiv korrelation for de sammenlignede parametre. Under feltundersøgelsen kom det til udtryk, at sjov er et parameter, der dækker over mange forskellige ting, blandt andet at noget kan være humoristisk sjovt, men også underligt sjovt. Dette parameter er derfor svært at måle på, hvorfor det kan give mening at sammensætte det med sej, da disse korrelerer. Ydermere kan sej sammensættes med enten sød eller spændende. Det virkede til, at børn oftest bedømte robotten som værende sej, hvorimod ældre rejsende ikke nødvendigvis kunne relatere til at robotten var sej. Da det bedømmes, at en robot ikke kan være sej uden at være spændende og da parametrene korrelerer positivt, kan det vælges at medtage parametrene sød og spændende dækkende over både sød, spændende, sej og sjov.  
 
-
- 
-
-
-
-
- 
-
-
-
-
-
-
-
-
+Undersøges hvor tryg testpersonerne var ved robotten op imod om de regnede med at den fulgte dem det rigtige sted hen og hvorvidt robotten kunne hjælpe dem, jævnfør \autoref{fig:SammenligningSQ10SQ12} og \autoref{fig:SammenligningSQ8SQ10}, forefindes der en positiv korrelation herimellem. Det kan overvejes hvorvidt tryghedsparameteret og at de rejsende regnede med robotten fulgte dem det rigtige sted hen kan slås sammen til et parameter omhandlende tillid til robotten. På den måde kan de tre parametre slås sammen til to; tillid til robotten og hvorvidt robotten kan hjælpe den rejsende. Det kan dog være problematisk at slå to skala spørgsmål sammen til et nyt, for at danne en ny skala, da forståelsen af tillid til robotten ikke er testet på samme måde som de to andre er, og fordi tillid og tryghed ikke nødvendigvis er det samme. 
 
