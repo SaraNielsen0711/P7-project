@@ -18,31 +18,31 @@ Der er lavet et kombineret histogram og normalfordelingsplot for hver skala, for
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/HistogramNormalFordeling/SQ17} 
-\caption{Histogrammet viser hyppigheden af besvarelser (y-aksen), inden for de fastsatte intervaller (x-aksen). Den røde kurve viser den underliggende normalfordelingskurve, som er baseret på middelværdien og standardafvigelsen}
+\includegraphics[width = 0.7\textwidth]{Figure/DatabehandlingSkalaer/HistogramNormalFordeling/SQ17} 
+\caption{Histogrammet viser hyppigheden af besvarelser (y-aksen) målt som relativ frekvens (Antal/SampleSize), inden for de fastsatte intervaller (x-aksen). Den sorte kurve viser den underliggende normalfordelingskurve, som er baseret på middelværdien og standardafvigelsen}
 \label{fig:histogram17}
 \end{figure}
 \noindent
 %
-På \autoref{fig:histogram17} ses et eksempel på et af histogrammerne med tilhørende normalfordelingskurve. Da en stor del af data befinder sig under den røde kurve, tyder det på at besvarelserne for skalaspørgsmål 17 er tilnærmelsesvist normalfordelte. Det undersøges dog ikke med signifikanstest, da formålet med gennemgangen blot er at få et overblik over fordelingerne.\blankline
+På \autoref{fig:histogram17} ses et eksempel på et af histogrammerne med tilhørende normalfordelingskurve. Da en stor del af data befinder sig under den sorte kurve, tyder det på at besvarelserne for skalaspørgsmål 17 er tilnærmelsesvist normalfordelte. Det undersøges dog ikke med signifikanstest, da formålet med gennemgangen blot er at få et overblik over fordelingerne.\blankline
 %
-Kurverne i flere af plottene er meget flade, hvilket skyldes at akserne holdes konstante på tværs af plottene, for bedre at kunne sammenligne dem indbyrdes. Det er dog med undtagelse af SQ5 og SQ7, da data er så centreret på disse, at det bliver svært at se fordelingerne på de andre plots hvis akserne defineres ud fra SQ5 og SQ7.\blankline
+Kurverne i flere af plottene er meget flade, hvilket skyldes at akserne holdes konstante på tværs af plottene, for bedre at kunne sammenligne dem indbyrdes. Det er dog med undtagelse af SQ5, SQ7 og SQ11, da data er så centreret på disse, at det bliver svært at se fordelingerne på de andre plots hvis akserne defineres ud fra SQ5, SQ7 og SQ11.\blankline
 %
 I mange af plottene er der en ret stor varians, hvilket viser at en stor del af skalaen er blevet anvendt. Her skal det tilføjes at besvarelserne er givet ud fra forskellige højder, indfaldsvinkler og afstande og at variansen derfor ikke nødvendigvis er et udtryk for at folk er uenige, men snarere at de har vurderet forskellige stimuli. Et eksempel er givet på \autoref{fig:histogram14}.\blankline
 %
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/HistogramNormalFordeling/SQ14} 
+\includegraphics[width = 0.7\textwidth]{Figure/DatabehandlingSkalaer/HistogramNormalFordeling/SQ14} 
 \caption{Fordelingerne af besvarelserne på skalaspørgsmål 14}
 \label{fig:histogram14}
 \end{figure}
 \noindent
 %
-I disse historgram- og normalfordelingsplot blev der kigget på, hvordan besvarelserne er fordelt for hvert enkelt spørgsmål, men for at få et samlet overblik, kigges på \autoref{fig:boksplots}, hvor der er lavet boksplots for alle skalaspørgsmålene. \fxnote{Sæt det nye billede for boksplots ind og skriv om det}
+I disse historgram- og normalfordelingsplot blev der kigget på, hvordan besvarelserne er fordelt for hvert enkelt spørgsmål, men for at få et samlet overblik, kigges på \autoref{fig:boksplots}, hvor der er lavet boksplots for alle skalaspørgsmålene. 
 %
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/boksplot0er} 
+\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/BoksplotUden0er} 
 \caption{Boksplot over fordelinger af besvarelserne for hvert skalaspørgsmål.}
 \label{fig:boksplots}
 \end{figure}
@@ -60,6 +60,7 @@ De lukkede endepunkter som blev anvendt på skalaerne, kan være med til at gør
 Nogle steder bruges kun øverste halvdel, hvor der andre steder kun bruges nederste halvdel. Det hænger sammen med formuleringerne på endepunkterne, da den positive label sommetider vil være ved 100 (Eks.: ekstremt sød) og i andre tilfælde ved 0 (Eks.: slet ikke anmassende).
 
 
+<<<<<<< HEAD
 %%\subsection{Varians}
 %%
 %%For at få et overblik over hvor meget besvarelserne variere og hvor stor forskel, der er mellem variationen ved de forskellige SQ, beregnes variansen for hver SQ beregnes med formlen: \blankline
@@ -87,7 +88,36 @@ Nogle steder bruges kun øverste halvdel, hvor der andre steder kun bruges neder
 Når variansen ikke er ens for ens data kan det i nogle tilfælde vælges at udligne variansen. Hvis variansen skulle udlignes vil der skulle laves en standardisering af data. Formålet med at gøre dette er at data med lav varians i rå data får lige betydning i PCA som rå data med stor varians. \blankline
 %
 Det vælges ikke at standardisere data, da det kan give skævvridninger som ikke er ønsket. Testpersonerne har reelt haft muligheden for at svare på hele skalaen, men har valgt at give besvarelser i nærheden af hinanden, hvilket tolkes som at de har været mere enige i dette tilfælde. \blankline
+=======
+%\subsection{Varians}
 %
-Al data er målt med samme måleenhed, da det er målt på samme skala, der går fra 0 til 100 ved aflæsningen. Dette er en del af begrundelsen for ikke at standardisere, da det ofte gøre i tilfælde hvor målingerne ikke er målt med samme måleenhed. \blankline
+%For at få et overblik over hvor meget besvarelserne variere og hvor stor forskel, der er mellem variationen ved de forskellige SQ, beregnes variansen for hver SQ beregnes med formlen: \blankline
 %
-Hvis der er større variation ved nogle skalabesvarelser, vil de vægte mere i en PCA, men det vurderes at være acceptabelt og ønsket. Det er dog vigtigt at være opmærksom på dette, når resultaterne af PCA analyseres. 
+%\begin{equation}
+	%Var = \frac{\sum_{i=1}^{n}(x_i-\overline{x})^{2}}{(n-1)}
+%\end{equation}
+%\noindent
+%
+%\fxnote{Indsæt kilde (Field bog)}
+%Hvor $Var$ er varians, $x_i$ er målingen for nummer $i$, $\overline{x}$ er middelværdien og $n$ er antal målinger. 
+%En oversigt over variansen for hver SQ kan ses på \autoref{fig:Varians}. 
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width = \textwidth]{Figure/DatabehandlingSkalaer/Varians} 
+%\caption{Søjlediagram over variansen for besvarelserne til hvert Scale Question.}
+%\label{fig:Varians}
+%\end{figure}
+%\noindent
+%
+%Det tydeligt at se ud fra \autoref{fig:Varians} at der er stor forskel mellem variansen ved de forskellige SQ. For eksempel er variansen for SQ5 og SQ7 meget lav i forhold til SQ1 og SQ8. 
+%
+%\subsection{Standardisering af besvarelser}
+%Når variansen ikke er ens for ens data kan det i nogle tilfælde vælges at udligne variansen. Hvis variansen skulle udlignes vil der skulle laves en standardisering af data. Formålet med at gøre dette er at data med lav varians i rå data får lige betydning i PCA som rå data med stor varians. \blankline
+%
+%Det vælges ikke at standardisere data, da det kan give skævvridninger som ikke er ønsket. Testpersonerne har reelt haft muligheden for at besvarer på hele skalaen, men har valgt at give besvarelser i nærheden af hinanden, hvilket tolkes som at de har været mere enige i dette tilfælde. \blankline
+>>>>>>> 87f8c0ae26261aba46ee41f9e5229c3afb679585
+%
+%Al data er målt med samme måleenhed, da det er målt på samme skala, der går fra 0 til 100 ved aflæsningen. Dette er en del af begrundelsen for ikke at standardisere, da det ofte gøre i tilfælde hvor målingerne ikke er målt med samme måleenhed. \blankline
+%
+%Hvis der er større variation ved nogle skalabesvarelser, vil de vægte mere i en PCA, men det vurderes at være acceptabelt og ønsket. Det er dog vigtigt at være opmærksom på dette, når resultaterne af PCA analyseres. 
