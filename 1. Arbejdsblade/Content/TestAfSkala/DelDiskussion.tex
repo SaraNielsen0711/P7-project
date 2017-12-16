@@ -1,37 +1,57 @@
 \chapter{Diskussion}
 \label{TestAfSkalaDiskussion}
-% Nedenstående er tanker gjort under lufthavnsbesøgene (1/12 og 5/12). Det kan bruges som inspiration til diskussion, men er ikke punkter der skal diskuteres. 
-% HER FRA
+%
+Denne diskussion vil tage udgangspunkt i den foregående databehandling og vedrører forskellige emner.  
+
+\section{Skalaerne}
+\label{DiskussionSkala}
+%
 Ændringer til testdesign: Fejl/problemer med testen (programmet)
 Misforstod skala midtpunkt, som markør - de prøvede at trække i den. Der er f.eks. en observation hvor en TP tror at vi mangle labels de andre steder (Fin). Misforstod skala i forhold til hvor robotten stoppede troede det var i forhold til hvor robotten fulgte dem hen. Hvis vi havde sat faste afstande skulle robotten følge dem, hvilket formentlig ikke er hensigtmæssigt, men den måde vi har gjort det på sørger for at testpersonerne selv tilpasser afstanden, det kan være årsagen til SQ5 er så lille. Måske burde man ikke have lavet PCA på det. Det samme er gældende for indgangsvinkel    
 
-Testpersoner (sample size er lille fordi vi har 23 skalaer, og flere grupper) vi regnede med 45 på en dag, men fik 43 på flere dage. Vi snakker kun med dem, der har valgt at snakke med robotten, men hvad så med dem der ikke interagerede med robotter - hvorfor gør de det ikke og hvilke problemer kan det skyldes. Dem der er med føler måske at de skal please os og vurderer tingene bedre end hvad de er. 
-
-Observationer: Nogen testpersoner, er ikke blevet fulgt af robotten særlig langt, nogen har fået hjælp til at svare på skalaer, nogen har stillet spørgsmål til flere ting, nogen har svaret på skalaerne uden at være den der har interageret med robotten. 
-
-Frasortering af manglende data: Skal ikke være i diskussion, det er diskuteret for i afsnittet
-
 Fordeling af besvarelser: Labels kan have påvirket variationen i besvarelserne, f.eks. SQ5 og SQ7 hvor der nærmest ikke er en variation. Diskuter lukkede endepunkter, nogen svarer tæt på endepunktet og nogen svarer langt fra. 
-
-Overvej om standardisering er færdig skrevet eller om der mangler noget til det. 
-
-Slet afsnit om varians. 
-
 
 Men diskuter at det faktisk er godt at vi har meget varians, fordi det viser at vi påvirker oplevelsen og at det har en effekt. Det er ikke nødvendigvis at godt at vi har en meget lille varians, fordi det kan betyde at vi ikke har brugt hele skalaen. Systematisk varians, det skal ikke bare svinge mellem 0 og 100 mellem alle parametre. Det påvirker også hvad vi kan sige ud fra korrelationerne, fordi det er meget usikkert. 
 
-Inferential databehandling / Principal Component Analysis, ret de andre overskrifter til PCA: Højde osv. 
+\section{Testpersoner}
+\label{DiskussionTestpersoner}
+%
+Havde det været muligt, at kontrollere robottens afstand til testpersonerne samt indgangsvinklen ville der blive sigtet efter at få 45 testpersoner. Da det ikke var en mulighed og det tog væsentlig længere tid overhovedet, at få nogle testpersoner, hvorfor testen blev afviklet over to dage, resulterede det i, at der kun blev indsamlet data fra 43 testpersoner, hvilket er relativt få taget i betragtning af hvor mange timer der blev afsat til testen i lufthavnen, og hvor mange rejsende, der bare gik forbi robotten.
+
+Selvom 43 testpersoner i nogle henseender kan være tilstrækkeligt vurderes det, at det ikke har været tilfældet i denne test. Det skyldes hovedsagligt, at der bliver testet 23 forskellige skalaer, ændret på tre fysiske parametre; højde, afstand og indgangsvinkel, men også at den måde hvorpå testpersonerne er inddelt i grupperne. Hvor grupperne referer til antallet af testpersoner repræsenteret ved de fem højder, tre afstande og fire indgangsvinkler. Med så mange forskellige scenarier burde der have været langt flere testpersoner for, at kunne fastslå noget endegyldigt.\blankline
+%
+På gruppen blev det diskuteret hvorvidt rejsende, som ikke interagerede med robotten men tydeligt registrerede den var der og rejsende, som starter en interaktion med robotten men som enten svarer nej til om den må hjælpe dem med at finde rundt i AAL eller som af en eller anden grund stopper interaktionen undervejs, skulle stoppes og spørges om hvorfor de ikke havde lyst til at interagere med robotten. Årsagen til at dette ikke blev gjort er, at det for de rejsende kan virke meget bebrejdende, at blive spurgt ind til hvorfor de ikke har interageret med robotten, og fordi det ikke ønskes, at forstyrre dem, hvis de nu har travlt. Derudover skal det også respekteres, hvis de rejsende bare ikke har lyst til at deltage. 
+
+Fordelen ved at have stoppet dem for at spørge ind til hvorfor de valgte ikke at interagere med robotten eller valgte aktivt at trykke nej til hjælpen eller stoppede interaktionen undervejs, havde været at andre synspunkter kunne være kommet til udtryk. Det kan jo være, at årsagen til at nogle af de rejsende, som ikke interagerede med robotten, er, at de ikke føler sig trygge ved robotten, eller ikke føler at den kan hjælpe dem. Dette kommer ikke nødvendigvis til udtryk ved de indsamlede besvarelser, da det formentlig godt kan antages, at de rejsende, som har interageret med robotten og besvaret skalaerne, i højere grad har følt sig trygge ved robotten sammenlignet med nogen af dem, der ikke har. Ved at have stoppet de rejsende kan det have været med til, at give et mere nuanceret billede af hvordan HRI opleves, da nogle af de mere negative parametre, såsom at robotten er anmassende og irriterende, formentlig ville være mere tydelige. \blankline
+%
+Da testpersonerne besvarede skalaerne var, der som regel en testleder i nærheden for at sikre, dels at programmet fungerede og dels for at besvare eventuelle spørgsmål. Dette kan potentielt have påvirket nogle af testpersonernes besvarelser, da de måske har været bevidste om at testlederen kunne se besvarelserne, hvorfor de måske enten har vurderet nogle parametre lavere eller højere, end hvad de reelt mener bare for at tilfredsstille projektgruppen. Derudover var der også nogle få testpersoner, eksempelvis TP10, som modtog hjælp i forhold til at trykke på robottens skærm under interaktionen, da de formentlig ellers havde opgivet og gået videre. Dette kan ligeledes have påvirket deres besvarelser, uden at det vides hvordan. 
+
+Andre ting, der kan have påvirket testpersonernes opleves relaterer sig blandt andet til, at alle testpersoner ikke blev fulgt lige langt, enten fordi de vidste hvor de rent faktisk skulle hen og robotten fulgte dem den forkerte vej, eller fordi testpersonerne startede interaktionen i nærheden af Duty Free, hvor robotten som regel stoppede. Dette gør sig blandt andet gældende for TP14 og TP27, som ikke blev fulgt afsted af robotten, da testlederen stod lige ved siden af dem. I relation til det, fremgår det fra observationerne, jævnfør \fullref{TestAfSkalaLufthavnsBesog}, at TP21 misforstod SQ5: \textit{Jeg synes, at robotten stoppede}, hvor de to rejsende tror det handler om, hvorvidt robotten stoppede tæt på det sted, som de havde valgt at den skulle følge dem hen til. Det virker også til at TP16 ikke forstod SQ5. 
+
+Andre testpersoner har haft en samtale med testlederen samtidig med, at de evaluerede interaktionen med robotten på de præsenterede skalaer, dette, dog uvist, kan have haft en indflydelse på deres besvarelser, både fordi samtalen kan have hjulpet dem til at forstå skala spørgsmålene, men også fordi det måske, har påvirket dem til at svare mere positivt end hvad de reelt mener.
+
+Derudover har der også været situationer, hvor en familie enten skiftes til at trykke på robottens skærm, eller hvor det kun er én, der trykker på skærmen, men hvor det er et andet familiemedlem, som svarer på skalaerne. Derfor er der situationer hvor en testperson har svaret på skalaerne, men ikke interagerede med robotten. Det er uvist hvilken indflydelse det har haft og om det overhovedet har haft en indflydelse.  
+
+
+\section{Fysiske parametre}
+\label{DiskussionFysiskeParametre}
+%
+
+
+
 
 Det havde været nemmere at se noget hvis vi kunne kontrollere vores variable mere og hvis vi ikke havde testet alt på en gang, og at vi har forskellige typer grupper. 
 
 Diskuter valg af højder, det kunne være at 123.5 cm ikke havde været nødvendig. 
 
-Scree plot: Scree - Robot's Height (ret de andre overskrifter fra matlab også) måske kun i artiklen. 
-
 
 Fart og højde ændres af Double, hvilket kan være et problem fordi vi ingen kontrol har over det. 
 
 
+
+\section{Redundans}
+\label{DiskussionRedundansSkalaer}
+%
 Kig på hvilke skalaer der kan undværes - sød og sjov. 
 
 
