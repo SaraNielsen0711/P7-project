@@ -1,15 +1,54 @@
 \chapter{Diskussion}
 \label{TestAfSkalaDiskussion}
 % Nedenstående er tanker gjort under lufthavnsbesøgene (1/12 og 5/12). Det kan bruges som inspiration til diskussion, men er ikke punkter der skal diskuteres. 
-Folk forsøger at ramme et endepunkt - det er den effekt endepunkter har.\\
-Folk var ikke lige så glade i starten af december i lufthavnen, derfor har vi ikke haft lige så mange testpersoner igennem som vi gerne ville.\\
-Det fungerede ikke så godt at forudbestemme R, for hvad nu hvis man kun vil interagere, når den kommer fra en bestemt vinkel - men så ikke gør det, fordi den henvender sig forkert. Det er bedre at lade der være naturlig variation, og så ændre højden mellem testpersonerne.\\
-At robotten rekrutterer gør at rekrutteringen går meget langsommere, men igen er det meget økologisk.\\
-Der er virkelig mange testpersoner der siger nej\\
-Vi mangler næsten et "den henvendte sig for meget" parameter, så vi kan se om den er anmasende, fordi den presser på og henvender sig, når man ikke ligner nogen der har brug for hjælp.\blankline
-%
-Skriv om at vi kan undvære SQ5 og SQ7, både fordi de ikke rigtig siger noget, eller varierer - det skyldes formentlig labels på midtpunktet. 
+% HER FRA
+Ændringer til testdesign: Fejl/problemer med testen (programmet)
+Misforstod skala midtpunkt, som markør - de prøvede at trække i den. Der er f.eks. en observation hvor en TP tror at vi mangle labels de andre steder (Fin). Misforstod skala i forhold til hvor robotten stoppede troede det var i forhold til hvor robotten fulgte dem hen. Hvis vi havde sat faste afstande skulle robotten følge dem, hvilket formentlig ikke er hensigtmæssigt, men den måde vi har gjort det på sørger for at testpersonerne selv tilpasser afstanden, det kan være årsagen til SQ5 er så lille. Måske burde man ikke have lavet PCA på det. Det samme er gældende for indgangsvinkel    
 
-Vi kan se at der er svaret lige omkring midten for spørgsmål 5 og 7 på tværs af alle de demografiske faktorer. 5 og 7 er derfor ikke særligt beskrivende for den oplevelse folk har haft, da alle har svaret cirka det samme både på tværs af demografi og på tværs af de stimuli de har været udsat for (forskellige højder, afstande og vinkler). 5=robotten er for tæt på/langt væk, 7=robotten er for høj/lav.
+Testpersoner (sample size er lille fordi vi har 23 skalaer, og flere grupper) vi regnede med 45 på en dag, men fik 43 på flere dage. Vi snakker kun med dem, der har valgt at snakke med robotten, men hvad så med dem der ikke interagerede med robotter - hvorfor gør de det ikke og hvilke problemer kan det skyldes. Dem der er med føler måske at de skal please os og vurderer tingene bedre end hvad de er. 
 
-Selvom de forskellige skalaer er blevet udviklet, så de tilnærmelsesvis ligner hinanden, så er der alligevel forskel på dem. Dels er der forskel på hvordan skala spørgsmålet er formuleret, dels har endepunkterne forskellige og forskelligt formulerede labels og dels har nogle skalaer et midtpunkt med eller uden label.
+Observationer: Nogen testpersoner, er ikke blevet fulgt af robotten særlig langt, nogen har fået hjælp til at svare på skalaer, nogen har stillet spørgsmål til flere ting, nogen har svaret på skalaerne uden at være den der har interageret med robotten. 
+
+Frasortering af manglende data: Skal ikke være i diskussion, det er diskuteret for i afsnittet
+
+Fordeling af besvarelser: Labels kan have påvirket variationen i besvarelserne, f.eks. SQ5 og SQ7 hvor der nærmest ikke er en variation. Diskuter lukkede endepunkter, nogen svarer tæt på endepunktet og nogen svarer langt fra. 
+
+Overvej om standardisering er færdig skrevet eller om der mangler noget til det. 
+
+Slet afsnit om varians. 
+
+
+Men diskuter at det faktisk er godt at vi har meget varians, fordi det viser at vi påvirker oplevelsen og at det har en effekt. Det er ikke nødvendigvis at godt at vi har en meget lille varians, fordi det kan betyde at vi ikke har brugt hele skalaen. Systematisk varians, det skal ikke bare svinge mellem 0 og 100 mellem alle parametre. Det påvirker også hvad vi kan sige ud fra korrelationerne, fordi det er meget usikkert. 
+
+Inferential databehandling / Principal Component Analysis, ret de andre overskrifter til PCA: Højde osv. 
+
+Det havde været nemmere at se noget hvis vi kunne kontrollere vores variable mere og hvis vi ikke havde testet alt på en gang, og at vi har forskellige typer grupper. 
+
+Diskuter valg af højder, det kunne være at 123.5 cm ikke havde været nødvendig. 
+
+Scree plot: Scree - Robot's Height (ret de andre overskrifter fra matlab også) måske kun i artiklen. 
+
+
+Fart og højde ændres af Double, hvilket kan være et problem fordi vi ingen kontrol har over det. 
+
+
+Kig på hvilke skalaer der kan undværes - sød og sjov. 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
