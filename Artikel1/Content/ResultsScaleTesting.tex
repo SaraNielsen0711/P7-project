@@ -6,14 +6,26 @@ The dataset contains several zero-answers which, due to a programming error, cou
 \noindent
 The different ratings on the scales in the second test are visualised on \autoref{fig:Boxplot}.
 %
-\begin{figure}[H]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width = 0.49\textwidth]{Figure/Boksplot24uden0}
+%	\setlength\abovecaptionskip{-1.2\baselineskip} 
+%	\caption{Boxplot showing the 24 attributes. The boxplot shows the median, where the box is ranging from 25-75 \% of the data, and the whiskers from 0-25 \% and 25-100 \% of the data.}
+%	\label{fig:Boxplot}
+%\end{figure}
+%\noindent
+%
+
+\begin{figure*}[!b]
 	\centering
-	\includegraphics[width = 0.49\textwidth]{Figure/Boksplot24uden0}
-	\setlength\abovecaptionskip{-1.2\baselineskip} 
+	\subfloat[]{\includegraphics[width=6.9in]{Figure/Boksplot24uden0}
+	\label{fig:Boxplot}}
+%	\hfil
+%	\subfloat[]{\includegraphics[width=2.5in]{Figure/Boksplot24uden0}
+%		\label{fig_second_case}}
 	\caption{Boxplot showing the 24 attributes. The boxplot shows the median, where the box is ranging from 25-75 \% of the data, and the whiskers from 0-25 \% and 25-100 \% of the data.}
-	\label{fig:Boxplot}
-\end{figure}
-\noindent
+\end{figure*}
+
 %
 From \autoref{fig:Boxplot}\fxnote{Ifølge Dorte kunne vi sagtens gøre brug af farver her til at gruppere boksplottet. Jeg r enig! (fx. 1,4, 8, 12, 14, 19 er én farve, da de beskriver boxplots med stor variation osv.)... undskyld, Juliane.} it is notable that their exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being too broadly describing. \\ 
 
@@ -79,7 +91,7 @@ Furthermore 2D and 3D biplots from the different PCAs shows positive and negativ
 \noindent
 %
 
-To investigate these correlations further, ratings from correlating SQs are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparisonplots do not take groupings into consideration. This might be why some correlations is not found when comparing SQ, even though PCA showed a correlation \fxnote{De her to sætninger føler jeg ikke giver mening - korn. Er det bedre nu? - Lucca}. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Variables that have a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
+To investigate these correlations further, ratings from correlating SQs are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparisonplots do not take groupings into consideration. This might be why some correlations is not found when comparing SQ, even though PCA showed a correlation. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Variables that have a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
 %
 \begin{figure}[H]
 	\centering
