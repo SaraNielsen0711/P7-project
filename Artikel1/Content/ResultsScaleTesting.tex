@@ -18,16 +18,21 @@ The different ratings on the scales in the second test are visualised on \autore
 From \autoref{fig:Boxplot}\fxnote{Ifølge Dorte kunne vi sagtens gøre brug af farver her til at gruppere boksplottet. Jeg r enig! (fx. 1,4, 8, 12, 14, 19 er én farve, da de beskriver boxplots med stor variation osv.)... undskyld, Juliane.} it is notable that their exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being too broadly describing. \\ 
 
 \noindent
-When looking at gender differences SQ4 and SQ21 seems to reveal a difference. Females rate SQ4 and SQ21 twice as high as males, which means that they experience the robot's movements more calm but also more intrusive compared to males.\\
+When looking at gender differences SQ21 seem to reveal a difference. Females rate SQ21 twice as high as males, which also seems to apply to SQ4 and SQ11. It suggests that they experience the robot's movements more calm compared to males, but also that they find the robot less intrusive and startling.\\
 
 \noindent
-Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree}\fxnote{Bør ikke være dette plot, der ikke viser noget, men i stedet eksempelvis scree for højde.}. It shows that only 80 \% of the total variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance. The results were:
+When conducting a PCA on all the scale results it shows that only 80 \% of the total variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:Scree} shows a scree plot from PCA relating to the robot's height, where 94.1 \% of the variance is explained when using three dimensions. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance. The results were:
+
+\noindent
+\textbullet \textbf{Height:} SQ19 appears to contribute the most to PC1. SQ1 the most to PC2. \\
+\textbullet \textbf{Distance:} SQ1 appears to contribute the most to PC1 along with SQ15. SQ10 contributes most to PC2.\\
+\textbullet \textbf{Direction:} SQ10 contributes most to PC1. SQ22 and SQ23 contributes almost equally much to PC2.\\
 %
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.40\textwidth]{Figure/Scree.png}
 	\setlength\abovecaptionskip{-0.5\baselineskip} 
-	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained [\%].}
+	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained [\%]: PC1 (61 \%), PC2 (19.1 \%), PC3(14 \%), PC4(5.9 \%).}
 	\label{fig:Scree}
 \end{figure}
 \noindent
@@ -42,10 +47,6 @@ Conducting a PCA on all the scale results in the screeplot on \autoref{fig:Scree
 \end{figure}
 \noindent
 %
-\textbullet \textbf{Height:} SQ19 appears to contribute the most to PC1. SQ1 the most to PC2. \\
-\textbullet \textbf{Distance:} SQ1 appears to contribute the most to PC1 along with SQ15. SQ10 contributes most to PC2.\\
-\textbullet \textbf{Direction:} SQ10 contributes most to PC1. SQ22 and SQ23 contributes almost equally much to PC2.\\
-
 Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between variables/scale questions. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
 %
 \begin{table}
@@ -78,7 +79,7 @@ Furthermore 2D and 3D biplots from the different PCAs shows positive and negativ
 \noindent
 %
 
-To investigate these correlations further ratings from correlating SQs are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparisons do not take groupings into consideration. This might be why some correlations is not found when comparing SQ \fxnote{De her to sætninger føler jeg ikke giver mening - korn}. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Also variables that has a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
+To investigate these correlations further, ratings from correlating SQs are compared, as seen in \autoref{fig:SQ12+SQ18}. Even though correlations occur when doing PCA on groupings, these comparisonplots do not take groupings into consideration. This might be why some correlations is not found when comparing SQ, even though PCA showed a correlation \fxnote{De her to sætninger føler jeg ikke giver mening - korn. Er det bedre nu? - Lucca}. From \autoref{fig:SQ12+SQ18} it is seen that the robot is perceived more exciting when subjects like to be served by the robot. Variables that have a clear correlation from this kind of comparison are shown in \autoref{tab:CorrelationsFromGraphs}.
 %
 \begin{figure}[H]
 	\centering
@@ -108,15 +109,13 @@ To investigate these correlations further ratings from correlating SQs are compa
 \noindent
 %
 
-The physical parameters can be compared with SQs as well as the demographic parameters in the same manner as comparing SQs with each other. \autoref{fig:HeightSQ6} shows SQ6 compared with the robot's height, which shows that when the robot's height increases the robot is perceived as less annoying. Within Age small tendencies were noted. When comparing SQ6 with Age, the older a person is, the more inclined one is to rate the robot as going too fast. Also a small negative correlation was noted in relation to how exciting (spændende) the robot seemed. The older the subjects were, the less exciting they rated the robot. This same small tendency was seen with how funny (sjov) they rated the robot. Within Height the smaller the robot was the faster and more wild it was rated. This was expected as the robot is programmed from factory to move more slowly when the height increases and faster when it is low. Additionally it was rated more cute when it was small.
-
-{\color{red} Har tilføjet lidt til demografi her, men det bør nok rettes igennem :)}
+The physical parameters can be compared with SQs as well as the demographic parameters in the same manner as comparing SQs with each other. \autoref{fig:HeightSQ6} shows SQ6 compared with the robot's height, which shows that when the robot's height increases the robot is perceived as less annoying. Within subjects' age small tendencies were noted. When comparing SQ6 with age, the younger a person is, the more inclined one is to rate the robot as going too slow. Also, a small negative correlation was noted in relation to how exciting and funny the robot seemed. The older the subjects were, the less exciting and funny they rated the robot. Within height the smaller the robot was the faster and more wild it was rated. This was expected, as the robot is programmed from factory to move more slowly when the height increases and faster when it is low. Additionally it was rated more cute when it was small.
 %
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = 0.49\textwidth]{Figure/HeightSQ6}
 	\setlength\abovecaptionskip{-1.2\baselineskip} 
-	\caption{NEW.}
+	\caption{Comparison between the robot's five heights (cm) and ratings on SQ6 based on all subjects.}
 	\label{fig:HeightSQ6}
 \end{figure}
 \noindent
