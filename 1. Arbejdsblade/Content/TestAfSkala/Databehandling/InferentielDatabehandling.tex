@@ -6,12 +6,12 @@ Først laves en \textit{Principal Component Analysis} (PCA) analyse på det saml
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Figure/DatabehandlingSkalaer/PCAfigures/Scree.png}
-\caption{\textit{Scree}-plot, hvorpå sammenhængen mellem antallet af \textit{Principal Components} og \textit{Variance Explained [\%]} fremgår.}
+\caption{\textit{Scree}-plot, hvorpå sammenhængen mellem antallet af \textit{Principal Components} og \textit{Variance Explained [\%]} fremgår. Bidraget for hver PC er som følger: PC1 29.9 \%, PC2 13.4 \%, PC3 9.8 \%, PC4 8.5 \%, PC5 6.4 \%, PC6 5.4 \% og PC7 4.8 \%.}
 \label{fig:Scree}
 \end{figure}
 \noindent
 %
-Ud fra \textit{Scree}-plottet på \autoref{fig:Scree} fremgår det, at der ikke er en tydelig sammenhæng i variansen fra datasættet, da kun 29.9 \% af variansen kan forklares af PC1 og 13.4 \% af PC2. Selv hvis de tre første PCs medtages, er det kun 53.1 \% af variansen, som forklares af modellen. Dette skyldes formentligt, at der er for mange variable, som bliver varieret på én gang og at det ikke har været muligt at kontrollere alle variable lige godt, og at der tilmed forekommer forskellige grupperinger i forhold til de variable, der tilnærmelsesvist var mulige at kontrollere. På baggrund af det er det svært at vurdere hvilke parametre, der korrelerer.\blankline 
+Ud fra \textit{Scree}-plottet på \autoref{fig:Scree} fremgår det, at der ikke er en tydelig sammenhæng i variansen fra datasættet, da kun 29.9 \% af variansen kan forklares af PC1 og 13.4 \% af PC2. Selv hvis de tre første PCs medtages, er det kun 53.1 \% af variansen, som forklares af modellen. Selvom det kun er de første syv PCs der fremgår på \autoref{fig:Scree} så er der reelt 23 PCs, men da de restrende PCs bidrager med meget lidt fremgår de ikke på \textit{Scree}-plottet. Dette skyldes formentligt, at der er for mange variable, som bliver varieret på én gang og at det ikke har været muligt at kontrollere alle variable lige godt, og at der tilmed forekommer forskellige grupperinger i forhold til de variable, der tilnærmelsesvist var mulige at kontrollere. På baggrund af det er det svært at vurdere hvilke parametre, der korrelerer.\blankline 
 %
 Ud fra \textit{Score}-plottet på \autoref{fig:Score} fremgår det også at PC1 kun forklarer en lille del af variansen, da der er meget spredning i datapunkterne og spredningen ikke er systematisk. Hvis PC1 havde forklaret en større del af variansen, ville data være mere centreret omkring den horisontale akse.
 %
