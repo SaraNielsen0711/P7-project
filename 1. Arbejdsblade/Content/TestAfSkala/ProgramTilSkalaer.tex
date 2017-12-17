@@ -3,7 +3,7 @@
 %
 Programmet, som blev brugt til at præsentere skalaerne for testpersonerne, blev udviklet i \textit{Processing 3.3.6}, \parencite{WEB:Processing3}. Det bygger på et widget-bibliotek udviklet af Søren Krarup Olesen m.fl. som hedder \textit{PDPGUITest}. I programmet er der lavet klasser til blandt andet check bokse, radio knapper, sliders og lignende GUI elementer, som kan interageres med og som kan gemme data fra besvarelserne.\blankline 
 %
-I \textit{setup} konstrueres objekter fra klasserne: PDPGUI, PDPPushButton og PDPVASknapper. Heri defineres tekst, størrelse og placering af knapper. Det er også her hvor skala spørgsmål og labels på skalaerne defineres. Der laves også en tabel, med en navngivet kolonne og til hvert datapunkt.
+I \textit{setup} konstrueres objekter fra klasserne: PDPGUI, PDPPushButton og PDPVASknapper. Heri defineres tekst, størrelse og placering af knapper. Det er også her skalaspørgsmål og labels på skalaerne defineres. Der laves også en tabel, med en navngivet kolonne og til hvert datapunkt.
 
 I \textit{draw}-loopet er der syv forskellige skærmbilleder, som præsenteres for testpersonerne. Skærmbillederne dannes ved at loade de widgets ind, som blev konstruerede i setuppet, jævnfør linje 154 og 160-164 på \autoref{fig:Screen}. For de bipolære skalaer, som har en markering af midtpunktet er der tilføjet en linje oven på den pågældende widget, jævnfør linje 157-159. Det samme gælder i de tilfælde hvor der er et label på midterpunktet.
  
