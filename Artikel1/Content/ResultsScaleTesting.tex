@@ -19,21 +19,22 @@ The different ratings on the scales in the second test are visualised on \autore
 \begin{figure*}[!b]
 	\centering
 	\includegraphics[width=6.9in]{Figure/Boksplot24uden0}
-	\label{fig:Boxplot}
-%	\hfil
+	\hfil
 %	\subfloat[]{\includegraphics[width=2.5in]{Figure/Boksplot24uden0}
 %		\label{fig_second_case}}
-	\caption{Boxplot showing the 24 attributes. The boxplot shows the median, where the box is ranging from 25-75 \% of the data, and the whiskers from 0-25 \% and 25-100 \% of the data.}
+	\caption{Boxplot showing the 23 attributes. The boxplot shows the median, where the box is ranging from 25-75 \% of the data, and the whiskers from 0-25 \% and 75-100 \% of the data.}
+	\label{fig:Boxplot}
+%	
 \end{figure*}
 
 %
-From \autoref{fig:Boxplot}\fxnote{Ifølge Dorte kunne vi sagtens gøre brug af farver her til at gruppere boksplottet. Jeg r enig! (fx. 1,4, 8, 12, 14, 19 er én farve, da de beskriver boxplots med stor variation osv.)... undskyld, Juliane.} it is notable that their exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being too broadly describing. \\ 
+From \autoref{fig:Boxplot} \fxnote{Ifølge Dorte kunne vi sagtens gøre brug af farver her til at gruppere boksplottet. Jeg r enig! (fx. 1,4, 8, 12, 14, 19 er én farve, da de beskriver boxplots med stor variation osv.)... undskyld, Juliane.} it is notable that there exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or terminal points (5, 7, 9, 10, 11, 13). SQ5 and SQ7 are centralised around the midpoint, which can relate to the label (fine) being too broadly describing. \\ 
 
 \noindent
-When looking at gender differences SQ21 seem to reveal a difference. Females rate SQ21 twice as high as males, which also seems to apply to SQ4 and SQ11. It suggests that they experience the robot's movements more calm compared to males, but also that they find the robot less intrusive and startling.\\
+When looking at gender differences it seems that women rated SQ4, SQ11, and SQ21 lower than men. It suggests that females experience the robot's movements more calm compared to males, but also that they find the robot less intrusive and startling.\\
 
 \noindent
-When conducting a PCA on all the scale results it shows that only 80 \% of the total variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:Scree} shows a scree plot from PCA relating to the robot's height, where 94.1 \% of the variance is explained when using three dimensions. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance. The results were:
+When conducting a PCA on all the scale results it shows that only 80 \% of the total variance is explained when using 7 dimensions, which is why PCA relating to different groups as the robot's height, distance and direction is conducted in order to reduce the dimensions and be able to explain more of the variance. \autoref{fig:Scree} shows a scree plot from PCA relating to the robot's height, where 94.1 \% of the variance is explained using three dimensions. \autoref{fig:biplot} shows the biplot relating to the robot's height. Similar biplots were made for direction and distance. The results were:
 
 \noindent
 \textbullet \textbf{Height:} SQ19 appears to contribute the most to PC1. SQ1 the most to PC2. \\
@@ -43,7 +44,6 @@ When conducting a PCA on all the scale results it shows that only 80 \% of the t
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.40\textwidth]{Figure/Scree.png}
-	\setlength\abovecaptionskip{-0.5\baselineskip} 
 	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained [\%]: PC1 (61 \%), PC2 (19.1 \%), PC3(14 \%), PC4(5.9 \%).}
 	\label{fig:Scree}
 \end{figure}
@@ -53,13 +53,12 @@ When conducting a PCA on all the scale results it shows that only 80 \% of the t
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.40\textwidth]{Figure/RHeight-Biplot.png}
-	\setlength\abovecaptionskip{-0.5\baselineskip} 
 	\caption{Biplot showing how the different attributes contributes to components and which attributes that correlates. The black numbers denotes SQ and the red to the different heights in cm.}
 	\label{fig:biplot}
 \end{figure}
 \noindent
 %
-Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between attributes/scale questions. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
+Furthermore 2D and 3D biplots from the different PCAs shows positive and negative correlations between different attributes/SQs. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
 %
 \begin{table}
 	\centering
