@@ -29,29 +29,42 @@ The different ratings on the scales in the second test are visualised on \autore
 From \autoref{fig:Boxplot} it is notable that there exists much greater variation in some scales compared to others. For some SQs, a big part of the scale is used (1, 4, 8, 12, 14, 19), where for others a smaller part of the scale is used (2, 3, 5, 7, 9, 11, 13, 16). Furthermore some of the scale ratings appears normal distributed (1, 2, 6, 17, 20, 21) and others appears skewed (8, 9, 10, 11, 13, 18). In some SQs the data accumulates around midpoints or anchor points (5, 7, 9, 10, 11, 13, 16). SQ05 and SQ07 are centralised around the midpoint, which for SQ07 can relate to the label \textit{fine} being too broadly describing. The closed anchor points used on the scales can induce accumulation of data points around these. Also the use of bipolar scales poses the risk of picking two words which are not  each others opposite.
 
 When looking at gender differences it seems that women rated SQ04, SQ11, and SQ21 lower than men. It suggests that females experienced the movements of the robot more calm compared to males, but also that they find the robot less intrusive and startling.\\
-
-\noindent
-When conducting a PCA on all the scale results it showed that only 53.1 \% of the total variance is explained when using the first three dimensions, which is why PCA relating to different groups such as the robot's height, distance, and direction are conducted in order to reduce the dimensions and to be able to explain more of the variance. \autoref{fig:Scree} shows a Scree plot from PCA relating to the robot's height, where 94.1 \% of the variance is explained using three dimensions. \autoref{fig:biplot} shows the Biplot relating to the robot's height. Similar Biplots were made for direction and distance. The attributes which loads the most on the components are:
+When conducting a PCA on all the scale results it showed that only 53.1 \% of the total variance is explained when using the first three dimensions, which is why PCA relating to different groups such as the robot's height, distance, and direction are conducted in order to reduce the dimensions and to be able to explain more of the variance. Figure~\ref{fig:Scree} shows a Scree plot from PCA relating to the robot's height, where 94.1 \% of the variance is explained using three dimensions. Figure~\ref{fig:biplot} shows the Biplot relating to the robot's height. Similar Biplots were made for direction and distance. The attributes which loads the most on the components are:
 
 \noindent
 \textbf{Height:} SQ19 appears to contribute the most to PC1. SQ01 the most to PC2. SQ06 the most to PC3. \\
 \textbf{Distance:} SQ01 appears to contribute the most to PC1 along with SQ15. SQ10 contributes most to PC2.\\
 \textbf{Direction:} SQ10 contributes most to PC1. SQ22 and SQ23 contributes almost equally to PC2. SQ13 and SQ20 contributes almost equally to PC3.\\
 %
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.40\textwidth]{Figure/Scree.png}
-	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained (\%): PC1 (61 \%), PC2 (19.1 \%), PC3(14 \%), PC4(5.9 \%).}
-	\label{fig:Scree}
-\end{figure}
-\noindent
-%
-\begin{figure}[H]
-	\centering
-	\includegraphics[width = 0.40\textwidth]{Figure/RHeight-Biplot.png}
-	\caption{Biplot showing how the different attributes contributes to components and which attributes that correlates. The black numbers denotes SQ and the red to the different heights in cm.}
-	\label{fig:biplot}
-\end{figure}
+\begin{figure*}[!t]
+\centering
+\subfloat[Scree Plot for Robot Height]{\includegraphics[width=2.5in]{Figure/Scree.png}
+\label{fig:Scree}}
+\hfil
+\subfloat[Biplot for Robot Height]{\includegraphics[width=2.5in]{Figure/RHeight-Biplot.png}
+\label{fig:biplot}}
+\caption{\textbf{(a):} Scree plot showing the connection between the number of Principal Components and Variance Explained (\%): PC1 (61 \%), PC2 (19.1 \%), PC3(14 \%), PC4(5.9 \%). \textbf{(b):} Biplot showing how the different attributes contributes to components and which attributes that correlates. The black numbers denotes SQ and the red to the different heights in cm.}
+\label{fig_sim}
+\end{figure*}
+
+
+
+
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width = 0.40\textwidth]{Figure/Scree.png}
+%	\caption{Scree plot showing the connection between the number of Principal Components and Variance Explained (\%): PC1 (61 \%), PC2 (19.1 \%), PC3(14 \%), PC4(5.9 \%).}
+%	\label{fig:Scree}
+%\end{figure}
+%\noindent
+%%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width = 0.40\textwidth]{Figure/RHeight-Biplot.png}
+%	\caption{Biplot showing how the different attributes contributes to components and which attributes that correlates. The black numbers denotes SQ and the red to the different heights in cm.}
+%	\label{fig:biplot}
+%\end{figure}
 \noindent
 %
 2D and 3D Biplots from the different PCAs shows positive and negative correlations between different attributes. These correlations are presented in \autoref{tab:CorrelationsFromPCA}.
